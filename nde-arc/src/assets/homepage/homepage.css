@@ -1,0 +1,11 @@
+@use "src/app/styles/nde-variables" as vars;
+@use "src/app/styles/nde-mixing" as mixing;
+
+/* Custom search bar container */
+.custom-search-bar-container .background-overlay {
+                display: none;
+}
+.custom-search-bar-container {
+    background: #003058;
+    height: 15rem !important;
+}
