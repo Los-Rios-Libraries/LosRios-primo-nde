@@ -1,6 +1,17 @@
 @use "src/app/styles/nde-variables" as vars;
 @use "src/app/styles/nde-mixing" as mixing;
 
+/* Custom search bar container */
+/* Solid background, primary color */
+.custom-search-bar-container {
+	background: #6c2991;
+	height: 15rem !important;
+}
+/* Hide overlay */
+.custom-search-bar-container .background-overlay {
+	display: none;
+}
+
 .main-landing-page {
   width: vars.$responsiveWidth;
   @include vars.set-responsive-width;
