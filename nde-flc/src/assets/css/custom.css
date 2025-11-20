@@ -1,0 +1,41 @@
+/* Increase library logo height */
+nde-logo img {
+	height:60px; 
+	padding-right:1rem;
+	}
+
+/* Hide Open Access filter */
+nde-filters-value:has(button[data-qa="tlevel.open_access"]) {
+	display:none;
+	}
+
+/* move Expand my Results and Search in Fulltext filters to bottom of list */
+#scrolledContent .scroller-content {
+	display:grid;
+	}
+
+mat-slide-toggle[data-qa="filters_toggle_expand_my_results"],mat-slide-toggle[data-qa="filters_toggle_search_in_full_text"], mat-slide-toggle[data-qa="filters_toggle_search_in_full_text"] + mat-divider {
+	order:9;
+	}
+
+/* Hide campus affiliation 
+TBD */
+
+/* Hide journal coverage in article results, but show in Journal search results */
+nde-view-it-card .availability-text {
+	display: none !important;
+	}
+	
+#journal-db-layout-container nde-view-it-card .availability-text {
+	display:flex !important;
+	}
+	
+/* Hide links for MARC fields and LSP Problem Report */
+nde-full-display-links .link-container {
+	display: none;
+	}
+	
+nde-full-display-links .link-container:has(a[data-qa="source-record"]), nde-full-display-links .link-container a[data-qa="source-record"] {
+	display:unset;
+	}
+
