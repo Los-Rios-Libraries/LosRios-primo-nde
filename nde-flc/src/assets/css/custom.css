@@ -42,3 +42,6 @@ nde-full-display-links .link-container:has(a[data-qa="source-record"]), nde-full
 /* only show problem report button in brief results when hovering on record */
 nde-search-results .lr-problem-reporter {opacity:0;}
 nde-search-results nde-search-result-item-container:hover .lr-problem-reporter, nde-search-result-item-container:focus .lr-problem-reporter {opacity:1;}
+
+/* Modify Journal Search header background 
+TBD */
