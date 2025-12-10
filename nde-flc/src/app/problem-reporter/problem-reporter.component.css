@@ -1,0 +1,4 @@
+/* hover styles in brief results are in custom.css */
+.lr-problem-reporter {text-align: right; text-transform: uppercase; margin-bottom:-2rem;}
+.lr-problem-reporter button {position:relative; z-index: 0;bottom:2rem; color:var(--sys-tertiary); font-size:.8rem;}
+.lr-problem-reporter button .mat-icon {color:var(--sys-tertiary);}   
