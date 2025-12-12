@@ -12,6 +12,12 @@
 	display: none;
 }
 
+/* hide default banner visually h2 */
+.custom-search-bar-container h2 {
+	position: absolute !important;
+	left: -99999px;
+}
+
 .main-landing-page {
   width: vars.$responsiveWidth;
   @include vars.set-responsive-width;
@@ -23,7 +29,6 @@
   @include mixing.respond-to('xsmall') {
     width: 100%;
   }
-
 
   .menu-container {
     .menu {
