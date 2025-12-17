@@ -1,0 +1,23 @@
+@if (showCard()) {
+    <div>
+    <mat-card class="example-card margin-top-medium padding-normal" appearance="outlined">
+        <mat-card-header class="margin-bottom-medium">
+            <mat-card-title>About Library Fees</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p>
+                @if (isStudent()) {
+                    <span>You can pay your library fees online via <a href="https://ps.losrios.edu/student/signon.html" target="_blank">eServices <mat-icon>open_in_new</mat-icon></a> or in person at the <a href="https://scc.losrios.edu/student-resources/support-services/business-services" target="_blank">SCC Business Services Office. <mat-icon>open_in_new</mat-icon></a></span>
+
+                }
+                @else {
+                    <span>To pay your library fees, first go to the library to get a statement of charges. </span>              
+                }
+                <a href="https://answers.library.losrios.edu/scc/faq/279946" target="_blank">Find more info about paying library fees. <mat-icon>open_in_new</mat-icon></a>
+            </p>
+            <p>You might also be able to resolve your fees by returning overdue materials. <a href="https://answers.library.losrios.edu/scc/faq/316527" target="_blank">Find more info about returns <mat-icon>open_in_new</mat-icon></a>.</p>
+            <p>Questions about your fees? Please contact the library at <a href="tel:+1-916-558-2301">(916) 558-2301</a>.</p>
+        </mat-card-content>
+    </mat-card>
+</div>
+}
