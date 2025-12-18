@@ -45,3 +45,9 @@ nde-search-results nde-search-result-item-container:hover .lr-problem-reporter, 
 
 /* Modify Journal Search header background 
 TBD */
+
+/* chat widget */
+.s-lch-widget-float {
+   /* don't conflict with up-to-top arrow or login prompt */
+  bottom: 80px !important;
+}
