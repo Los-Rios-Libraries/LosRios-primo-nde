@@ -22,7 +22,7 @@ export class ProblemReporterComponent {
 
   // getter function to retrieve record ID
   get recordID() {
-    return this.hostComponent.searchResult.pnx.control.recordid[0];
+    return this.hostComponent?.searchResult?.pnx?.control?.recordid[0];
   }
 
   private store = inject(Store);
