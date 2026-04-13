@@ -2,6 +2,45 @@
   --main-col-color: #800a28; /* this should be a darker color */
   --second-col-color:#fde373; /* this should be a lighter color */
 }
+/* footer */
+footer {
+  background-color: var(--second-col-color);
+  border-top: 2px solid var(--sys-on-secondary-fixed);
+  margin-top:40px;
+}
+
+footer .main-landing-page {
+  margin-block-end: 20px;
+}
+
+/* footer .grid-item {margin-bottom:2rem;} */
+footer li a:link, footer li a:visited {
+  color: var(--sys-on-secondary-fixed);
+  text-decoration: none;
+}
+
+footer li a:hover, footer li a:focus {
+  text-decoration: underline;
+}
+
+#subfooter {
+  background-color: #570019;
+  /* padding-left:2rem; */
+}
+
+#subfooter a:link, #subfooter a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+#subfooter a:hover, #subfooter a:focus {
+  text-decoration: underline;
+}
+
+#subfooter-libraries {
+  gap: 1rem;
+}
+
 /* chat widget */
 .s-lch-widget-float {
    /* don't conflict with up-to-top arrow or login prompt */
@@ -10,3 +49,12 @@
 /* only show problem report button in brief results when hovering on record */
 nde-search-results .lr-problem-reporter {opacity:0;}
 nde-search-results nde-search-result-item-container:hover .lr-problem-reporter, nde-search-result-item-container:focus .lr-problem-reporter {opacity:1;}
+@media (min-width: 768px) {
+  
+  /* increase footer padding for desktop */
+  #footer-container {padding-left: 3rem; padding-right: 3rem;
+  }
+
+
+
+}
