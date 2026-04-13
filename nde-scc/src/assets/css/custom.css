@@ -1,3 +1,7 @@
+:root {
+  --main-col-color: #800a28; /* this should be a darker color */
+  --second-col-color:#fde373; /* this should be a lighter color */
+}
 /* chat widget */
 .s-lch-widget-float {
    /* don't conflict with up-to-top arrow or login prompt */
