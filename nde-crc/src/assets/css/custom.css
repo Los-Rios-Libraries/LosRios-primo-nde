@@ -51,3 +51,15 @@ nde-search-results nde-search-result-item-container:hover .lr-problem-reporter, 
   bottom: 80px !important;
   z-index:500 !important;
 }
+
+@media (min-width: 768px) {
+  
+  /* hide phone number linking styles for desktop */
+  a[href^="tel"]:hover, a[href^="tel"]:focus {
+    text-decoration: none !important;
+    cursor: default;
+  }
+
+
+
+}
