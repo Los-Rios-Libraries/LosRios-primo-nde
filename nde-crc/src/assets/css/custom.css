@@ -17,6 +17,30 @@ nde-top-bar .mat-mdc-button:not(:disabled) svg path {color: #fff !important; bor
 .search-dropdown-container-button-text {color:var(--sys-on-background);}  
 .advanced-search-button.advanced-search-btn-home-page {color:var(--whiteText) !important;}
 .available-at-button.mat-mdc-button:not(:disabled) {color:unset !important;} /* availability statement that shows under physical items */
+
+/* larger logo / header */
+nde-logo img {
+  height: 50px;
+  padding-right: 1rem;
+}
+.custom-search-bar-container {
+  height: auto !important;
+}
+
+.top-bar-background-image {
+  background: var(--main-col-color);
+  background-image: unset !important;
+}
+
+.background-overlay {
+  display: none;
+}
+
+/* hide default label visually */
+.custom-search-bar-container h2 {
+  position: absolute !important;
+  left: -99999px;
+}
 /* only show problem report button in brief results when hovering on record */
 nde-search-results .lr-problem-reporter {opacity:0;}
 nde-search-results nde-search-result-item-container:hover .lr-problem-reporter, nde-search-result-item-container:focus .lr-problem-reporter {opacity:1;}

@@ -17,6 +17,31 @@ nde-top-bar .mat-mdc-button:not(:disabled) svg path {color: #fff !important; bor
 .search-dropdown-container-button-text {color:var(--sys-on-background);}  
 .advanced-search-button.advanced-search-btn-home-page {color:var(--whiteText) !important;}
 .available-at-button.mat-mdc-button:not(:disabled) {color:unset !important;} /* availability statement that shows under physical items */
+
+/* larger logo / header */
+nde-logo img {
+  height: 50px;
+  padding-right: 1rem;
+}
+.custom-search-bar-container {
+  height: auto !important;
+}
+
+.top-bar-background-image {
+  background: var(--main-col-color);
+  background-image: unset !important;
+}
+
+.background-overlay {
+  display: none;
+}
+
+/* hide default label visually */
+.custom-search-bar-container h2 {
+  position: absolute !important;
+  left: -99999px;
+}
+
 /* footer */
 footer {
   background-color: var(--second-col-color);
