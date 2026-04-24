@@ -44,6 +44,104 @@ nde-logo img {
   left: -99999px;
 }
 
+/* enlarge record titles */
+nde-record-title .record-title .mat-body-large {
+  font-size: 1.4em;
+}
+
+.record-title .mat-body-medium {
+  font-size: unset;
+}
+
+/* better render full-text buttons */
+.quicklink-button {
+  font-weight: 500 !important;
+}
+
+/* Apply background to collection discovery names for contrast */
+.collection-discovery-header .content {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.grid-item .lr-availability-display {position:relative; bottom:40px;}
+
+/* hide extra links from MARC 856 and NZ GES */
+nde-full-display-links .links-container span{
+  display: none;  
+}
+
+/* move slider filters to bottom */
+#scrolledContent .scroller-content {
+  display: grid;
+}
+
+mat-slide-toggle[data-qa="filters_toggle_expand_my_results"], mat-slide-toggle[data-qa="filters_toggle_search_in_full_text"], mat-slide-toggle[data-qa="filters_toggle_search_in_full_text"]+mat-divider {
+  order: 9;
+}
+
+/* hide AI research assistant widget */
+nde-research-assistant-side-bar {
+  display: none;
+}
+
+/* remove outline when custom resource type icons show */
+.record-thumbnail[src*="assets/images/icon"] {outline:unset !important;}
+
+/* hide periodical coverage info in article results */
+nde-view-it-card .availability-text {
+  display: none !important;
+}
+
+/* but show it in journal search */
+#journal-db-layout-container nde-view-it-card .availability-text {
+  display: flex !important;
+}
+
+.lr-note a:link, .lr-note a:visited {
+  text-decoration: none;
+}
+.lr-note a:hover, .lr-note a:focus {
+  text-decoration: underline;
+} 
+/* avoid duplicate local notes */
+nde-full-display-service-container-before-from-remote-0 .lr-note {
+  display: none;
+}
+#nde\.getit\.locations .lr-note[data-location*="HoldingsTop"] {
+  display: block;
+}
+
+
+/* increase size of full-text links */
+h5.package-name {
+  font-size: 1.3rem !important;
+}
+h5.package-name:focus, h5.package-name:hover {
+  text-decoration: underline;
+}
+
+
+/* links in public notes */
+.view-it-text-with-icon a:link, .view-it-text-with-icon a:visited {color:var(--sys-primary);}
+h5.package-name+mat-icon {
+  height: 1.3rem !important;
+  width: 1.3rem !important;
+}
+
+nde-notification > div { border:2px solid var(--main-col-color); font-size:1.3rem;}
+#notifText {font-size:1em; }
+nde-login .mat-icon, nde-login .availability-button {color:var(--main-col-color) !important; fill:var(--main-col-color); }
+nde-full-display-service-container nde-login .availability-button {color:var(--main-col-color) !important;font-size:1.2rem !important;}
+/* library card area */
+/* increase contrast - this area fails automated check */
+nde-personal-details-view .detail_name {
+  color: var(--sys-on-surface) !important;
+}
+
+
+
 /* footer */
 footer {
   background-color: var(--second-col-color);
@@ -89,9 +187,13 @@ footer li a:hover, footer li a:focus {
   bottom: 80px !important;
   z-index:500 !important;
 }
+
+
 /* only show problem report button in brief results when hovering on record */
 nde-search-results .lr-problem-reporter {opacity:0;}
 nde-search-results nde-search-result-item-container:hover .lr-problem-reporter, nde-search-result-item-container:focus .lr-problem-reporter {opacity:1;}
+
+
 @media (min-width: 768px) {
   
   /* increase footer padding for desktop */
