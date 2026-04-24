@@ -1,4 +1,9 @@
 /* Increase library logo height */
+:root {
+  --main-col-color: #6C2991; 
+  --second-col-color:#017EA4; 
+}
+
 nde-logo img {
 	height:60px; 
 	padding-right:1rem;
