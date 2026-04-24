@@ -90,4 +90,5 @@ TBD */
 .s-lch-widget-float {
    /* don't conflict with up-to-top arrow or login prompt */
   bottom: 80px !important;
+  z-index:500 !important;
 }
