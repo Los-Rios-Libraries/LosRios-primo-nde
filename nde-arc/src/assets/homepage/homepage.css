@@ -2,10 +2,19 @@
 @use "src/app/styles/nde-mixing" as mixing;
 
 /* Custom search bar container */
-.custom-search-bar-container .background-overlay {
-                display: none;
-}
+/* Solid background, primary color */
 .custom-search-bar-container {
-    background: #003058;
-    height: 15rem !important;
+	background: #003058;
+	height: 15rem !important;
 }
+/* Hide overlay */
+.custom-search-bar-container .background-overlay {
+	display: none;
+}
+
+/* hide default banner visually h2 */
+.custom-search-bar-container h2 {
+	position: absolute !important;
+	left: -99999px;
+}
+
