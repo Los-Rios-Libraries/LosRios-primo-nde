@@ -195,6 +195,7 @@ footer li a:hover, footer li a:focus {
   /* increase footer padding for desktop */
   #footer-container {padding-left: 3rem; padding-right: 3rem;
   }
+.collection-discovery-list .lr-availability-display {margin-left:12rem !important; }
   /* hide phone number linking styles for desktop */
   a[href^="tel"]:hover, a[href^="tel"]:focus {
     text-decoration: none !important;
