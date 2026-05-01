@@ -1,6 +1,6 @@
 :root {
   --main-col-color: #00263D; 
-  --second-col-color:#12254D; 
+  --second-col-color:#F26E21; 
 }
 
 /** color changes to establish branding **/
@@ -138,7 +138,7 @@ footer li a:hover, footer li a:focus {
 }
 
 #subfooter {
-  background-color: #570019;
+  background-color: #12254D;
   /* padding-left:2rem; */
 }
 
