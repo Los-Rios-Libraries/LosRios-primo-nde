@@ -37,7 +37,7 @@ nde-logo img {
 }
 
 /* hide default label visually */
-.custom-search-bar-container h2 {
+.custom-search-bar-container h1 {
   position: absolute !important;
   left: -99999px;
 }
