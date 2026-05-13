@@ -1,2 +1,3 @@
-a {font-size:1.3em;}
-mat-icon {vertical-align: middle; font-size:20px;}
+a {font-size:1.3em; text-decoration: underline;}
+a:hover, a:focus {text-decoration: none;}
+mat-icon {vertical-align: middle; font-size:20px;margin-left: 0.5rem;}
