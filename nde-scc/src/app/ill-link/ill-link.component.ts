@@ -21,10 +21,6 @@ export class IllLinkComponent{
     } else {    
     return '';
     }
-
-  }
-  ngOnInit() {
-    console.log('hostComponent:', this.hostComponent);
   }
 
 
