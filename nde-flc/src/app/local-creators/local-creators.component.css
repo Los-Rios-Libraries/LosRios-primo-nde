@@ -1,0 +1,10 @@
+.lr-creator-block {margin-top:10px;}
+/* los rios icon svg for badge */
+.lr-logo-a{fill:#252d65;}
+.lr-logo-b{fill:#215dd6;}
+.lr-logo-c{fill:#9cceeb;}
+.badges .badge-item {align-items: baseline; font:var(--sys-body-small);}
+mat-icon {font-size:16px; vertical-align: baseline;}
+.lr-creator-blurb {vertical-align: middle;}
+a {color:var(--sys-primary); text-decoration: none;}
+a:hover, a:focus {text-decoration: underline;}
