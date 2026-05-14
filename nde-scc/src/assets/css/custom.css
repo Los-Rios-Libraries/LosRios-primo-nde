@@ -98,18 +98,6 @@ nde-view-it-card .availability-text {
   display: flex !important;
 }
 
-.lr-note a:link, .lr-note a:visited {
-  text-decoration: none;
-}
-.lr-note a:hover, .lr-note a:focus {
-  text-decoration: underline;
-} 
-/* avoid duplicate local notes */
-nde-full-display-service-container-before-from-remote-0 .lr-note {
-  display: none;
-}
-#nde\.getit\.locations .lr-note[data-location*="HoldingsTop"] {
-  display: block;
 }
 
 
