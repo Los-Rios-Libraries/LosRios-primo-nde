@@ -79,14 +79,6 @@ nde-notification[message^="nui\.request\.signin"]:has(+ nde-request-card[data-qa
 /* hide default ILL link */
 nde-request-card[data-qa*="interlibrary loan"] mat-card {display: none;}
 
-/* move slider filters to bottom */
-#scrolledContent .scroller-content {
-  display: grid;
-}
-
-mat-slide-toggle[data-qa="filters_toggle_expand_my_results"], mat-slide-toggle[data-qa="filters_toggle_search_in_full_text"], mat-slide-toggle[data-qa="filters_toggle_search_in_full_text"]+mat-divider {
-  order: 9;
-}
 
 /* hide AI research assistant widget */
 nde-research-assistant-side-bar {
