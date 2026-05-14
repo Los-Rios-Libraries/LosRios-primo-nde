@@ -67,6 +67,9 @@ nde-record-title .record-title .mat-body-large {
 nde-full-display-links .links-container span{
   display: none;  
 }
+
+/* hide campus links in request form; look out for unintended consequences of this selector */
+.mat-mdc-optgroup-label {display: none !important;}
 /* hide sign-in prompt above ILL link  */
 nde-notification[message^="nui\.request\.signin"]:has(+ nde-request-card[data-qa*="interlibrary loan"]) {display: none;} 
 /* hide default ILL link */
