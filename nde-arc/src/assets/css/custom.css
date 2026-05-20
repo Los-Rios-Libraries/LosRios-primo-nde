@@ -183,10 +183,13 @@ nde-search-results nde-search-result-item-container:hover .lr-problem-reporter, 
   #footer-container {padding-left: 3rem; padding-right: 3rem;
   }
  /* hide phone number linking styles for desktop */
+ .collection-discovery-list .lr-availability-display {margin-left:12rem !important; }
+  /* hide phone number linking styles for desktop */
   a[href^="tel"]:hover, a[href^="tel"]:focus {
     text-decoration: none !important;
     cursor: default;
   }
+  
 
 
 }
