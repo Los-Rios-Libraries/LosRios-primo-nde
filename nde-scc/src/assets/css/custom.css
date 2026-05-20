@@ -94,6 +94,13 @@ nde-view-it-card .availability-text {
   display: flex !important;
 }
 
+/* SCC recommended local 591 notes */
+nde-collection-discovery-gallery .lr-note-section:has(.lr-note-sccRec) {position:relative; top:-4em; left:10px; font-style:italic; font-size:.9em;}
+nde-collection-discovery-gallery .lr-note-sccRec-quote, nde-collection-discovery-gallery .lr-note-sccRec md-icon, nde-collection-discovery-gallery .lr-note-sccRec-dash, prm-opac-after .lr-note-sccRec-recby, .is-gallery-view .lr-note-sccRec {display:none;}
+nde-collection-discovery-gallery .lr-note-sccRec {padding-right:8px; margin-top:4px;}
+#nde\.getit\.locations .lr-note:has(.lr-note-sccRec) {padding:10px;margin-left:70px; margin-right:10px; margin-bottom:10px; border:2px solid #ffce00;}
+#nde\.getit\.locations .lr-note-sccRec {margin-left:10px; margin-right:20px;}
+
 }
 
 
