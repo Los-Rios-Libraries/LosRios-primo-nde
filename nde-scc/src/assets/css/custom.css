@@ -19,6 +19,7 @@ nde-top-bar .mat-mdc-button:not(:disabled) svg path {color: #fff !important; bor
 .advanced-search-button.advanced-search-btn-home-page {color:var(--whiteText) !important;}
 .available-at-button.mat-mdc-button:not(:disabled) {color:unset !important;} /* availability statement that shows under physical items */
   
+.mat-mdc-button[aria-label^="No Online"]:not(:disabled){color:unset !important;} /* correct color of "No Online Access" button that appears in some cases */
 
 /* larger logo / header */
 nde-logo img {
