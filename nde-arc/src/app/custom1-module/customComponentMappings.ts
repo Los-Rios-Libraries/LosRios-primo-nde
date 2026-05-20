@@ -6,12 +6,14 @@ import { LocalCreatorsComponent } from '../local-creators/local-creators.compone
 import { WrapperSearchContainDropdownAfterComponent } from '../wrapper-search-contain-dropdown-after/wrapper-search-contain-dropdown-after.component';
 import { BrowseLandingPageComponent } from '../browse-landing-page/browse-landing-page.component';
 import { LocalNotesComponent } from '../local-notes/local-notes.component';
+import { WrapperCollectionDiscoveryGalleryItemBottomComponent } from '../wrapper-collection-discovery-gallery-item-bottom/wrapper-collection-discovery-gallery-item-bottom.component';
 
 // Define the map
 export const selectorComponentMap = new Map<string, any>([
   ['nde-top-bar-before', HomepageLogoComponent],
   ['nde-search-result-item-container-bottom', ProblemReporterComponent],
   ['nde-full-display-service-container-before', LocalNotesComponent],
+  ['nde-collection-discovery-gallery-item-bottom', WrapperCollectionDiscoveryGalleryItemBottomComponent],
   ['nde-record-availability-top', LocalCreatorsComponent],
   ['nde-fines-bottom', FeeInfoComponent],
   ['nde-locations-container-after', LocalNotesComponent],
