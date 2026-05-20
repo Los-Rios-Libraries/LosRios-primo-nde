@@ -45,9 +45,8 @@ nde-logo img {
 }
 
 /* enlarge record titles */
-nde-record-title .record-title .mat-body-large {
-  font-size: 1.3em;
-}
+nde-record-title .record-title .mat-body-large, .browse-search-item-text h3 {
+  font-size: 1.3em !important;
 }
 
 /* better render full-text buttons */
@@ -123,7 +122,10 @@ nde-full-display-service-container nde-login .availability-button {color:var(--m
 nde-personal-details-view .detail_name {
   color: var(--sys-on-surface) !important;
 }
-
+/* browse page - hide default element because otherwise it loads briefly before the custom component replaces it */
+nde-browse-home-page .container:first-child {
+  display: none;
+}
 
 
 /* footer */

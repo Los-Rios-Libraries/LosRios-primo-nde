@@ -43,8 +43,8 @@ nde-logo img {
 }
 
 /* enlarge record titles */
-nde-record-title .record-title .mat-body-large {
-  font-size: 1.3em;
+nde-record-title .record-title .mat-body-large, .browse-search-item-text h3 {
+  font-size: 1.3em !important;
 }
 
 
@@ -147,6 +147,12 @@ nde-search-results nde-search-result-item-container:hover .lr-problem-reporter, 
 
 /* Modify Journal Search header background 
 TBD */
+
+/* browse page - hide default element because otherwise it loads briefly before the custom component replaces it */
+nde-browse-home-page .container:first-child {
+  display: none;
+}
+
 
 /* footer */
 footer {
