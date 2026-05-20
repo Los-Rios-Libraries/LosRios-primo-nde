@@ -16,6 +16,6 @@ When getting data from hostComponent, it's pretty common for data to not be ther
 ### Replacing an entire default component
 Ex Libris has said that you can replace the contents of a full component, e.g. nde-landing-page - instead of hooking into e.g. nde-landing-page-after, you can just replace the whole thing. However, this doesn't necessarily happen as you'd expect. The default selector will remain in the DOM, and your custom component will appear as its next sibling.
 
-In addition, the default content will briefly load before being destroyed. So you need to hide them with CSS if you don't want to see that. 
+In addition, the default content will briefly load before being destroyed. So you need to hide that content with CSS if you don't want to see it. 
 
 Because of these limitations, I'm not really clear if using this strategy to replace various landing pages (homepage, browse, journal) is preferable to using e.g. -after.
