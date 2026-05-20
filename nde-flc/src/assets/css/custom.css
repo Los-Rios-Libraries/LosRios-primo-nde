@@ -226,9 +226,12 @@ footer li a:hover, footer li a:focus {
 
 /* chat widget */
 .s-lch-widget-float {
-   /* don't conflict with up-to-top arrow or login prompt */
-  bottom: 80px !important;
+  bottom: 58px !important;
   z-index:500 !important;
+}
+/* don't conflict with up-to-top arrow or login prompt */
+.cdk-overlay-container:has(nde-login) ~ div[id^="s-lch-widget"] {
+bottom: 120px !important;
 }
 
 @media (min-width: 768px) {
