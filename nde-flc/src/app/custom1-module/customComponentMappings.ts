@@ -3,6 +3,7 @@ import { ProblemReporterComponent } from '../problem-reporter/problem-reporter.c
 import { FeeInfoComponent } from "../fee-info/fee-info.component";
 import { IllLinkComponent } from '../ill-link/ill-link.component';
 import { LocalCreatorsComponent } from '../local-creators/local-creators.component';
+import { WrapperSearchContainDropdownAfterComponent } from '../wrapper-search-contain-dropdown-after/wrapper-search-contain-dropdown-after.component';
 
 // Define the map
 export const selectorComponentMap = new Map<string, any>([
@@ -10,5 +11,6 @@ export const selectorComponentMap = new Map<string, any>([
   ['nde-search-result-item-container-bottom', ProblemReporterComponent],
   ['nde-record-availability-top', LocalCreatorsComponent],
   ['nde-fines-bottom', FeeInfoComponent],
-  ['nde-request-card-bottom', IllLinkComponent]
+  ['nde-request-card-bottom', IllLinkComponent],
+  ['nde-search-contain-dropdown-after', WrapperSearchContainDropdownAfterComponent],
 ]);
