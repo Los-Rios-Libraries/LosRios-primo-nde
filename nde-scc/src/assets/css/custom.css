@@ -34,6 +34,7 @@ nde-logo img {
 .top-bar-background-image {
   background: var(--main-col-color);
   background-image: unset !important;
+  border-bottom:8px solid var(--second-col-color);
 }
 
 .background-overlay {
