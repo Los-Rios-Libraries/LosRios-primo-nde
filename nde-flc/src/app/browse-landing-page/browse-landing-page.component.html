@@ -1,0 +1,35 @@
+
+@if (browseScope()) {
+<mat-card appearance="outlined" class="margin-top-huge">
+    <mat-card-header>
+        <mat-card-title>Browse by {{browseScope()}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        @if (browseScope() === 'Subject') {
+                 <p>Enter a Library of Congress (LC) subject heading to browse adjacent subject headings of titles held by the library. Then click a subject heading to view which titles have that LC subject.</p>
+                <p>Examples:</p>
+               
+                <ul>
+                     @for (subject of this.subjects; track subject) {
+                    <li><a href="{{urlBase}}&amp;browseScope={{subjectCode}}&amp;browseQuery={{subject}}" matTooltipPosition= "right" matTooltip="Open {{subject}} in Browse Search">{{subject}}<mat-icon>chevron_right</mat-icon></a></li>
+                }
+                </ul>
+                <p>The Library of Congress lists current subject headings in <a href="https://www.loc.gov/aba/publications/FreeLCSH/freelcsh.html" target="_blank">freely available PDF files<mat-icon arial-label="Open in new window">open_in_new</mat-icon></a>.</p>
+            }
+        @if (browseScope() === 'Call number') {
+        
+                <p>Enter part or all of a Library of Congress (LC) call number to find items across the Los Rios libraries in call-number order.</p>
+                <p>Examples:</p>
+                <ul>
+                    @for (callNo of this.callNos; track callNo) {
+                        <li><a href="{{urlBase}}&amp;browseScope={{callNoCode}}&amp;browseQuery={{callNo}}" matTooltipPosition= "right" matTooltip="Open {{callNo}} in Browse Search">{{callNo}}<mat-icon>chevron_right</mat-icon></a></li>
+                    }
+                </ul>
+                <p>Find the letters and titles of the main LC classes in the <a href="https://www.loc.gov/catdir/cpso/lcco/" target="_blank">Library of Congress Classification Outline<mat-icon arial-label="Open in new window">open_in_new</mat-icon></a>.</p>
+                <p>Only physical resources, such as print books and DVDs, are shown as results in call number browse searches.</p>
+            }
+            
+    </mat-card-content>
+
+</mat-card>
+}

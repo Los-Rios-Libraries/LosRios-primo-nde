@@ -1,0 +1,37 @@
+// These constants are used to populate the browse landing page with random subjects and call numbers. The shuffleArray function is used to randomize the order of the subjects and call numbers each time the component is initialized.
+
+export const browseSelections = {
+  subjects: [
+    'Arab-Israeli conflict',
+    'Automobile drivers Psychology',
+    'Asian American gay people',
+    'Deception Psychological aspects',
+    'Food Philosophy',
+    'Hormone therapy',
+    'Freedom of speech United States History',
+    'Polarization (Social sciences)',
+    'Pan-Africanism History',
+    'Racism in education',
+    'Strikes and lockouts',
+    'Technology Social aspects',
+    'Tulsa Race Massacre, Tulsa, Okla., 1921',
+    'Women Suffrage United States History',
+  ],
+  callNos: [
+    'B528',
+    'F1226',
+    'HQ73',
+    'GV450',
+    'JC423',
+    'JK404',
+    'PG3325',
+    'PS3552.U827',
+    'Q335',
+    'QR171.G29',
+    'RC553.A88',
+    'T14.5',
+    'TL152.35',
+    'X512.3.A35',
+    'ZA3073.5',
+  ],
+} as const satisfies string[] | { subjects: string[]; callNos: string[] };

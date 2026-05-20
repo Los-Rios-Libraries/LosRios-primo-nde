@@ -1,0 +1,8 @@
+ul {margin-bottom:12px !important;}
+li {list-style-type: disc; margin-left:2em;}
+mat-icon {font-size:16px; vertical-align: text-top; margin-left:4px;}
+a:link:not([target="_blank"]), a:visited:not([target="_blank"]) {text-decoration:underline;}
+
+@media (min-width: 768px) {
+mat-card {width:60%; margin-left:auto; margin-right:auto;   }
+}
