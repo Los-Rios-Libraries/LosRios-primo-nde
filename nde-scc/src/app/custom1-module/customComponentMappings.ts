@@ -1,9 +1,9 @@
 import { HomepageLogoComponent } from '../homepage-logo/homepage-logo.component';
-import { ProblemReporterComponent } from '../problem-reporter/problem-reporter.component';
 import { FeeInfoComponent } from "../fee-info/fee-info.component";
 import { LocalCreatorsComponent } from '../local-creators/local-creators.component';
 import { WrapperCollectionDiscoveryGalleryItemBottomComponent } from '../wrapper-collection-discovery-gallery-item-bottom/wrapper-collection-discovery-gallery-item-bottom.component';
 import { LocalNotesComponent } from '../local-notes/local-notes.component';
+import { WrapperSearchResultItemContainerBottomComponent } from '../wrapper-search-result-item-container-bottom/wrapper-search-result-item-container-bottom.component';
 import { BrowseLandingPageComponent } from '../browse-landing-page/browse-landing-page.component';  
 import { IllLinkComponent } from '../ill-link/ill-link.component';  
 import { WrapperSearchContainDropdownAfterComponent } from '../wrapper-search-contain-dropdown-after/wrapper-search-contain-dropdown-after.component';
@@ -11,8 +11,8 @@ import { WrapperSearchContainDropdownAfterComponent } from '../wrapper-search-co
 // Define the map
 export const selectorComponentMap = new Map<string, any>([
   ['nde-top-bar-before', HomepageLogoComponent],
-  ['nde-search-result-item-container-bottom', ProblemReporterComponent],
-  ['nde-search-result-item-container-bottom', WrapperSearchResultItemContainerBottomComponent],  ['nde-full-display-service-container-before', LocalNotesComponent],
+  ['nde-search-result-item-container-bottom', WrapperSearchResultItemContainerBottomComponent],
+  ['nde-full-display-service-container-before', LocalNotesComponent],
   ['nde-collection-discovery-gallery-item-bottom', WrapperCollectionDiscoveryGalleryItemBottomComponent],
   ['nde-record-availability-top', LocalCreatorsComponent],
   ['nde-fines-bottom', FeeInfoComponent],
