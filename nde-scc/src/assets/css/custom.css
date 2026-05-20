@@ -82,6 +82,12 @@ nde-full-display-links .links-container span{
 
 /* hide campus links in request form; look out for unintended consequences of this selector */
 .mat-mdc-optgroup-label {display: none !important;}
+
+/* icon in request form */
+.request-card path {
+  stroke: var(--main-col-color) !important;
+} 
+
 /* hide sign-in prompt above ILL link  */
 nde-notification[message^="nui\.request\.signin"]:has(+ nde-request-card[data-qa*="interlibrary loan"]) {display: none;} 
 /* hide default ILL link */
