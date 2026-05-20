@@ -18,7 +18,7 @@ const selectDeliveryState = createFeatureSelector<any>('Delivery');
 })
 export class ProblemReporterComponent {
   // we need the record ID both for the problem report and in order to get the correct data from the store to decide which queue to send it to. So we get this from the host component
-  @Input() private hostComponent!: any;
+  @Input() public hostComponent!: any;
 
   // getter function to retrieve record ID
   get recordID() {
