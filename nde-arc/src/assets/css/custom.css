@@ -91,6 +91,24 @@ nde-view-it-card .availability-text {
   display: flex !important;
 }
 
+/* avoid duplicate local notes */
+nde-full-display-service-container-before-from-remote-0 .lr-note {
+  display: none;
+}
+#nde\.getit\.locations .lr-note-area-holdingstop {
+  display: block;
+}
+
+nde-collection-discovery-gallery .lr-note-section {
+  padding-right:10px;
+}
+
+/* vary local notes look for list view in collection discovery */
+nde-collection-discovery-list .lr-note-section {
+  left:80px !important;
+  top:-20px !important;
+}
+
 /* increase size of full-text links */
 h5.package-name {
   font-size: 1.3rem !important;
@@ -182,7 +200,6 @@ nde-search-results nde-search-result-item-container:hover .lr-problem-reporter, 
   /* increase footer padding for desktop */
   #footer-container {padding-left: 3rem; padding-right: 3rem;
   }
- /* hide phone number linking styles for desktop */
  .collection-discovery-list .lr-availability-display {margin-left:12rem !important; }
   /* hide phone number linking styles for desktop */
   a[href^="tel"]:hover, a[href^="tel"]:focus {

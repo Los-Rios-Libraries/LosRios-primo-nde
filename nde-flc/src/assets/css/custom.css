@@ -90,6 +90,23 @@ nde-view-it-card .availability-text {
   display: flex !important;
 }
 
+/* avoid duplicate local notes */
+nde-full-display-service-container-before-from-remote-0 .lr-note {
+  display: none;
+}
+#nde\.getit\.locations .lr-note-area-holdingstop {
+  display: block;
+}
+
+nde-collection-discovery-gallery .lr-note-section {
+  padding-right:10px;
+}
+
+/* vary local notes look for list view in collection discovery */
+nde-collection-discovery-list .lr-note-section {
+  left:80px !important;
+  top:-20px !important;
+}
 
 /* move Expand my Results and Search in Fulltext filters to bottom of list */
 #scrolledContent .scroller-content {

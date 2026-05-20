@@ -94,6 +94,15 @@ nde-view-it-card .availability-text {
   display: flex !important;
 }
 
+
+/* avoid duplicate local notes */
+nde-full-display-service-container-before-from-remote-0 .lr-note {
+  display: none;
+}
+#nde\.getit\.locations .lr-note-area-holdingstop {
+  display: block;
+}
+
 /* SCC recommended local 591 notes */
 nde-collection-discovery-gallery .lr-note-section:has(.lr-note-sccRec) {position:relative; top:-4em; left:10px; font-style:italic; font-size:.9em;}
 nde-collection-discovery-gallery .lr-note-sccRec-quote, nde-collection-discovery-gallery .lr-note-sccRec md-icon, nde-collection-discovery-gallery .lr-note-sccRec-dash, prm-opac-after .lr-note-sccRec-recby, .is-gallery-view .lr-note-sccRec {display:none;}
@@ -101,8 +110,17 @@ nde-collection-discovery-gallery .lr-note-sccRec {padding-right:8px; margin-top:
 #nde\.getit\.locations .lr-note:has(.lr-note-sccRec) {padding:10px;margin-left:70px; margin-right:10px; margin-bottom:10px; border:2px solid #ffce00;}
 #nde\.getit\.locations .lr-note-sccRec {margin-left:10px; margin-right:20px;}
 
+
+nde-collection-discovery-gallery .lr-note-section {
+  padding-right:10px;
 }
 
+/* vary local notes look for list view in collection discovery */
+nde-collection-discovery-list .lr-note-section {
+  left:80px !important;
+  top:-20px !important;
+}
+nde-full-display-details-after-from-remote-0 {display:flex; flex-direction:column;}
 
 /* increase size of full-text links */
 h5.package-name {
