@@ -47,9 +47,6 @@ nde-record-title .record-title .mat-body-large {
   font-size: 1.3em;
 }
 
-.record-title .mat-body-medium {
-  font-size: unset;
-}
 
 /* better render full-text buttons */
 .quicklink-button {
