@@ -53,6 +53,15 @@ nde-record-title .record-title .mat-body-large, .browse-search-item-text h3 {
 .quicklink-button {
   font-weight: 500 !important;
 }
+
+/* emphasize full-text link text */
+.view-it-text h3.package-name {
+  font-size: 1.4rem;
+  border-bottom: 2px solid var(--sys-primary);
+}
+.view-it-text h3.package-name:focus, .view-it-text h3.package-name:hover {
+  border-bottom:none;
+} 
 /* Apply background to collection discovery names for contrast */
 .collection-discovery-header .content {
   background-color: rgba(0, 0, 0, 0.6);
