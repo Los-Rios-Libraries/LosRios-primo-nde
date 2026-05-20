@@ -1,1 +1,4 @@
-#onesearch-logo {padding-top:1rem;}
+img {padding-top:1rem; max-height:80px;}
+@media screen and (min-width: 768px) {
+  img {max-height:unset;}
+}
