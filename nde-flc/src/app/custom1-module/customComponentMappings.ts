@@ -7,6 +7,7 @@ import { BrowseLandingPageComponent } from '../browse-landing-page/browse-landin
 import { LocalNotesComponent } from '../local-notes/local-notes.component';
 import { WrapperCollectionDiscoveryGalleryItemBottomComponent } from '../wrapper-collection-discovery-gallery-item-bottom/wrapper-collection-discovery-gallery-item-bottom.component';
 import { WrapperSearchResultItemContainerBottomComponent } from '../wrapper-search-result-item-container-bottom/wrapper-search-result-item-container-bottom.component';
+import { WrapperBaseRequestFormBottomComponent } from '../wrapper-base-request-form-bottom/wrapper-base-request-form-bottom.component';
 
 // Define the map
 export const selectorComponentMap = new Map<string, any>([
@@ -20,6 +21,7 @@ export const selectorComponentMap = new Map<string, any>([
   ['nde-full-display-details-after', LocalNotesComponent],
   ['nde-get-it-before', LocalNotesComponent],
   ['nde-view-it-after', LocalNotesComponent],
+  ['nde-base-request-form-bottom', WrapperBaseRequestFormBottomComponent],
   ['nde-request-card-bottom', IllLinkComponent],
   ['nde-search-contain-dropdown-after', WrapperSearchContainDropdownAfterComponent],
   ['nde-browse-home-page-bottom', BrowseLandingPageComponent]
