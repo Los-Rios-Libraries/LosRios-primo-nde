@@ -1,0 +1,37 @@
+a:link, a:visited {
+  text-decoration: none;
+}
+ a:hover, a:focus {
+  text-decoration: underline;
+} 
+.mat-icon {
+  font-size: 14px;
+  height: 14px;
+  width: 14px;
+  vertical-align: center;
+  margin:0 0.5rem;
+  color: var(--main-col-color);
+}
+
+.lr-note-area-detailsbottom {
+  margin:auto;
+  background: #eee;
+  padding:20px;
+}
+
+.lr-note-area-detailsbottom a {
+  text-align: center;
+}
+
+.lr-note-area-holdingsbottom {
+  text-align:center;
+}
+.lr-note-area-viewitbottom, .lr-note-area-holdingstop {
+  padding-left: 1rem;
+}
+
+@media (min-width: 768px) {
+  .lr-note-area-detailsbottom {
+    width:80%;
+  }
+}

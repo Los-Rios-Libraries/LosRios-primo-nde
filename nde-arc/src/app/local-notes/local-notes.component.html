@@ -1,0 +1,20 @@
+<div class="lr-note-section">
+@for (note of notes(); track $index ) {
+    <div class="lr-note" [class]="note.location">
+        <div [class]="note.noteType" >
+            @if (note.noteType.includes('sccRec')) {
+                <mat-icon aria-label="Recommended title">thumb_up</mat-icon>
+            }
+            @if (note.noteText) {
+                <span [innerHTML]="note.noteText"> </span>
+            }
+            @if (note.noteText && note.url) {
+                &nbsp;
+            }
+            @if (note.url && note.linkText) {
+                <a [href]="note.url" target="_blank">{{note.linkText}}<mat-icon aria-label="Open in new window">open_in_new</mat-icon></a>
+            }
+        </div>
+    </div>
+}
+</div>
