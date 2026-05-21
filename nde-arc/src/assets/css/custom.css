@@ -19,27 +19,33 @@ nde-top-bar .mat-mdc-button:not(:disabled) svg path {color: #fff !important; bor
 .advanced-search-button.advanced-search-btn-home-page {color:var(--whiteText) !important;}
 .available-at-button.mat-mdc-button:not(:disabled) {color:unset !important;} /* availability statement that shows under physical items */
 .mat-mdc-button[aria-label^="No Online"]:not(:disabled){color:unset !important;} /* correct color of "No Online Access" button that appears in some cases */
+
 /* larger logo / header */
 nde-logo img {
   height: 50px;
   padding-right: 1rem;
 }
+
+/* let the custom search/header area size naturally */
 .custom-search-bar-container {
   height: auto !important;
 }
 
+/* ARC-colored top search/header background */
 .top-bar-background-image {
   background: var(--main-col-color);
   background-image: unset !important;
   border-bottom:8px solid var(--second-col-color);
 }
 
+/* remove default background overlay */
 .background-overlay {
   display: none;
 }
 
 /* hide default label visually */
-.custom-search-bar-container h1 {
+.custom-search-bar-container h1 
+.custom-search-bar-container h2 {
   position: absolute !important;
   left: -99999px;
 }
