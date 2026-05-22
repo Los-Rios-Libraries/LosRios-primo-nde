@@ -44,7 +44,7 @@ nde-logo img {
 }
 
 /* hide default label visually */
-.custom-search-bar-container h1 
+.custom-search-bar-container h1, 
 .custom-search-bar-container h2 {
   position: absolute !important;
   left: -99999px;
@@ -170,8 +170,9 @@ nde-browse-home-page .container:first-child {
 
 /* footer */
 footer {
-  background-color: var(--second-col-color);
-  border-top: 2px solid var(--sys-on-secondary-fixed);
+  background-color: #014c8d; /* ARC royal blue */
+  border-top: 3px solid #003058;
+  color: #ffffff;
   margin-top:40px;
 }
 
@@ -179,19 +180,23 @@ footer .main-landing-page {
   margin-block-end: 20px;
 }
 
-/* footer .grid-item {margin-bottom:2rem;} */
-footer li a:link, footer li a:visited {
-  color: var(--sys-on-secondary-fixed);
+footer li a:link,
+footer li a:visited,
+footer a:link,
+footer a:visited {
+  color: #ffffff;
   text-decoration: none;
 }
 
-footer li a:hover, footer li a:focus {
+footer li a:hover,
+footer li a:focus,
+footer a:hover,
+footer a:focus {
   text-decoration: underline;
 }
 
 #subfooter {
-  background-color: var(--main-col-color);
-  /* padding-left:2rem; */
+  background-color: #003058; /* ARC primary blue */
 }
 
 #subfooter a:link, #subfooter a:visited {
