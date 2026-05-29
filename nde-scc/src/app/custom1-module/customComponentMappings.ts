@@ -9,6 +9,7 @@ import { BrowseLandingPageComponent } from '../browse-landing-page/browse-landin
 import { IllLinkComponent } from '../ill-link/ill-link.component';  
 import { WrapperBaseRequestFormBottomComponent } from '../wrapper-base-request-form-bottom/wrapper-base-request-form-bottom.component';
 import { WrapperSearchContainDropdownAfterComponent } from '../wrapper-search-contain-dropdown-after/wrapper-search-contain-dropdown-after.component';
+import { DigitalBookLinkComponent } from '../digital-book-link/digital-book-link.component';
 
 // Define the map
 export const selectorComponentMap = new Map<string, any>([
@@ -27,4 +28,5 @@ export const selectorComponentMap = new Map<string, any>([
   ['nde-request-card-bottom', IllLinkComponent],
   ['nde-search-contain-dropdown-after', WrapperSearchContainDropdownAfterComponent],
   ['nde-browse-home-page-bottom', BrowseLandingPageComponent],
+  ['nde-view-it-card-bottom', DigitalBookLinkComponent]
 ]);

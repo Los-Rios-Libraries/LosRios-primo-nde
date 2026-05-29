@@ -9,6 +9,7 @@ import { WrapperCollectionDiscoveryGalleryItemBottomComponent } from '../wrapper
 import { WrapperSearchResultItemContainerBottomComponent } from '../wrapper-search-result-item-container-bottom/wrapper-search-result-item-container-bottom.component';
 import { WrapperBaseRequestFormBottomComponent } from '../wrapper-base-request-form-bottom/wrapper-base-request-form-bottom.component';
 import { LandingPageComponent } from '../landing-page/landing-page.component';
+import { DigitalBookLinkComponent } from '../digital-book-link/digital-book-link.component';
 
 // Define the map
 export const selectorComponentMap = new Map<string, any>([
@@ -26,5 +27,6 @@ export const selectorComponentMap = new Map<string, any>([
   ['nde-base-request-form-bottom', WrapperBaseRequestFormBottomComponent],
   ['nde-request-card-bottom', IllLinkComponent],
   ['nde-search-contain-dropdown-after', WrapperSearchContainDropdownAfterComponent],
-  ['nde-browse-home-page-bottom', BrowseLandingPageComponent]
+  ['nde-browse-home-page-bottom', BrowseLandingPageComponent],
+  ['nde-view-it-card-bottom', DigitalBookLinkComponent]
 ]);
