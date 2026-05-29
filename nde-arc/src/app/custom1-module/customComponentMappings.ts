@@ -8,10 +8,12 @@ import { LocalNotesComponent } from '../local-notes/local-notes.component';
 import { WrapperCollectionDiscoveryGalleryItemBottomComponent } from '../wrapper-collection-discovery-gallery-item-bottom/wrapper-collection-discovery-gallery-item-bottom.component';
 import { WrapperSearchResultItemContainerBottomComponent } from '../wrapper-search-result-item-container-bottom/wrapper-search-result-item-container-bottom.component';
 import { WrapperBaseRequestFormBottomComponent } from '../wrapper-base-request-form-bottom/wrapper-base-request-form-bottom.component';
+import { LandingPageComponent } from '../landing-page/landing-page.component';
 
 // Define the map
 export const selectorComponentMap = new Map<string, any>([
   ['nde-top-bar-before', HomepageLogoComponent],
+  ['nde-landing-page', LandingPageComponent],
   ['nde-search-result-item-container-bottom', WrapperSearchResultItemContainerBottomComponent],  
   ['nde-full-display-service-container-before', LocalNotesComponent],
   ['nde-collection-discovery-gallery-item-bottom', WrapperCollectionDiscoveryGalleryItemBottomComponent],
