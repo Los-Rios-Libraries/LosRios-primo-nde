@@ -31,5 +31,6 @@ export const VIEW_CONSTANTS = {
   ],
   almaDFaq:<string> '382385',
   collectionsShowingAvailability:<string[]> ['8191432850005325', '8188683380005325'],
-  limitedDeliveryFaq:<string> '406975'
+  limitedDeliveryFaq:<string> '406975',
+  collectionRoot:<string> '8160329870005325'
 } as const;

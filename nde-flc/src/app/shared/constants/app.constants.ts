@@ -29,6 +29,7 @@ export const VIEW_CONSTANTS = {
       phone: '558-2301',
     },
   ],
-  limitedDeliveryFaq:<string> '407119'
   almaDFaq:<string> 'https://answers.library.losrios.edu/flc/search/?t=0&adv=1&topics=Digital%20Books',
+  limitedDeliveryFaq:<string> '407119',
+  collectionRoot:<string> '8189463160005325'
 } as const;
