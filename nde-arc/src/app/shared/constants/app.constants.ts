@@ -29,7 +29,7 @@ export const VIEW_CONSTANTS = {
       phone: '558-2301',
     },
   ],
-  almaDHelp: 'https://answers.library.losrios.edu/arc/faq/372430',
+  almaDFaq:<string> 'https://answers.library.losrios.edu/arc/faq/372430',
   collectionsShowingAvailability:<string[]> ['8191432850005325', '8188683380005325'],
   limitedDeliveryFaq:<string> '407682'
 } as const;
