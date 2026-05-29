@@ -1,0 +1,17 @@
+<h2 class="mat-headline-medium">Explore Collections</h2>
+<mat-grid-list [cols]="numInRow"  [rowHeight]="itemHeight" gutterSize="16px"> 
+    @for (collection of collections(); track collection.col_id) { 
+        <mat-grid-tile>
+        <a [href]="collectionPage + collection.col_id" matTooltip="{{collection.desc}}" matTooltipPosition ="above" >
+            <img [src]="thumbnailBaseURL + collection.col_id" alt="">
+            <mat-grid-tile-footer>{{collection.title}} <mat-icon iconPositionEnd>chevron_right</mat-icon></mat-grid-tile-footer>
+        </a>
+        
+    </mat-grid-tile> 
+} 
+</mat-grid-list>
+<div class="display-flex flex-layout-end margin-top-medium">
+        <a mat-stroked-button [href]="collectionPage + collectionRoot">View all collections 
+            <mat-icon iconPositionEnd>chevron_right</mat-icon> 
+        </a>
+     </div>
