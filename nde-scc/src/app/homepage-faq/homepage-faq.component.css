@@ -1,0 +1,7 @@
+a, a:visited {text-decoration: none;color:var(--main-col-color);}
+a:hover, a:focus {text-decoration: underline;}
+.mdc-button:hover, .mdc-button-focus, .mdc-button-active {text-decoration: none;}
+.mdc-button, .mat-icon {color:  var(--main-col-color) !important; border-color:var(--main-col-color) !important;}
+mat-icon {vertical-align: middle; font-size:16px; vertical-align: middle;}
+ul {padding-left: 1.5rem;}
+li {margin-bottom: 0.5rem;}

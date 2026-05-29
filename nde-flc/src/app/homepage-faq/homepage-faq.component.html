@@ -1,0 +1,18 @@
+<div id="lr-faq-list">
+    @if (faqs().length > 0) { 
+        <ul> 
+        @for (faq of faqs(); track faq.question) { 
+            <li>
+                <a [href]="faq.url" target="_blank">{{faq.question}} 
+                <mat-icon>open_in_new</mat-icon>
+                </a>
+            </li> 
+        } 
+        </ul>
+    <div class="display-flex flex-layout-end">
+        <a mat-stroked-button [href]="faqSiteURL" target="_blank">More Library Answers 
+            <mat-icon iconPositionEnd>open_in_new</mat-icon> 
+        </a>
+     </div>
+    }
+<div> 
