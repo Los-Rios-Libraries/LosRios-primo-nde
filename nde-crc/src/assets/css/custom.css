@@ -62,12 +62,21 @@ nde-record-title .record-title .mat-body-large, .browse-search-item-text h3 {
 .view-it-text h3.package-name:focus, .view-it-text h3.package-name:hover {
   border-bottom:none;
 } 
+/* increase collection title font size */
+#collectionTitle {
+  font-size: 2rem;
+}
 /* Apply background to collection discovery names for contrast */
 .collection-discovery-header .content {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 8px;
   border-radius: 4px;
 }
+/* get rid of last slash in breacrumbs */
+.collection-path:last-of-type + span {
+  display: none;
+}
+
 
 /* hide extra links from MARC 856 and NZ GES */
 nde-full-display-links .links-container span{
