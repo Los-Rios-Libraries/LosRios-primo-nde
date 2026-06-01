@@ -15,13 +15,6 @@ export class HomepageLogoComponent {
   private store = inject(Store);
   routerState = this.store.selectSignal(selectRouterState);
   imageUrl = `${__webpack_public_path__}assets/images/onesearch-logo.png`;
-  showLogo = computed(() => {
-    // only show logo on home page
-    const page = this.routerState().routerState;
-    if (page === 'home') {
-      return true;
-    } else {
-      return false;
-    }
-  });
+  
+  showLogo = computed(() => this.routerState()?.routerState === 'home');
 }
