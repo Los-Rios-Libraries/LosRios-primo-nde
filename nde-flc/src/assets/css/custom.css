@@ -108,10 +108,8 @@ nde-view-it-card .availability-text {
   display: none !important;
 }
 
-/* but show it in journal search */
-#journal-db-layout-container nde-view-it-card .availability-text {
-  display: flex !important;
-}
+/* but show it in in title records */
+nde-search-result-item-container:has(a[id^="record_id_alma"]) + div nde-view-it-card .availability-text {display:flex !important;}
 
 /* avoid duplicate local notes */
 nde-full-display-service-container-before-from-remote-0 .lr-note {
