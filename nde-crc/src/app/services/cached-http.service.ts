@@ -34,10 +34,19 @@ export class CachedHttpService {
       }
     }
 
-    // 3. Network with Error Fallback (Unchanged)
-    return this.http.get<ApiWrapper<T>>(config.url).pipe(
-      map(res => res.data),
+    // 3. Network with Error Fallback (UPDATED)
+    return this.http.get<ApiWrapper<T> | null>(config.url).pipe(
+      map(res => {
+        // Safely check if the response is empty/null. 
+        // If it is, immediately return the safe fallback provided by the component.
+        if (!res || res.data === undefined || res.data === null) {
+          return config.emptyFallback;
+        }
+        return res.data;
+      }),
       tap(data => {
+        // Because of the safe map above, this will now successfully trigger 
+        // and save the empty state to localStorage!
         storage.setItem(key, JSON.stringify({
           timestamp: Date.now(),
           data: data
