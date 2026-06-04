@@ -1,8 +1,10 @@
 ul {margin-bottom:12px !important;}
 li {list-style-type: disc; margin-left:2em;}
-mat-icon {font-size:16px; vertical-align: text-top; margin-left:4px;}
+.mat-icon {font-size:16px; vertical-align: text-top; margin-left:4px;transition:margin-left .4s cubic-bezier(.25,.8,.25,1);}
 a:link:not([target="_blank"]), a:visited:not([target="_blank"]) {text-decoration:underline;}
-
+ a:hover:not([target="_blank"]) .mat-icon, a:focus:not([target="_blank"]) .mat-icon {margin-left: 12px !important;}
+ .mat-mdc-card-subtitle {margin: 0.5rem 2rem; font-style:italic; font-weight:normal;}
+ .mat-mdc-card-title .mat-icon {font-size:24px;}
 @media (min-width: 768px) {
-mat-card {width:60%; margin-left:auto; margin-right:auto;   }
+.mat-mdc-card {width:60%; margin-left:auto; margin-right:auto;   }
 }
