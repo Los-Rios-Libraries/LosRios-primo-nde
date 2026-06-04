@@ -1,5 +1,5 @@
 div { padding-left: 1rem;}
 .mat-icon {font-size:16px; vertical-align: text-top; color:var(--main-col-color);}
-.mat-icon:first-of-type {font-size:24px;}
+.mat-icon:first-of-type {font-size:18px; margin-right: 0.20rem;}
 a {text-decoration: none; color:var(--main-col-color);}
 a:hover, a:focus {text-decoration: underline;}
