@@ -168,7 +168,7 @@ nde-personal-details-view .detail_name {
 
 /* only show problem report button in brief results when hovering on record */
 nde-search-results .lr-problem-reporter {opacity:0;}
-nde-search-results nde-search-result-item-container:hover .lr-problem-reporter, nde-search-result-item-container:focus .lr-problem-reporter {opacity:1;}
+nde-search-results nde-search-result-item-container:hover .lr-problem-reporter, nde-search-result-item-container:has(input:focus) .lr-problem-reporter, nde-search-result-item-container:has(a:focus) .lr-problem-reporter, nde-search-result-item-container:has(button:focus) .lr-problem-reporter {opacity:1;}
 
 /* browse page - hide default element because otherwise it loads briefly before the custom component replaces it */
 nde-browse-home-page .container:first-child {
