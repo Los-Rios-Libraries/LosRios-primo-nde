@@ -20,13 +20,15 @@ export class LimitedDeliveryNoteComponent {
     fullDisplayData = toSignal(this.store.select(selectFullDisplay));
 
     deliveryLimited = computed(() => {
+      // regular expression requires that the Alma location code begin with a single character followed by 'c' or 'mdvd', which are the codes for the unlimited delivery locations. 
       const unlimitedDeliveryLocations = /^.(c|mdvd)/; 
 
       const locations = this.fullDisplayData()?.getItLocations?.locations;
-      if (locations.some((loc: any) => unlimitedDeliveryLocations.test(loc["sub-location-code"]))) {
+      // If any location matches the regex pattern, then it's not limited delivery. If none match, then it is limited delivery.
+      if (locations.some((loc: any) => unlimitedDeliveryLocations.test(loc['sub-location-code']))) {
         return false; // Not limited delivery
       } else {
-        return true; // Limited delivery
+        return true; // Limited delivery - template will be rendered
       } 
     });
     faqURL = `https://answers.library.losrios.edu/${VIEW_CONSTANTS.libraryAcronym}/faq/${VIEW_CONSTANTS.limitedDeliveryFaq}`;
