@@ -16,7 +16,11 @@ export class DigitalBookLinkComponent {
   // Use a setter to update the signal whenever the input changes
   @Input() set hostComponent(value: NdeDelivery) {
     const isDigital = value?.electronicService?.serviceType === 'DIGITAL';
-    this.showLink.set(isDigital);
+    const packageName = value?.electronicService?.packageName;
+    // only test the regex if packageName is defined to avoid errors
+    // representation must have "textbook" (case-insensitive) in the label for the link to show
+    const isTextbook = packageName ? /textbook/i.test(packageName) : false;
+    this.showLink.set(isDigital && isTextbook);
   }
 
   showLink = signal(false);
