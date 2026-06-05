@@ -32,5 +32,6 @@ export const VIEW_CONSTANTS = {
   almaDFaq:<string> 'https://answers.library.losrios.edu/scc/faq/382385',
   collectionsShowingAvailability:<string[]> ['8191432850005325', '8188683380005325'],
   limitedDeliveryFaq:<string> '406975',
+  subjectInfoFaqId:<string> '408106',
   collectionRoot:<string> '8160329870005325'
 } as const;

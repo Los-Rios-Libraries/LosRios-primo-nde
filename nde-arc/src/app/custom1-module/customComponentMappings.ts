@@ -10,6 +10,7 @@ import { WrapperSearchResultItemContainerBottomComponent } from '../wrapper-sear
 import { WrapperBaseRequestFormBottomComponent } from '../wrapper-base-request-form-bottom/wrapper-base-request-form-bottom.component';
 import { LandingPageComponent } from '../landing-page/landing-page.component';
 import { DigitalBookLinkComponent } from '../digital-book-link/digital-book-link.component';
+import { ShowSubjectsInfoComponent } from '../show-subjects-info/show-subjects-info.component';
 
 // Define the map
 export const selectorComponentMap = new Map<string, any>([
@@ -22,6 +23,7 @@ export const selectorComponentMap = new Map<string, any>([
   ['nde-fines-bottom', FeeInfoComponent],
   ['nde-locations-container-after', LocalNotesComponent],
   ['nde-full-display-details-after', LocalNotesComponent],
+  ['nde-full-display-details-bottom', ShowSubjectsInfoComponent],
   ['nde-get-it-before', LocalNotesComponent],
   ['nde-view-it-after', LocalNotesComponent] ,
   ['nde-base-request-form-bottom', WrapperBaseRequestFormBottomComponent],
