@@ -1,0 +1,38 @@
+.lr-header-banner { 
+    background-color: var(--second-col-color); 
+    justify-content: center;
+    color: var(--main-col-color); 
+    font-size: 1.3rem; 
+    border-bottom: 2px solid var(--main-col-color); 
+    padding: 1rem 0; 
+    
+    /* Ensure content doesn't spill out while shrinking */
+    overflow: hidden; 
+}
+
+/* Force the browser to animate from full size to 0 */
+@keyframes crushBanner {
+    0% {
+        max-height: 150px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-bottom-width: 2px;
+        opacity: 1;
+    }
+    100% {
+        max-height: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        border-bottom-width: 0px;
+        opacity: 0;
+    }
+}
+
+/* The forwards keyword keeps it at 0px until the timeout removes it */
+.sliding-out {
+    animation: crushBanner 300ms cubic-bezier(0.4, 0.0, 0.2, 1) forwards !important;
+}
+
+.mat-icon { font-size: 16px; font-weight:bold; vertical-align: middle; margin-left: 4px; }
+
+.dismiss-btn { justify-content: right;height: auto; }

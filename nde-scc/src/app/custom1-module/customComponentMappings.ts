@@ -1,3 +1,4 @@
+import { HeaderBannerComponent } from '../header-banner/header-banner.component';
 import { HomepageLogoComponent } from '../homepage-logo/homepage-logo.component';
 import { FeeInfoComponent } from "../fee-info/fee-info.component";
 import { LocalCreatorsComponent } from '../local-creators/local-creators.component';
@@ -14,6 +15,7 @@ import { ShowSubjectsInfoComponent } from '../show-subjects-info/show-subjects-i
 
 // Define the map
 export const selectorComponentMap = new Map<string, any>([
+  ['nde-header', HeaderBannerComponent],
   ['nde-top-bar-before', HomepageLogoComponent],
   ['nde-landing-page', LandingPageComponent],
   ['nde-search-result-item-container-bottom', WrapperSearchResultItemContainerBottomComponent],

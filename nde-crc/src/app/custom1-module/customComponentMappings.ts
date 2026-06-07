@@ -11,9 +11,11 @@ import { WrapperBaseRequestFormBottomComponent } from '../wrapper-base-request-f
 import { LandingPageComponent } from '../landing-page/landing-page.component';
 import { DigitalBookLinkComponent } from '../digital-book-link/digital-book-link.component';
 import { ShowSubjectsInfoComponent } from '../show-subjects-info/show-subjects-info.component';
+import { HeaderBannerComponent } from '../header-banner/header-banner.component';
 
 // Define the map
 export const selectorComponentMap = new Map<string, any>([
+  ['nde-header', HeaderBannerComponent],
   ['nde-top-bar-before', HomepageLogoComponent],
   ['nde-landing-page', LandingPageComponent],
   ['nde-search-result-item-container-bottom', WrapperSearchResultItemContainerBottomComponent],  

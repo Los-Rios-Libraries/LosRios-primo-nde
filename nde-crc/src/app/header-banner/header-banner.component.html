@@ -1,0 +1,23 @@
+@if (primaryAlert(); as alertData) {
+  @if (!isDismissed()) {
+  <div class="flex-row lr-header-banner" role="alert" aria-live="assertive" [class.sliding-out]="isHiding()">
+    
+    <div class="">  
+      {{alertData.question}}. 
+      <a [href]="alertData.url" target="_blank">
+        More info<mat-icon>open_in_new</mat-icon>
+      </a>
+    </div>
+
+    <button 
+    mat-button
+    matTooltip="Hide this message for 30 days"
+      class="dismiss-btn" 
+      (click)="dismissBanner()" 
+      aria-label="Dismiss alert">
+      <mat-icon>close</mat-icon>
+    </button>
+
+  </div> 
+}
+}
