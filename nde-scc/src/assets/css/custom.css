@@ -58,13 +58,10 @@ nde-record-title .record-title .mat-body-large, .browse-search-item-text h3 {
 }
 
 /* emphasize full-text link text */
-.view-it-text h3.package-name {
-  font-size: 1.4rem;
-  border-bottom: 2px solid var(--sys-primary);
+.view-it-text .package-name {
+  font-size: 1.3rem;
 }
-.view-it-text h3.package-name:focus, .view-it-text h3.package-name:hover {
-  border-bottom:none;
-} 
+
 /* increase collection title font size */
 #collectionTitle {
   font-size: 2rem;
