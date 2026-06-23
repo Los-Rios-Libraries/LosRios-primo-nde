@@ -50,10 +50,10 @@ module.exports = {
       ]
     }),
     // DISABLE ngDevMode as it is not needed in a remoteEntry work around for issue: https://github.com/angular-architects/module-federation-plugin/issues/458
-    // new webpack.DefinePlugin({
-    //   ngDevMode: "undefined",
-    // }),
-    // END DISABLE ngDevMode as it is not needed in a remoteEntry
+    // this was un-commented in June 2026. LibKey add-on was interfering with certain custom components and this was the fix.
+    new webpack.DefinePlugin({
+      ngDevMode: "undefined",
+    }),
     new ModuleFederationPlugin({
         library: { type: "module" },
 
