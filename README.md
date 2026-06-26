@@ -3,7 +3,7 @@ NDE development environment for the four NDE views at the Los Rios Libraries. Th
 
 The libraries are initially migrating customizations from [their Primo VE views](https://github.com/Los-Rios-Libraries/Primo-VE-Views).
 
-The repository is public to allow others to look at how the custom components are done, but please be aware that we are not professional developers and aspects of the components may be less than optimal. Obviously copying and adapting code is done at your own risk.
+The repository is public to allow others to look at how the custom components are done, but please be aware that we are not professional developers and aspects of the components may be less than optimal. Obviously copying and adapting code is done at your own risk. Note that we are using chatbots pretty heavily to fill in substantial knowledge gaps, optimize component logic, etc.
 
 Live NDE views may not be fully synced to the repository while we are in the early stages of development. The Sacramento City College view is likely to include the most customizations until we go live. Links:
 * [American River College](https://caccl-lrccd.primo.exlibrisgroup.com/nde/home?vid=01CACCL_LRCCD:ARC)
@@ -20,4 +20,6 @@ In addition, the default content will briefly load before being destroyed. So yo
 
 Because of these limitations, I'm not really clear if using this strategy to replace various landing pages (homepage, browse, journal) is preferable to using e.g. -after.
 ### HTTP requests
-When making HTTP requests of remote web services, I have only been able to get this to work by using [HttpClientModule](https://angular.dev/api/common/http/HttpClientModule), which is apparently deprecated and may stop working if the Primo codebase is updated to a later version of Angular.
+When making HTTP requests of remote web services, I have gotten errors when trying to use the provideHttpClient() method, which apparently is the usual way to accomplish this in current Angular. I initially had success using [HttpClientModule](https://angular.dev/api/common/http/HttpClientModule), but this will break when the framework is updated to Angular 20. So now I am using the regular JavaScript fetch API.
+### Add-on drama
+When I started using the LibKey add-on, my development environment broke even though the built/live version was fine. This was apparently caused by conflicts between production-level activity (add-ons don't operate as dev) and the dev environment. The fix was to edit webpack.config.js, uncommenting a block that sets ngDevMode to 'undefined'.
