@@ -4,7 +4,7 @@
     color: var(--main-col-color); 
     font-size: 1.3rem; 
     border-bottom: 2px solid var(--main-col-color); 
-    padding: 1rem 0; 
+    padding: 1rem; 
     
     /* Ensure content doesn't spill out while shrinking */
     overflow: hidden; 
