@@ -1,5 +1,4 @@
 import { Component, inject } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { FaqItem } from '../shared/models/faq.model';
 import { CachedHttpService } from '../services/cached-http.service';
@@ -13,7 +12,6 @@ import { VIEW_CONSTANTS } from '../shared/constants/app.constants';
   selector: 'custom-homepage-faq',
   standalone: true,
   imports: [
-    HttpClientModule, // deprecated in Angular 16+, but still needed for HttpClient injection
     MatCardModule,
     MatIconModule,
     MatListModule,

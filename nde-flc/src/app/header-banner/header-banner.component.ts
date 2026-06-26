@@ -2,7 +2,6 @@
 // scc-onesearch
 // If the user clicks the dismiss button, a cookie is set to prevent that specific alert from showing again for 30 days. The cookie name is dynamically generated based on the content of the alert to ensure uniqueness. 
 import { Component, inject, signal, computed } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { alertResponse } from '../shared/models/faq.model';
 import { CachedHttpService } from '../services/cached-http.service';
@@ -16,7 +15,7 @@ import { CookieService } from '../services/cookie.service';
 @Component({
   selector: 'custom-header-banner',
   standalone: true,
-  imports: [HttpClientModule, MatIconModule, MatButtonModule, MatTooltip, MatIcon],
+  imports: [MatIconModule, MatButtonModule, MatTooltip, MatIcon],
   providers: [CachedHttpService],
   templateUrl: './header-banner.component.html',
   styleUrl: './header-banner.component.css'

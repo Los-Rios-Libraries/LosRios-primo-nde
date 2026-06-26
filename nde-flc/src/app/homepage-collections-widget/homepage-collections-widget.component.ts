@@ -1,5 +1,4 @@
 import { Component, inject } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs'; // 1. Imported map operator
 import { CollectionItem } from '../shared/models/collection.model';
@@ -14,7 +13,7 @@ import { VIEW_CONSTANTS } from '../shared/constants/app.constants';
 @Component({
   selector: 'custom-homepage-collections-widget',
   standalone: true,
-  imports: [HttpClientModule, MatGridListModule, MatTooltipModule, MatIconModule, MatButtonModule],
+  imports: [MatGridListModule, MatTooltipModule, MatIconModule, MatButtonModule],
   providers: [CachedHttpService],
   templateUrl: './homepage-collections-widget.component.html',
   styleUrl: './homepage-collections-widget.component.css',
