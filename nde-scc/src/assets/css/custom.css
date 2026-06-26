@@ -7,8 +7,15 @@
 .main-menu-label, .main-manu-label {color:var(--main-col-color) !important;}
 nde-general-search-header {background-image: none !important;background-color: var(--main-col-color);}
  .mat-mdc-unelevated-button:not(:disabled), nde-request-card .mat-mdc-unelevated-button:not(:disabled) {background-color:var(--main-col-color) !important;}
+ .search-result-item .mat-mdc-unelevated-button:not(:disabled), stacked-button .mat-mdc-unelevated-button:not(:disabled) {background-color:unset !important;} /* this rule is made necessary by LibKey add-on */
+ /* more LibKey overrides */
+ .quicklink-button-text, .dropdown-group .ti-dropdown-button {color:var(--main-col-color) !important; border-color:var(--main-col-color) !important;}
+ .with-dropdown .sys-primary path {fill: var(--main-col-color) !important; stroke: var(--main-col-color) !important;}
  .main-menu-label .mat-icon, .main-manu-label .mat-icon, .mat-mdc-button:not(:disabled) .mat-icon, .icon-primary-fill.mat-icon svg path {fill: var(--main-col-color) !important ;}
  .mat-mdc-button:not(:disabled), .mat-mdc-button:not(:disabled) svg path, nde-online-availability .mat-icon svg path, .quicklinks-menu-item-text {color:var(--main-col-color) !important;border-color:var(--main-col-color) !important;}
+ .mat-mdc-menu-content:has(stacked-button) {background-color:#fff;}
+
+ nde-cancel-request-dialog .mat-mdc-unelevated-button:not(:disabled) {color:#fff !important;}  
  .request-card[_ngcontent-ng-c3616819823] .mat-icon svg path {stroke: var(--main-col-color) !important; color:var(--main-col-color) !important; }
  .quicklink-menu-item path {fill: var(--main-col-color) !important;}
 nde-top-bar {background: var(--main-col-color) !important ;}
