@@ -6,5 +6,5 @@
  .mat-icon {font-size:16px; }
 .mat-grid-tile:hover .mat-grid-tile-footer .mat-icon, .mdc-button:hover .mat-icon, mdc-button:focus .mat-icon {margin-left: 12px !important; font-weight: 500 !important; font-size:18px;  }
 .mat-grid-tile {border-bottom:1px solid var(--border);}
-img {border-top:1px solid var(--border);}
+img {border-top:1px solid var(--border); height: 160px;}
 
