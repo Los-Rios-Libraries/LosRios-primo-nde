@@ -156,6 +156,21 @@ nde-notification > div { border:2px solid var(--main-col-color); font-size:1.3re
 #notifText {font-size:1em; }
 nde-login .mat-icon, nde-login .availability-button {color:var(--main-col-color) !important; fill:var(--main-col-color); }
 nde-full-display-service-container nde-login .availability-button {color:var(--main-col-color) !important;font-size:1.2rem !important;}
+
+/* de-emphasize certain notifications */
+#title-nde\.relatedItems\.chaptersOfThisBook nde-notification, #title-nde\.relatedItems\.bookReviews nde-notification, #nde\.relatedItems\.otherChaptersOfThisBook nde-notification {
+   background-color: transparent; border:none;
+  order: 2;
+}
+#title-nde\.relatedItems\.chaptersOfThisBook nde-notification .notification-container, #title-nde\.relatedItems\.bookReviews nde-notification .notification-container, #nde\.relatedItems\.otherChaptersOfThisBook nde-notification .notification-container {
+  background-color:#fff; border:none;
+  justify-content: left !important;
+}
+#title-nde\.relatedItems\.chaptersOfThisBook nde-notification #notifText, #title-nde\.relatedItems\.bookReviews nde-notification #notifText, #nde\.relatedItems\.otherChaptersOfThisBook nde-notification #notifText {
+   color: var(--sys-on-surface);
+  font-style: italic;
+}
+nde-browse-general-search-nav .main-content {display:none !important;}
 /* library card area */
 /* increase contrast - this area fails automated check */
 nde-personal-details-view .detail_name {
