@@ -24,13 +24,16 @@ export class HeaderBannerComponent {
   private cachedHttp = inject(CachedHttpService);
   private cookieService = inject(CookieService);
 
+  daysToHide = 30; // Number of days to hide the banner after dismissal
+  toolTipDaysToHide = this.daysToHide.toString(); // Convert to string for tooltip display
+
   // 1. Fetch the alert data
   alert = toSignal(
     this.cachedHttp.get<alertResponse[]>({
       url: `https://na-workflows.hosted.exlibrisgroup.com/60d0c170-306f-43b5-a6a4-a9d81bda2fc4/webhook/lrsa-posts?topic=${VIEW_CONSTANTS.libraryAcronym}-onesearch`,
       cacheKey: `header_alert_cache_${VIEW_CONSTANTS.libraryAcronym}`,
       emptyFallback: [],
-      cacheDurationMs: 10 * 60 * 1000, 
+      cacheDurationMs: 10 * 60 * 1000, // Cache for 10 minutes
     }),
     { initialValue: [] },
   );
@@ -43,7 +46,6 @@ export class HeaderBannerComponent {
     return alerts.length > 0 ? alerts[0] : null;
   });
 
-  // 2. Dynamically compute the cookie name once the alert is loaded
  // 2. Dynamically compute the cookie name once the alert is loaded
   cookieName = computed(() => {
     const alertItem = this.primaryAlert(); // Use the computed primary alert directly!
@@ -84,7 +86,7 @@ export class HeaderBannerComponent {
     setTimeout(() => {
       const name = this.cookieName();
       if (name) {
-        this.cookieService.set(name, 'true', 30); // Hide for 30 days
+        this.cookieService.set(name, 'true', this.daysToHide); // Hide for the specified number of days
         this.manuallyDismissed.set(true); // Angular @if removes it completely
       }
     }, 300)
