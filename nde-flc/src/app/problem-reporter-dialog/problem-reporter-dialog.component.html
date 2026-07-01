@@ -1,0 +1,57 @@
+<h2 mat-dialog-title>Report a problem</h2>
+    
+    <mat-dialog-content>
+      @if (isSuccess) {
+        <div class="success-message">
+          <p><strong>Thank you!</strong></p>
+          <p>Your report has been successfully submitted.</p>
+        </div>
+      } 
+      @else {
+        <p class="lead">Did you find a problem in OneSearch? Please let us know so we can find a solution.</p>
+        
+        @if (errorMessage) {
+          <div class="error-alert">
+            {{ errorMessage }}
+          </div>
+        }
+        
+        <form [formGroup]="reportForm" class="reporter-form">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Please describe the problem (required)</mat-label>
+            <textarea matInput formControlName="description" rows="5" required></textarea>
+            @if (reportForm.controls.description.hasError('required') && reportForm.controls.description.touched) {
+              <mat-error>This field is required.</mat-error>
+            }
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>If you would like a response, please leave us your email address</mat-label>
+            <input matInput type="email" formControlName="email">
+            @if (reportForm.controls.email.hasError('email') && reportForm.controls.email.touched) {
+              <mat-error>The email address entered does not have a valid format.</mat-error>
+            }
+          </mat-form-field>
+
+          <div style="display: none;" aria-hidden="true">
+            <label for="honeyf">Leave this field blank</label>
+            <input id="honeyf" formControlName="email2" type="text" autocomplete="off">
+          </div>
+        </form>
+      }
+      
+      @if (isSubmitting) {
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+      }
+    </mat-dialog-content>
+
+    @if (!isSuccess) {
+      <mat-dialog-actions align="end">
+        <button mat-button mat-dialog-close [disabled]="isSubmitting">Cancel</button>
+        <button mat-flat-button color="primary" 
+                [disabled]="reportForm.invalid || isSubmitting" 
+                (click)="submitReport()">
+          Submit
+        </button>
+      </mat-dialog-actions>
+    }

@@ -1,0 +1,35 @@
+.lead {
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  color: #333;
+}
+
+.reporter-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.success-message {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 1.2rem;
+  color: #2e7d32;
+  /* Material Green */
+}
+
+.error-alert {
+  background-color: #ffebee;
+  /* Material Red Light */
+  color: #c62828;
+  /* Material Red Dark */
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}

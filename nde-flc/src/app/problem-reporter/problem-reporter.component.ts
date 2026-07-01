@@ -4,7 +4,9 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog'; // ADDED
 import { VIEW_CONSTANTS } from '../shared/constants/app.constants';
+import { ProblemReporterDialogComponent } from '../problem-reporter-dialog/problem-reporter-dialog.component'; // ADDED
 
 // we need Delivery from store to know if there only physical or digital inventory--report will be sent to college-level queue in this case
 const selectDeliveryState = createFeatureSelector<any>('Delivery');
@@ -26,6 +28,7 @@ export class ProblemReporterComponent {
   }
 
   private store = inject(Store);
+  private dialog = inject(MatDialog);
 
   // convert Delivery to signal for easier handling. We can't use the signal directly because it seems that it doesn't get properly updated.
   delivery = toSignal(this.store.select(selectDeliveryState));
@@ -52,26 +55,21 @@ export class ProblemReporterComponent {
   });
 
   openReporter(): void {
-    // open the pop-up widow, centered on the screen. Eventually change this to a dialog/modal
-    const w = 600;
-    const h = 600;
-    // Handle dual monitor setups better by using window.screenLeft/Top if available
-    const left = (window.screen.width / 2) - (w / 2);
-    const top = (window.screen.height / 2) - (h / 2); // Center vertically properly
-
-    const baseUrl = 'https://library.losrios.edu/utilities/problem-reporter/';
-    
-    const params = new URLSearchParams({
+    // Consolidate background contextual information into a structural data object
+    const reportMetadata = {
       url: location.href,
       recordid: this.recordID ?? '',
       college: VIEW_CONSTANTS.libraryAcronym,
       queue: this.queue(),
       source: 'primo'
-    });
+    };
 
-    const winFeatures = `toolbar=no, location=no, menubar=no, width=${w}, height=${h}, top=${top}, left=${left}`;
-    
-    window.open(`${baseUrl}?${params.toString()}`, 'Problem reporter', winFeatures);
+    // Open the Material modal dialog dynamically
+    this.dialog.open(ProblemReporterDialogComponent, {
+      width: '550px',
+      maxWidth: '95vw',
+      data: reportMetadata // Injects the metadata values directly into the dialog
+    });
   }
 
 }
