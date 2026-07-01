@@ -206,6 +206,7 @@ footer .main-landing-page {
   margin-block-end: 20px;
 }
 footer ul + h2 { margin-top: 10px !important;}
+.lr-social-icon {display: inline-block; margin-right: 10px; padding-top:10px;}
 footer li a:link,
 footer li a:visited,
 footer a:link,
@@ -220,7 +221,7 @@ footer a:hover,
 footer a:focus {
   text-decoration: underline;
 }
-
+footer .material-icons { font-size:14px; vertical-align: center;}
 #subfooter {
   background-color: #003058; /* ARC primary blue */
 }

@@ -198,6 +198,7 @@ footer .main-landing-page {
   margin-block-end: 20px;
 }
 footer ul + h2 { margin-top: 10px !important;}
+.lr-social-icon {display: inline-block; margin-right: 10px; padding-top:10px;}
 /* footer .grid-item {margin-bottom:2rem;} */
 footer li a:link, footer li a:visited {
   color: var(--sys-on-secondary-fixed);
@@ -221,7 +222,7 @@ footer li a:hover, footer li a:focus {
 #subfooter a:hover, #subfooter a:focus {
   text-decoration: underline;
 }
-
+footer .material-icons { font-size:14px; vertical-align: center;}
 #subfooter-libraries {
   gap: 1rem;
 }
