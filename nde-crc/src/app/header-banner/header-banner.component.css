@@ -1,7 +1,7 @@
 .lr-header-banner { 
     background-color: var(--second-col-color); 
     justify-content: center;
-    color: var(--main-col-color); 
+    color: var(--mat-app-text-color); 
     font-size: 1.3rem; 
     border-bottom: 2px solid var(--main-col-color); 
     padding: 1rem; 
