@@ -22,27 +22,12 @@ export class FeeInfoComponent {
   user = this.store.selectSignal(selectUserState); // this will provide user group
 
   showCard = computed(() => {
-    // if there are any non-closed fines, show the message
-    const finesList = this.account().finesList;
-    let finesExist = false;
-    if (finesList) {
-      for (const fine of finesList) {
-        if (fine.fineType !== 'CLOSED') {
-          finesExist = true;
-          break;
-        }
-      }
-    }
-    return finesExist;
+    // show message if any fine is not CLOSED
+    return !!this.account()?.finesList?.some((fine: any) => fine.fineType !== 'CLOSED');
   });
 
   isStudent = computed(() => {
     // show one message for students, another for non-students
-    let student = false;
-    const userGroup = this.user().decodedJwt.userGroup;
-    if (userGroup === 'STUDENT') {
-      student = true;
-    }
-    return student;
+    return this.user().decodedJwt.userGroup === 'STUDENT';
   });
 }
