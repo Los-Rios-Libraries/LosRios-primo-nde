@@ -27,13 +27,13 @@ export class ShowLockerInfoComponent implements DoCheck {
   private deliveryLibraries = [
     {
       key: 'scc',
-      name: 'the Sacramento City College Library lockers',
+      name: 'Sacramento City College Library',
       id: '5066568570005325',
       path: '360910',
     },
     {
       key: 'flc',
-      name: 'the Folsom Lake College Library lockers',
+      name: 'Folsom Lake College Library',
       id: '5020041320005325',
       path: '361527',
     },
