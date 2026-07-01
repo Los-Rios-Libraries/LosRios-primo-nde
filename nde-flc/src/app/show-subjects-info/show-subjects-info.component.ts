@@ -21,7 +21,7 @@ const selectSearchResults = createFeatureSelector<any>('Search');
 })
 export class ShowSubjectsInfoComponent {
   private store = inject(Store);
-
+// toSignal is used for selectFullDisplay because the component needs to access the selectedRecordId property of the full display state, which is not an observable. Using selectSignal with selectFullDisplay did not work.
   fullDisplay = toSignal(this.store.select(selectFullDisplay));
   searchResults = this.store.selectSignal(selectSearchResults);
 
