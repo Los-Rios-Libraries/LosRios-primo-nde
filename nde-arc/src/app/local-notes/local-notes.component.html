@@ -1,6 +1,6 @@
 <div class="lr-note-section">
 @for (note of notes(); track $index ) {
-    <div class="lr-note" [class]="note.location">
+    <div class="lr-note flex-row" [class]="note.location">
         <div [class]="note.noteType" >
             @if (note.noteType.includes('sccRec')) {
                 <mat-icon aria-label="Recommended title">thumb_up</mat-icon>
