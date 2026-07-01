@@ -1,4 +1,4 @@
-import { Component, inject, computed } from '@angular/core';
+import { Component, inject, computed, ChangeDetectionStrategy } from '@angular/core';
 import { Store, createFeatureSelector } from '@ngrx/store';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { MatCardModule } from '@angular/material/card';
@@ -13,6 +13,7 @@ const selectUserState = createFeatureSelector<any>('user');
   imports: [MatCardModule, MatIconModule],
   templateUrl: './fee-info.component.html',
   styleUrl: './fee-info.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FeeInfoComponent {
   private store = inject(Store);
