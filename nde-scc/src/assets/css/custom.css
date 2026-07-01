@@ -205,6 +205,7 @@ footer {
 footer .main-landing-page {
   margin-block-end: 20px;
 }
+footer ul + h2 { margin-top: 10px !important;}
 
 /* footer .grid-item {margin-bottom:2rem;} */
 footer li a:link, footer li a:visited {
