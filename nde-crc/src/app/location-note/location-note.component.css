@@ -1,0 +1,6 @@
+div {padding: 1rem;}
+p {font-size: 0.875rem;}
+p span {font-style:italic;}
+.mat-icon {font-size:16px; vertical-align: first;}
+p > .mat-icon {font-size: 20px;}
+a {margin-left:8px;}

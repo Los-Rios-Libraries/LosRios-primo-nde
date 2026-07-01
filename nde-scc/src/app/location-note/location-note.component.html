@@ -1,0 +1,11 @@
+@if (locationNote) { 
+    <div class="location-note" class="flex-row flex-layout-center-start">
+        <p> 
+            <mat-icon aria-hidden="true">info_outline</mat-icon>
+            <span [innerHTML]="locationNote.text"></span>
+             @if (locationNote.moreInfo !== '') { 
+                <a [href]="locationNote.moreInfo" target="_blank">Learn more <mat-icon aria-label="Open in new tab">open_in_new</mat-icon></a> 
+            } 
+        </p>
+    </div>
+}

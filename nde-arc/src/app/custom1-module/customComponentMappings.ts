@@ -12,6 +12,7 @@ import { LandingPageComponent } from '../landing-page/landing-page.component';
 import { DigitalBookLinkComponent } from '../digital-book-link/digital-book-link.component';
 import { ShowSubjectsInfoComponent } from '../show-subjects-info/show-subjects-info.component';
 import { HeaderBannerComponent } from '../header-banner/header-banner.component';
+import { LocationNoteComponent } from '../location-note/location-note.component';
 
 // Define the map
 export const selectorComponentMap = new Map<string, any>([
@@ -32,5 +33,6 @@ export const selectorComponentMap = new Map<string, any>([
   ['nde-request-card-bottom', IllLinkComponent],
   ['nde-search-contain-dropdown-after', WrapperSearchContainDropdownAfterComponent],
   ['nde-browse-home-page-bottom', BrowseLandingPageComponent],
-  ['nde-view-it-card-bottom', DigitalBookLinkComponent]
+  ['nde-view-it-card-bottom', DigitalBookLinkComponent],
+  ['nde-location-bottom', LocationNoteComponent]
 ]);
