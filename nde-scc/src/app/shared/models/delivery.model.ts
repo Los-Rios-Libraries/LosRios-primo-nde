@@ -2,5 +2,6 @@
 export interface NdeDelivery {
   electronicService?: {
     serviceType: string;
+    packageName: string;
   };
 }
