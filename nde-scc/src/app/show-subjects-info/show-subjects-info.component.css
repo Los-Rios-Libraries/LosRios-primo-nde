@@ -1,3 +1,3 @@
-.mat-icon { vertical-align: first; font-size: 16px; }
-p {text-align:right;margin: 10px 0;}
-p > .mat-icon { margin-right: 6px; font-size:18px;color:var(--main-col-color); }
+.mat-icon { vertical-align: first; font-size: .85rem; }
+p {text-align:right;margin: 10px 0; font:var(--sys-body-medium);}
+p > .mat-icon { margin-right: 6px; font-size: 1.1rem;color:var(--main-col-color); }
