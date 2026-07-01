@@ -1,2 +1,21 @@
-p {margin:0 2rem;}
-mat-icon {vertical-align: middle; font-size:20px; margin-left:0.5rem;}
+@keyframes highlight-fade {
+  0% {
+    background-color: rgba(255, 255, 0, 0.5); /* Bright yellow start */
+  }
+  100% {
+    background-color: transparent; /* Fades to transparent */
+  }
+}
+
+p {
+  margin: 0 2rem;
+  padding: 0.5rem 1rem; /* Added padding so the background box looks balanced */
+  border-radius: 4px;   /* Optional: softens the corners of the highlight */
+  animation: highlight-fade 2.5s ease-out forwards; /* Plays once upon DOM insertion */
+}
+
+mat-icon {
+  vertical-align: middle; 
+  font-size: 20px; 
+  margin-left: 0.5rem;
+}
