@@ -1,3 +1,4 @@
+@if (collections().length > 0) {
 <h2 class="mat-headline-medium">Explore Collections</h2>
 <mat-grid-list [cols]="numInRow"  [rowHeight]="itemHeight" gutterSize="16px"> 
     @for (collection of collections(); track collection.col_id) { 
@@ -15,3 +16,4 @@
             <mat-icon iconPositionEnd>chevron_right</mat-icon> 
         </a>
      </div>
+}
