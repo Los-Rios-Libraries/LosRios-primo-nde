@@ -133,10 +133,12 @@ export class LocalCreatorsComponent implements DoCheck {
     }
 
     if (crCol.length === 0) return 'Los Rios Community College District';
-    if (crCol.length === 1) return crCol[0];
-    if (crCol.length === 2) return `${crCol[0]} and ${crCol[1]}`;
-
-    const lastMember = crCol.pop();
-    return `${crCol.join(', ')} and ${lastMember}`;
+    else if (crCol.length === 1) return crCol[0];
+    else if (crCol.length === 2) return `${crCol[0]} and ${crCol[1]}`;
+    else {
+      const lastMember = crCol.pop();
+      return `${crCol.join(', ')} and ${lastMember}`;
+    }
+    
   }
 }
