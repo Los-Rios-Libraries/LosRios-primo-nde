@@ -29,15 +29,24 @@ export class CachedHttpService {
     }
 
     // 2. Native Fetch API Call
-    const fetchPromise = fetch(config.url).then(response => {
+    const fetchPromise = fetch(config.url).then(async response => {
+      // Treat 204 No Content and 404 Not Found as valid "empty" states
+      if (response.status === 204 || response.status === 404) {
+        return null;
+      }
+
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       
+      // Safely parse the text first to avoid SyntaxErrors on completely empty 200 OK bodies
+      const text = await response.text();
+      if (!text) {
+        return null;
+      }
+
       // Cast the resulting JSON to your ApiWrapper interface
-      return response.status === 204 
-        ? null 
-        : response.json() as Promise<ApiWrapper<T>>; 
+      return JSON.parse(text) as ApiWrapper<T>; 
     });
 
     // 3. Convert Promise to RxJS Observable
