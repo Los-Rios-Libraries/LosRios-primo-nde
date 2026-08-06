@@ -126,7 +126,7 @@ export class LocalCreatorsComponent implements DoCheck {
     if (!collegeCode) return 'Los Rios Community College District';
 
     const crCol = [];
-    for (let lib of VIEW_CONSTANTS.libraries) {
+    for (const lib of VIEW_CONSTANTS.libraries) {
       if (collegeCode.indexOf(lib.abbr) > -1) {
         crCol.push(`${lib.name} College`);
       }
