@@ -1,6 +1,5 @@
-import { Component, computed, OnInit } from '@angular/core';
+import { Component, computed, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { CustomDataService } from '../services/custom-data-service';
-// Update the import path below to match where you saved the service
 import { ArrayUtilsService } from '../services/array-utils.service'; 
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
@@ -15,6 +14,7 @@ import { browseSelections } from './browse-landing-page-constants';
   imports: [MatTabsModule, MatCardModule, MatIcon, MatTooltip],
   templateUrl: './browse-landing-page.component.html',
   styleUrl: './browse-landing-page.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BrowseLandingPageComponent implements OnInit {
   viewCode = VIEW_CONSTANTS.libraryAcronym.toUpperCase();
