@@ -135,6 +135,8 @@ nde-collection-discovery-gallery .lr-note-section {
   padding-right:10px;
 }
 
+nde-collection-discovery-gallery .lr-creator-block { position:relative; top:-3.5em;}
+
 /* vary local notes look for list view in collection discovery */
 nde-collection-discovery-list .lr-note-section {
   left:80px !important;
