@@ -1,7 +1,7 @@
 // These constants are used to populate the browse landing page with random subjects and call numbers. The shuffleArray function is used to randomize the order of the subjects and call numbers each time the component is initialized.
 
 export const browseSelections = {
-  subjects: [
+  lcSubjects: [
     'Arab-Israeli conflict',
     'Automobile drivers Psychology',
     'Asian American gay people',
@@ -18,11 +18,60 @@ export const browseSelections = {
     'Tulsa Race Massacre, Tulsa, Okla., 1921',
     'Women Suffrage United States History',
   ],
+  homoitSubjects: [
+    'African American LGBTQ+ people',
+    'Bisexual fiction',
+    'Coming out',
+    'Gay biographies',
+    'Gay couples',
+    'Genderqueer people',
+    'Lesbian liberation',
+    'LGBTQ+ athletes',
+    'LGBTQ+ parents',
+    'Non-binary people',
+    'Queer activism',
+    'Trans women'
+  ],
+  lcGenres: [
+    'Black humor',
+    'Campus fiction',
+    'Detective and mystery fiction',
+    'Diaries',
+    'Environmental films',
+    'Love poetry',
+    'Magic realist fiction',
+    'Manga',
+    'Monologues (Drama)',
+    'Narrative poetry',
+    'One-act plays',
+    'Paranormal comics',
+    'Personal correspondence',
+    'Prose poems',
+    'Romantic comedy films',
+    'Science fiction comics',
+    'Utopian fiction'
+  ],
+  lcNames: [
+    'A24 (Firm)',
+    'Chaucer, Geoffrey, -1400',
+    'Chekhov, Anton Pavlovich, 1860-1904',
+    'Coogler, Ryan, 1986-',
+    'Didion, Joan',
+    'Galeano, Eduardo, 1940-2015',
+    'Mandela, Nelson, 1918-2013',
+    'Plato',
+    'Pussy Riot (Musical group)',
+    'Said, Edward W.',
+    'Shelley, Mary Wollstonecraft, 1797-1851',
+    'Smith, Zadie',
+    'Wilder, Billy, 1906-2002',
+    'X, Malcolm, 1925-1965'
+  ],
   callNos: [
     {class: 'B528', desc: 'Stoicism'},
     {class: 'F1226', desc: 'History of Mexico'},
     {class: 'HQ73', desc: 'LGBTQ People'},
-    {class: 'GV450', desc: 'Nudist sunbathing'},
+    {class: 'GV450', desc: 'Nudism'},
     {class: 'JC423', desc: 'Republicanism'},
     {class: 'HV7936.P8', desc: 'Police psychology'},
     {class: 'HV9471', desc: 'Corrections'},
@@ -39,4 +88,4 @@ export const browseSelections = {
     {class: 'TL152.35', desc: 'Drivers - Psychology'},
     {class: 'ZA3073', desc: 'Information Ethics'},
   ],
-} as const satisfies { subjects: readonly string[]; callNos: readonly { class: string; desc: string }[] };
+} as const satisfies { lcSubjects: readonly string[]; homoitSubjects: readonly string[]; lcGenres: readonly string[]; lcNames: readonly string[]; callNos: readonly { class: string; desc: string }[] };

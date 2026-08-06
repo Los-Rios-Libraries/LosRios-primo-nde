@@ -1,16 +1,27 @@
 @if (browseScope().browse_type) {
 <mat-card appearance="outlined" class="margin-top-huge">
     <mat-card-header>
-        <mat-card-title>Browse by {{browseScope().browse_type}} <mat-icon>{{browseScope().icon}}</mat-icon></mat-card-title>
+        <mat-card-title>Browse by {{browseScope().browse_type}} 
+            <!-- material design icons -->
+            @if (browseScope().icon) {
+                <mat-icon aria-hidden="true">{{browseScope().icon}}</mat-icon>
+            }
+            <!-- other images -->
+             @else if (browseScope().image) {
+                <img [src]="browseScope().image" alt="">
+
+            }
+        </mat-card-title>
         <mat-card-subtitle>To switch between different browse options, select the desired category from the dropdown menu above.</mat-card-subtitle >
     </mat-card-header>
     <mat-card-content>
-        @if (browseScope().browse_type === 'Subject') {
+        @switch (browseScope().browse_type) {
+        @case ('LC subject heading') {
             <p>Enter a Library of Congress (LC) subject heading to browse adjacent subject headings of titles held by any of the Los Rios Libraries. Then click a subject heading to view which titles have that LC subject.</p>
             <p>Examples:</p>
             
             <ul>
-                @for (subject of this.subjects; track subject.name) {
+                @for (subject of this.lcSubjects; track subject.name) {
                     <li>
                         <a [href]="subject.url" 
                            matTooltipPosition="right" 
@@ -20,11 +31,64 @@
                     </li>
                 }
             </ul>
-            <p>Results are limited to monographs, meaning books and other standalone titles. Articles are not included.</p>
             <p>The Library of Congress lists current subject headings in <a href="https://www.loc.gov/aba/publications/FreeLCSH/freelcsh.html" target="_blank">freely available PDF files.<mat-icon aria-label="Open in new window">open_in_new</mat-icon></a></p>
             <p><a [href]="subjectFaqUrl" target="_blank">Read more about subject headings in OneSearch.<mat-icon aria-label="Open in new window">open_in_new</mat-icon></a></p>
         }
-        @if (browseScope().browse_type === 'Call number') {
+        @case ('Homosaurus subject heading') {
+            <p>Enter a Homosaurus subject heading to browse adjacent subject headings of titles held by any of the Los Rios Libraries. Then click a subject heading to view which titles have that Homosaurus subject.</p>
+            <p>Examples:</p>
+            
+            <ul>
+                @for (subject of this.homoitSubjects; track subject.name) {
+                    <li>
+                        <a [href]="subject.url" 
+                           matTooltipPosition="right" 
+                           matTooltip="Open {{subject.name}} in Browse Search">
+                           {{subject.name}}<mat-icon>chevron_right</mat-icon>
+                        </a>
+                    </li>
+                }
+            </ul>
+            <p>The Homosaurus vocabulary can be viewed at <a href="https://homosaurus.org/" target="_blank">homosaurus.org.<mat-icon aria-label="Open in new window">open_in_new</mat-icon></a></p>
+           
+        }
+         @case ('LC genre term') {
+            <p>Enter Library of Congress Genre/format term (LCGFT) to browse adjacent terms of titles held by any of the Los Rios Libraries. Then click a term to view which titles have that LC genre term.</p>
+            <p>Examples:</p>
+            
+            <ul>
+                @for (subject of this.lcGenres; track subject.name) {
+                    <li>
+                        <a [href]="subject.url" 
+                           matTooltipPosition="right" 
+                           matTooltip="Open {{subject.name}} in Browse Search">
+                           {{subject.name}}<mat-icon>chevron_right</mat-icon>
+                        </a>
+                    </li>
+                }
+            </ul>
+             <p>The Library of Congress lists current genre terms in <a href="https://www.loc.gov/aba/publications/FreeLCGFT/freelcgft.html" target="_blank">freely available PDF files.<mat-icon aria-label="Open in new window">open_in_new</mat-icon></a></p>
+           
+        }
+        @case ('LC name heading') {
+            <p>Enter a Library of Congress-formatted name of a person or organization to browse adjacent headings of titles held by any of the Los Rios Libraries. Then click a heading to view which titles have that LC name in their record.</p>
+            <p>Examples:</p>
+            
+            <ul>
+                @for (subject of this.lcNames; track subject.name) {
+                    <li>
+                        <a [href]="subject.url" 
+                           matTooltipPosition="right" 
+                           matTooltip="Open {{subject.name}} in Browse Search">
+                           {{subject.name}}<mat-icon>chevron_right</mat-icon>
+                        </a>
+                    </li>
+                }
+            </ul>
+             <p>The Library of Congress lists its name headings at the <a href="https://authorities.loc.gov/" target="_blank">Authorities site.<mat-icon aria-label="Open in new window">open_in_new</mat-icon></a></p>
+           
+        }
+        @case ('Call number') {
             <p>Enter part or all of a Library of Congress (LC) call number to find items across the Los Rios libraries in call-number order.</p>
             <p>Examples:</p>
             <ul>
@@ -41,6 +105,9 @@
             <p>Only physical resources, such as print books and DVDs, are shown as results in call number browse searches.</p>
             <p>Find the letters and titles of the main LC classes in the <a href="https://www.loc.gov/catdir/cpso/lcco/" target="_blank">Library of Congress Classification Outline.<mat-icon aria-label="Open in new window">open_in_new</mat-icon></a></p>
         }
+        }
+        <p>The various indexes you browse here may contain errors caused by improper cataloging. The Libraries work to correct these errors when discovered, but given the large size of the catalog, they cannot commit to fixing every problem.</p>
+        <p>If you encounter a particularly problematic entry, please use the <i>Report a Problem</i> button or <a [href]="askUsUrl" target="_blank">send us a message<mat-icon>open_in_new</mat-icon></a> to report it to the Libraries for investigation.</p>
     </mat-card-content>
 </mat-card>
 }

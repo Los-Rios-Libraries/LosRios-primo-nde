@@ -8,6 +8,8 @@ import { MatTooltip } from '@angular/material/tooltip';
 import { VIEW_CONSTANTS } from '../shared/constants/app.constants';
 import { browseSelections } from './browse-landing-page-constants';
 
+declare const __webpack_public_path__: string;
+
 @Component({
   selector: 'custom-browse-landing-page',
   standalone: true,
@@ -19,11 +21,19 @@ import { browseSelections } from './browse-landing-page-constants';
 export class BrowseLandingPageComponent implements OnInit {
   viewCode = VIEW_CONSTANTS.libraryAcronym.toUpperCase();
   callNoCode = 'callnumber.0';
-  subjectCode = 'subject.1';
+  lcSubjectCode = 'subject.1';
+  homoitSubjectCode = 'subject.2';
+  lcGenreCode = 'subject.3';
+  lcNameCode = 'author';
 
-  subjects: { name: string, url: string }[] = [];
+  lcSubjects: { name: string, url: string }[] = [];
+  homoitSubjects: {name: string, url: string}[] = [];
+  lcGenres: {name: string, url: string}[] = [];
+  lcNames: {name: string, url: string}[] = [];
   callNos: { class: string; desc: string, url: string }[] = [];
+
   subjectFaqUrl = `https://answers.library.losrios.edu/${VIEW_CONSTANTS.libraryAcronym}/faq/${VIEW_CONSTANTS.subjectInfoFaqId}`;
+  askUsUrl = `https://library.losrios.edu/ask-us?${VIEW_CONSTANTS.libraryAcronym}`;
 
   browseScope = computed(() => {
     const rawData = this.dataService.sharedData();
@@ -31,8 +41,18 @@ export class BrowseLandingPageComponent implements OnInit {
       return {browse_type: 'Call number', icon: 'shelves'};
     }
     else if (rawData && /subject/i.test(rawData)) {
-      return {browse_type: 'Subject', icon: 'menu_book'};
+      return {browse_type: 'LC subject heading', icon: 'menu_book'};
     }
+    else if (rawData && /homosaurus/i.test(rawData)) {
+      return {browse_type: 'Homosaurus subject heading', image: `${__webpack_public_path__}assets/images/homosaurus-24.png`};
+    }
+    else if (rawData && /lc genre/i.test(rawData)) {
+      return {browse_type: 'LC genre term', icon: 'category'};
+    }
+    else if (rawData && /author/i.test(rawData)) {
+      return {browse_type: 'LC name heading', icon: 'person_search'};
+    }
+    else 
     return {browse_type: null, icon: null};
   });
 
@@ -43,9 +63,21 @@ export class BrowseLandingPageComponent implements OnInit {
 
   ngOnInit() {
     // Chain .slice(0, 4) after the shuffle to limit the results for this component
-    this.subjects = this.arrayUtils.shuffle(browseSelections.subjects).slice(0, 4).map(subject => ({
+    this.lcSubjects = this.arrayUtils.shuffle(browseSelections.lcSubjects).slice(0, 4).map(subject => ({
       name: subject,
-      url: this.buildUrl(this.subjectCode, subject)
+      url: this.buildUrl(this.lcSubjectCode, subject)
+        }));
+    this.homoitSubjects = this.arrayUtils.shuffle(browseSelections.homoitSubjects).slice(0, 4).map(subject => ({
+      name: subject,
+      url: this.buildUrl(this.homoitSubjectCode, subject)
+        }));
+    this.lcGenres = this.arrayUtils.shuffle(browseSelections.lcGenres).slice(0, 4).map(subject => ({
+      name: subject,
+      url: this.buildUrl(this.lcGenreCode, subject)
+        }));
+    this.lcNames = this.arrayUtils.shuffle(browseSelections.lcNames).slice(0, 4).map(subject => ({
+      name: subject,
+      url: this.buildUrl(this.lcNameCode, subject)
         }));
 
     this.callNos = this.arrayUtils.shuffle(browseSelections.callNos).slice(0, 4).map(callNo => ({
