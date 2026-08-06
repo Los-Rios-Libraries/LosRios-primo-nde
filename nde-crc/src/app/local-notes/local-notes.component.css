@@ -10,6 +10,7 @@ a:link, a:visited {
   width: 14px;
   vertical-align: center;
   margin:0 0.5rem;
+  color: var(--main-col-color);
 }
 
 .lr-note-area-detailsbottom {
