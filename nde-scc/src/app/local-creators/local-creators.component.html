@@ -1,5 +1,7 @@
 @if (localCreatorExists()) {
+
   <div class="lr-creator-block">
+        @if (!(isCollectionDiscovery)) {
     <div class="badges flex">
       <div class="badge-item flex-row">
         <div class="badge-icon flex-column padding-right-medium">
@@ -15,7 +17,7 @@
         </div>
       </div>
     </div>
-
+  }
     @if (isFullDisplay) {
       <div>
         @for (creator of creatorsData; track creator.crName) {
@@ -37,5 +39,12 @@
         }
       </div>
     }
+    @else if (isCollectionDiscovery) {
+      <div class="lrcreator-collection flex-row flex-layout-start-center gap-05">
+          <div >
+            {{creatorsData[0].crName}}, {{creatorsData[0].creatorType}}
+            </div>
+        </div>
+        }      
   </div> 
 }

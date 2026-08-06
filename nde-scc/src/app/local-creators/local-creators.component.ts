@@ -32,9 +32,17 @@ export class LocalCreatorsComponent implements DoCheck {
     return location.href.includes('nde/fulldisplay?');
   }
 
+ get isCollectionDiscovery() {
+  // avoid showing main badge on collection results for collections featuring only local authors
+  return /collectionDiscovery?collectionId=(81105690080005325|81101867750005325)/.test(location.href);
+ }
+
   // ngDoCheck runs frequently, but we make it fast by only comparing strings
   ngDoCheck(): void {
-    const rawField = this.hostComponent?.searchResult?.pnx?.display?.lds09;
+    let rawField = this.hostComponent?.searchResult?.pnx?.display?.lds09;
+    if (this.isCollectionDiscovery) {
+      rawField = this.hostComponent?.item?.pnx?.display?.lds09;
+    }
 
     // Create a unique "signature" of the data (joining the array into a string)
     // If the data hasn't changed, this string will be identical to the last one.

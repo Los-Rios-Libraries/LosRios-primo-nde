@@ -8,3 +8,4 @@ mat-icon {font-size:16px; vertical-align: baseline;}
 .lr-creator-blurb {vertical-align: middle;}
 a {color:var(--sys-primary); text-decoration: none;}
 a:hover, a:focus {text-decoration: underline;}
+.lrcreator-collection {padding-left:1rem; font-size:0.9rem;}
