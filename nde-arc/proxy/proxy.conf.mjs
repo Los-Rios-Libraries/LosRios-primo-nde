@@ -1,7 +1,24 @@
 import fs from 'node:fs';
+import path from 'node:path';
 import {PROXY_TARGET} from "./proxy.const.mjs";
-import {customizationConfigOverride} from "./customization_config_override.mjs";
-import {buildMergedManifestResponse, createLocalCustomModuleAssetManifest, deepMerge, isCustomModuleAssetManifestRequest, resolveCustomModuleManifestPath} from "./proxy-utils.mjs";
+import {buildMergedManifestResponse, createLocalCustomModuleAssetManifest, deepMerge, getAssetRelativePath, isCustomModuleAssetManifestRequest, proxyAgent, resolveCustomModuleManifestPath, resolveLocalAssetFilePath} from "./proxy-utils.mjs";
+
+const assetContentTypes = {
+  '.css': 'text/css',
+  '.gif': 'image/gif',
+  '.html': 'text/html; charset=utf-8',
+  '.jpeg': 'image/jpeg',
+  '.jpg': 'image/jpeg',
+  '.js': 'application/javascript',
+  '.json': 'application/json',
+  '.png': 'image/png',
+  '.svg': 'image/svg+xml',
+  '.webp': 'image/webp',
+};
+
+function getAssetContentType(filePath) {
+  return assetContentTypes[path.extname(filePath).toLowerCase()] || 'application/octet-stream';
+}
 
 async function serveCustomModuleManifest(req, res) {
   const manifestPath = resolveCustomModuleManifestPath(req.url);
@@ -30,7 +47,8 @@ const proxyRules = [
   {
     context: ['/nde/home', '/home'],
     target: PROXY_TARGET,
-    secure: true,
+    agent: proxyAgent,
+    secure: false,
     changeOrigin: true,
     logLevel: 'debug',
     selfHandleResponse: true,
@@ -47,34 +65,43 @@ const proxyRules = [
   },
   {
     context: [
-      '/custom/*/assets/landingpage',
-      '/custom/*/assets/landingpage/**',
-      '/nde/custom/*/assets/landingpage',
-      '/nde/custom/*/assets/landingpage/**'
-    ],
-    target: PROXY_TARGET,
-    secure: true,
-    changeOrigin: true,
-    logLevel: 'debug',
-  },
-  {
-    context: [
       '/custom/*/assets',
       '/custom/*/assets/**',
       '/nde/custom/*/assets',
       '/nde/custom/*/assets/**'
     ],
-    target: 'not-needed',
-    router: (req) => `${req.protocol}://${req.get('host')}`,
-    changeOrigin: false,
+    target: PROXY_TARGET,
+    agent: proxyAgent,
+    secure: false,
+    changeOrigin: true,
     logLevel: 'debug',
-    pathRewrite: (path) =>
-      path.replace(/^\/(?:nde\/)?custom\/[^/]+\/assets\/?/, '/assets/'),
+    bypass: (req, res) => {
+      const relativePath = getAssetRelativePath(req.url);
+      const localFile = relativePath ? resolveLocalAssetFilePath(relativePath) : null;
+      if (process.env.PROXY_TRACE) {
+        if (localFile) {
+          console.log(`[asset-trace] ${req.url} -> LOCAL ${localFile}`);
+        } else {
+          console.log(`[asset-trace] ${req.url} -> REMOTE ${PROXY_TARGET}${req.url}`);
+        }
+      }
+      if (!localFile) {
+        return null;
+      }
+
+      res.writeHead(200, {
+        'content-type': getAssetContentType(localFile),
+        'cache-control': 'no-cache',
+      });
+      res.end(fs.readFileSync(localFile));
+      return true;
+    },
   },
   {
     context: ['/custom/*/asset-manifest.json', '/nde/custom/*/asset-manifest.json'],
     target: PROXY_TARGET,
-    secure: true,
+    agent: proxyAgent,
+    secure: false,
     changeOrigin: true,
     logLevel: 'debug',
     selfHandleResponse: true,
@@ -98,7 +125,8 @@ const proxyRules = [
   {
     context: ['/primaws/rest/pub/configuration/vid/'],
     target: PROXY_TARGET,
-    secure: true,
+    agent: proxyAgent,
+    secure: false,
     changeOrigin: true,
     logLevel: 'debug',
     selfHandleResponse: true,
@@ -109,8 +137,6 @@ const proxyRules = [
         try {
           const bodyStr = Buffer.concat(chunks).toString('utf8');
           const json = JSON.parse(bodyStr);
-          // MERGE instead of replace to retain unspecified fields
-          json.customization = deepMerge(json.customization || {}, customizationConfigOverride);
           const out = JSON.stringify(json);
           res.setHeader('content-type', 'application/json');
           res.end(out);
@@ -131,17 +157,18 @@ const proxyRules = [
       return url;
 
     },
-    secure: true,
+    secure: false,
     logLevel: 'debug',
     pathRewrite: { '^/nde/custom/.*/': '' },
 
   },
   {
     context: [
-      '**', '!/nde/custom/**', '!/nde/home', '!/home'
+      '**', '!/nde/custom/**', '!/nde/home', '!/home', '!/assets/**', '!/.well-known/**'
     ],
     target: PROXY_TARGET,
-    secure: true,
+    agent: proxyAgent,
+    secure: false,
     changeOrigin: true,
     logLevel: 'debug',
 
