@@ -5,7 +5,7 @@
         <mat-grid-tile>
         <a [href]="collectionPage + collection.col_id" matTooltip="{{collection.desc}}" matTooltipPosition ="above" >
             <img [src]="thumbnailBaseURL + collection.col_id" alt="">
-            <mat-grid-tile-footer>{{collection.title}} <mat-icon iconPositionEnd>chevron_right</mat-icon></mat-grid-tile-footer>
+            <mat-grid-tile-footer class="lr-collection-widget-title">{{collection.title}} <mat-icon iconPositionEnd>chevron_right</mat-icon></mat-grid-tile-footer>
         </a>
         
     </mat-grid-tile> 
