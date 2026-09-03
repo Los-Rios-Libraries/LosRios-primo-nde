@@ -26,11 +26,13 @@ nde-top-bar .mat-mdc-button:not(:disabled) svg path {color: #fff !important; bor
 .advanced-search-button.advanced-search-btn-home-page {color:var(--whiteText) !important;}
 .available-at-button.mat-mdc-button:not(:disabled) {color:unset !important;} /* availability statement that shows under physical items */
 .mat-mdc-button[aria-label^="No Online"]:not(:disabled){color:unset !important;} /* correct color of "No Online Access" button that appears in some cases */
+
 /* larger logo / header */
 nde-logo img {
   height: 50px;
   padding-right: 1rem;
 }
+
 .custom-search-bar-container {
   height: auto !important;
 }
@@ -56,33 +58,41 @@ nde-record-title .record-title .mat-body-large, .browse-search-item-text h3 {
   font-size: 1.3em !important;
 }
 
-
 /* better render full-text buttons */
 .quicklink-button {
   font-weight: 500 !important;
 }
+
 /* emphasize full-text link text */
 .view-it-text .package-name {
   font-size: 1.3rem;
 }
+
 .view-it-text h3.package-name:focus, .view-it-text h3.package-name:hover {
   border-bottom:none;
 } 
+
 /* increase collection title font size */
 #collectionTitle {
   font-size: 2rem;
 }
+
+/* Customize collection title colors */
+.mat-grid-tile-footer.lr-collection-widget-title, .mat-grid-tile-footer.lr-collection-widget-title .mat-icon {
+	color:#fff !important;
+}
+
 /* Apply background to collection discovery names for contrast */
 .collection-discovery-header .content {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 8px;
   border-radius: 4px;
 }
+
 /* get rid of last slash in breacrumbs */
 .collection-path:last-of-type + span {
   display: none;
 }
-
 
 /* hide extra links from MARC 856 and NZ GES */
 nde-full-display-links .links-container span{
@@ -96,8 +106,10 @@ nde-full-display-links .links-container span{
 .request-card path {
   stroke: var(--main-col-color) !important;
 } 
+
 /* hide sign-in prompt above ILL link  */
 nde-notification[message^="nui\.request\.signin"]:has(+ nde-request-card[data-qa*="interlibrary loan"]) {display: none;} 
+
 /* hide default ILL link */
 nde-request-card[data-qa*="interlibrary loan"] mat-card {display: none;}
 
@@ -166,7 +178,6 @@ h5.package-name:focus, h5.package-name:hover {
   text-decoration: underline;
 }
 
-
 /* links in public notes */
 .view-it-text-with-icon a:link, .view-it-text-with-icon a:visited {color:var(--sys-primary);}
 h5.package-name+mat-icon {
@@ -199,9 +210,6 @@ nde-personal-details-view .detail_name {
   color: var(--sys-on-surface) !important;
 }
 
-
-
-
 /* only show problem report button in brief results when hovering on record */
 nde-search-results .lr-problem-reporter {opacity:0;}
 nde-search-results nde-search-result-item-container:hover .lr-problem-reporter, nde-search-result-item-container:has(input:focus) .lr-problem-reporter, nde-search-result-item-container:has(a:focus) .lr-problem-reporter, nde-search-result-item-container:has(button:focus) .lr-problem-reporter {opacity:1;}
@@ -214,31 +222,33 @@ nde-browse-home-page .container:first-child {
   display: none;
 }
 
-
 /* footer */
 footer {
-  background-color: var(--second-col-color);
-  border-top: 2px solid var(--sys-on-secondary-fixed);
+  background-color: #017ea4;
+  border-top: 2px solid #1a4763;
   margin-top:40px;
+  color: #fff;
 }
 
 footer .main-landing-page {
   margin-block-end: 20px;
 }
+
 footer ul + h2 { margin-top: 10px !important;}
 .lr-social-icon {display: inline-block; margin-right: 10px; padding-top:10px;}
 /* footer .grid-item {margin-bottom:2rem;} */
-footer li a:link, footer li a:visited {
-  color: var(--sys-on-secondary-fixed);
+
+footer a:link, footer a:visited {
+  color: #fff;
   text-decoration: none;
 }
 
-footer li a:hover, footer li a:focus {
+footer a:hover, footer a:focus {
   text-decoration: underline;
 }
-footer .material-icons { font-size:14px; vertical-align: center;}
+
 #subfooter {
-  background-color: #570019;
+  background-color: #1a4763;
   /* padding-left:2rem; */
 }
 
@@ -251,6 +261,7 @@ footer .material-icons { font-size:14px; vertical-align: center;}
   text-decoration: underline;
 }
 
+footer .material-icons { font-size:14px; vertical-align: center;}
 #subfooter-libraries {
   gap: 1rem;
 }
@@ -276,7 +287,5 @@ bottom: 120px !important;
     text-decoration: none !important;
     cursor: default;
   }
-
-
 
 }
