@@ -1,6 +1,7 @@
 :root {
   --main-col-color: #6C2991; 
   --second-col-color:#017EA4; 
+  --text-over-second: #fff;
 }
 
 /** color changes to establish branding **/

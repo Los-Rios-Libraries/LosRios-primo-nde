@@ -1,6 +1,7 @@
 :root {
   --main-col-color: #800a28; /* this should be a darker color */
   --second-col-color:#fde373; /* this should be a lighter color */
+  --text-over-second: var(--sys-primary);
 }
 
 /** color changes to establish branding **/
