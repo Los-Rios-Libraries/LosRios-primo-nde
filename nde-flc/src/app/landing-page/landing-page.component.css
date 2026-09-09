@@ -2,7 +2,7 @@
  .grid-container {
   display: grid;
   grid-template-columns: 1fr; /* Mobile: 1 column */
-  gap: 100px;
+  gap: 20px;
 }
 .grid-item {min-width: 0;overflow-wrap: break-word; word-break: break-word;}
  .bordered-item {
