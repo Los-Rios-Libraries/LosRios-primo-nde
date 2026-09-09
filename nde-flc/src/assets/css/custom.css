@@ -78,11 +78,6 @@ nde-record-title .record-title .mat-body-large, .browse-search-item-text h3 {
   font-size: 2rem;
 }
 
-/* Customize collection title colors */
-.mat-grid-tile-footer.lr-collection-widget-title, .mat-grid-tile-footer.lr-collection-widget-title .mat-icon {
-	color:#fff !important;
-}
-
 /* Apply background to collection discovery names for contrast */
 .collection-discovery-header .content {
   background-color: rgba(0, 0, 0, 0.6);
