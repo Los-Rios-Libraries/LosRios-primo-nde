@@ -1,10 +1,12 @@
 import { Component, Input } from '@angular/core';
+import { ShowAvailabilityComponent } from '../show-availability/show-availability.component';
 import { LocalNotesComponent } from '../local-notes/local-notes.component';
+import { LocalCreatorsComponent } from '../local-creators/local-creators.component';
 
 @Component({
   selector: 'custom-wrapper-collection-discovery-gallery-item-bottom',
   standalone: true,
-  imports: [LocalNotesComponent],
+  imports: [ShowAvailabilityComponent, LocalNotesComponent, LocalCreatorsComponent],
   templateUrl: './wrapper-collection-discovery-gallery-item-bottom.component.html',
   styleUrl: './wrapper-collection-discovery-gallery-item-bottom.component.scss'
 })
