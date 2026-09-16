@@ -26,7 +26,10 @@ export class ShowAvailabilityComponent {
   collection = toSignal(this.store.select(selectCollectionState));
 
   showElement = computed(() => {
-    if (VIEW_CONSTANTS.collectionsShowingAvailability.indexOf(this.collection().currentCollectionId) > -1) {
+    if (VIEW_CONSTANTS.collectionsShowingAvailability.length === 0) {
+      return false;
+    }
+    else if (VIEW_CONSTANTS.collectionsShowingAvailability.indexOf(this.collection().currentCollectionId) > -1) {
       return true;
     } else {
       return false;
