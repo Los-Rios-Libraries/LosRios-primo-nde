@@ -30,6 +30,7 @@ export const VIEW_CONSTANTS = {
     },
   ],
   almaDFaq:<string> 'https://answers.library.losrios.edu/crc/search/?t=0&adv=1&topics=Digital%20books',
+  collectionsShowingAvailability:<string[]> [],
   limitedDeliveryFaq:<string> '407703',
   subjectInfoFaqId:<string> '414779',
   collectionRoot:<string> '8160329700005325'
