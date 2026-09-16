@@ -1,0 +1,7 @@
+
+/* some rules in custom.css because they depend upon other DOM elements */
+.lr-availability-display {font-size:0.875rem;margin-left:1rem;}
+.lr-availability-display {align-items:center; justify-content:center;}
+.lr-availability-display mat-icon {font-size:12px; display:flex;}
+.getit-location-available, .getit-location-available mat-icon {color: var(--valid); fill: var(--valid); align-items:center; }
+.getit-location-unavailable, .getit-location-unavailable mat-icon {color: var(--secondaryActionIcon); fill: var(--secondaryActionIcon); align-items:center;}
