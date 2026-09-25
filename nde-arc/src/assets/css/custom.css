@@ -124,6 +124,9 @@ nde-request-card[data-qa*="interlibrary loan"] mat-card {display: none;}
 
 /* show heading on focus */
 #nde\.request\.title:has(.mat-expansion-panel-header:focus + .mat-expansion-panel-content-wrapper nde-request-card[data-qa*="interlibrary loan"])  {margin-top:unset;}  
+
+/* hide chapters from this book area */
+#nde\.relatedItems\.chaptersOfThisBook {display:none;}
 /* hide AI research assistant widget */
 nde-research-assistant-side-bar {
   display: none;
