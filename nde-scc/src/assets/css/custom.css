@@ -156,7 +156,8 @@ nde-collection-discovery-gallery .lr-note-sccRec-quote, nde-collection-discovery
 nde-collection-discovery-gallery .lr-note-sccRec {padding-right:8px; margin-top:4px;}
 #nde\.getit\.locations .lr-note:has(.lr-note-sccRec) {padding:10px; margin-right:10px; margin-bottom:10px; border:2px solid #ffce00;}
 #nde\.getit\.locations .lr-note-sccRec {margin-left:10px; margin-right:20px;}
-
+.full-display-wrapper .lr-note-sccRec {display:flex; flex-direction:row; align-items:baseline; gap:1rem; font-style:italic; font-size:.9em;}
+.full-display-wrapper .lr-note-sccRec .mat-icon {display:flex;flex-direction:column; margin:0 !important; width:30px !important;}
 
 nde-collection-discovery-gallery .lr-note-section {
   padding-right:10px;
