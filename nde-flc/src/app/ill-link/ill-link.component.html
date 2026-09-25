@@ -1,6 +1,11 @@
 @if (newLink !== '') { 
-    <p>
-        <a [href]="newLink" target="_blank">Request this item via interlibrary loan<mat-icon aria-label="Open in new window">open_in_new</mat-icon>
-        </a>
-    </p> 
+    <mat-card class="flex-layout-center-center">
+        <mat-card-content>
+            <p>
+                <mat-icon>local_shipping</mat-icon>
+                <a [href]="newLink" target="_blank">Request this item via interlibrary loan<mat-icon aria-label="Open in new window">open_in_new</mat-icon>
+                </a>
+            </p>
+        </mat-card-content>
+    </mat-card>
 }

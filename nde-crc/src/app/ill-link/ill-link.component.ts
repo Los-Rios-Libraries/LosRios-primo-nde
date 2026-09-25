@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
+import {MatCardModule} from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'custom-ill-link',
   standalone: true,
-  imports: [MatIconModule],
+  imports: [MatIconModule, MatCardModule],
   templateUrl: './ill-link.component.html',
   styleUrl: './ill-link.component.css'
 })
