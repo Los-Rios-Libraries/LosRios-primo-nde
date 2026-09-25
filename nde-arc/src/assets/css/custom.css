@@ -13,6 +13,8 @@ nde-general-search-header {background-image: none !important;background-color: v
  .quicklink-button-text, .dropdown-group .ti-dropdown-button {color:var(--main-col-color) !important; border-color:var(--main-col-color) !important;}
  .with-dropdown .sys-primary path {fill: var(--main-col-color) !important; stroke: var(--main-col-color) !important;}
  .main-menu-label .mat-icon, .main-manu-label .mat-icon, .mat-mdc-button:not(:disabled) .mat-icon, .icon-primary-fill.mat-icon svg path {fill: var(--main-col-color) !important ;}
+  /* override default color of filter button when filters are open */
+  .mat-mdc-button.filters-open .mat-icon {fill: var(--sys-on-primary) !important;}
  .mat-mdc-button:not(:disabled), .mat-mdc-button:not(:disabled) svg path, nde-online-availability .mat-icon svg path, .quicklinks-menu-item-text {color:var(--main-col-color) !important;border-color:var(--main-col-color) !important;}
  .mat-mdc-menu-content:has(stacked-button) {background-color:#fff;}
 
