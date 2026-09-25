@@ -116,6 +116,9 @@ nde-full-display-links .links-container span{
 nde-notification[message^="nui\.request\.signin"]:has(+ nde-request-card[data-qa*="interlibrary loan"]) {display: none;} 
 /* hide default ILL link */
 nde-request-card[data-qa*="interlibrary loan"] mat-card {display: none;}
+
+/* show heading on focus */
+#nde\.request\.title:has(.mat-expansion-panel-header:focus + .mat-expansion-panel-content-wrapper nde-request-card[data-qa*="interlibrary loan"])  {margin-top:unset;}  
 /* hide AI research assistant widget */
 nde-research-assistant-side-bar {
   display: none;
