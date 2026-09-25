@@ -93,6 +93,18 @@ nde-full-display-links .links-container span{
   display: none;  
 }
 
+/* request area */
+/* hide request form title, but show it when it received keyboard focus */
+.mat-expansion-panel-header:not(:focus):has(#title-nde\.request\.title) {position:absolute; left:-999999px;}
+#nde\.request\.title .mat-divider {display:none;}
+/* bring login prompt and locations list closer together */
+#nde\.request\.title {margin-top:-80px;}
+/* remove negative margin when request form is collapsed */
+#nde\.getit\.locations:has(.mat-expansion-panel-header[aria-expanded="false"]:not(.brief-property-header-container)) + #nde\.request\.title {margin-top:0px;}
+/* adjust request prompt background and alignment */
+#nde\.request\.title .notification-container {background:#F7EDA3; justify-content:center; border:0 !important;}
+/* adjust "no requests" alert */
+.no-requests {font-size:1.2rem !important; text-align:center;}
 /* hide campus links in request form; look out for unintended consequences of this selector */
 .mat-mdc-optgroup-label {display: none !important;}
 
