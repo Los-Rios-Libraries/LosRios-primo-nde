@@ -1,14 +1,14 @@
 import { Component, inject, computed, ChangeDetectionStrategy } from '@angular/core';
 import { Store, createFeatureSelector } from '@ngrx/store';
 import { PrimoRouterState } from '../shared/models/routerState.model';
-import {AssetsPublicPathDirective} from '../services/assets-public-path.directive';
+
+declare const __webpack_public_path__: string;
 
 const selectRouterState = createFeatureSelector<PrimoRouterState>('routerState');
 
 @Component({
   selector: 'custom-homepage-logo',
   standalone: true,
-  imports: [AssetsPublicPathDirective],
   templateUrl: './homepage-logo.component.html',
   styleUrl: './homepage-logo.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -16,8 +16,9 @@ const selectRouterState = createFeatureSelector<PrimoRouterState>('routerState')
 export class HomepageLogoComponent {
   private store = inject(Store);
   
+  imageUrl = `${__webpack_public_path__}assets/images/onesearch-logo.png`;
+
   routerState = this.store.selectSignal(selectRouterState);
-  imageUrl = 'assets/images/onesearch-logo.png';
   
   showLogo = computed(() => this.routerState()?.routerState === 'home');
 }
