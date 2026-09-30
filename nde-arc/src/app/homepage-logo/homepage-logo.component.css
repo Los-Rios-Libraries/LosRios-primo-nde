@@ -1,3 +1,4 @@
+/* limit the height of the logo to 80px, but allow it to grow larger on larger screens */
 img {padding-top:1rem; max-height:80px;}
 @media screen and (min-width: 768px) {
   img {max-height:unset;}

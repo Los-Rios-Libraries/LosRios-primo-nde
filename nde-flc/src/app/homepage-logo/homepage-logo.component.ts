@@ -16,9 +16,12 @@ const selectRouterState = createFeatureSelector<PrimoRouterState>('routerState')
 export class HomepageLogoComponent {
   private store = inject(Store);
   
+  // image must be in the assets folder; adjust name and path as needed.
   imageUrl = `${__webpack_public_path__}assets/images/onesearch-logo.png`;
 
   routerState = this.store.selectSignal(selectRouterState);
   
+  // returns true if the current router state is 'home', otherwise false 
   showLogo = computed(() => this.routerState()?.routerState === 'home');
+
 }
