@@ -237,6 +237,11 @@ nde-browse-home-page .container:first-child {
   display: none;
 }
 
+/* move A-Z browse to second position on Journals by Title page */
+nde-atoz {order:2;}
+/* fix color on selected a-z button */
+.atoz-button.selected span, .atoz-button.selected span {color: #fff;}
+
 /* footer */
 footer {
   background-color: #017ea4;
