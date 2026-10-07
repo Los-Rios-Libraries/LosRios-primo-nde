@@ -278,6 +278,10 @@ bottom: 120px !important;
 /* only show problem report button in brief results when hovering on record */
 nde-search-results .lr-problem-reporter {opacity:0;}
 nde-search-results nde-search-result-item-container:hover .lr-problem-reporter, nde-search-result-item-container:focus .lr-problem-reporter {opacity:1;}
+
+/* display default resource type icons in regular size in showcase, more-from-same, etc. */
+.carousel-card .mat-mdc-card-image[src*="/assets/images/icon_"] {object-fit: contain !important;}
+.grid-thumbnail-container img[src*="/assets/images/icon_"] {object-fit: none !important;}
 @media (min-width: 768px) {
   
   /* increase footer padding for desktop */

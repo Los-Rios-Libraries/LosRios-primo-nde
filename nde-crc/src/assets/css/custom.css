@@ -265,6 +265,9 @@ footer .material-icons { font-size:14px; vertical-align: center;}
 bottom: 120px !important;
 }
 
+/* display default resource type icons in regular size in showcase, more-from-same, etc. */
+.carousel-card .mat-mdc-card-image[src*="/assets/images/icon_"] {object-fit: contain !important;}
+.grid-thumbnail-container img[src*="/assets/images/icon_"] {object-fit: none !important;}
 @media (min-width: 768px) {
   
   /* increase footer padding for desktop */
