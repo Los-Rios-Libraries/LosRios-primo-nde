@@ -34,4 +34,7 @@ export const VIEW_CONSTANTS = {
   limitedDeliveryFaq:<string> '406975',
   subjectInfoFaqId:<string> '408106',
   collectionRoot:<string> '8160329870005325'
+  feesFaqId: <string> '279946',
+  returnsFaqId:<string> '316527',
+  businessServices:<string> '/business-services',
 } as const;

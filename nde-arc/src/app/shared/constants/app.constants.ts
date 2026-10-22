@@ -33,5 +33,8 @@ export const VIEW_CONSTANTS = {
   collectionsShowingAvailability:<string[]> ['8191432850005325', '8188683380005325'],
   limitedDeliveryFaq:<string> '407682',
   subjectInfoFaqId:<string> '414780',
+  feesFaqId: <string> '278654',
+  returnsFaqId:<string> '396351',
+  businessServices:<string> '/student-resources/business-services',
   collectionRoot:<string> '8160469930005325'
 } as const;
