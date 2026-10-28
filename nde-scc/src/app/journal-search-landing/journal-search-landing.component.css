@@ -1,0 +1,14 @@
+h1 {font-size:var(--mat-card-title-text-size);}
+ul {margin-bottom:1rem !important;}
+li {list-style-type: disc; margin-left: 2em;}  
+.mat-grid-list { margin: 20px auto;}
+img {height:100%;}
+.mat-grid-tile a {display:inline-block; height:100%;}
+.mat-grid-tile:hover, .mat-grid-tile:focus {border: 1px solid var(--main-col-color); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);}
+.mat-icon {font-size:16px; vertical-align: text-top; position:relative; top:4px; margin-left:4px;transition:margin-left .4s cubic-bezier(.25,.8,.25,1);}
+ a:hover:not([target="_blank"]) .mat-icon, a:focus:not([target="_blank"]) .mat-icon {margin-left: 12px !important;}
+ 
+@media (min-width: 768px) {
+  .mat-mdc-card {width:80%; margin: 0 auto;}
+}
+

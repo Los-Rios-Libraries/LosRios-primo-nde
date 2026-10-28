@@ -1,0 +1,32 @@
+<mat-card appearance="outlined" class="margin-top-huge">
+    <mat-card-header>
+        <h1>Journals by Title</h1>
+    </mat-card-header>
+    <mat-card-content>
+        <p>Journals by Title is limited to periodicals: scholarly journals, magazines, newspapers, and other publications issued regularly rather than just once.
+</p>
+<mat-grid-list cols="5" rowHeight="1:1" gutterSize="8px">
+            @for (image of periodicalImages; track image.src) {
+                <mat-grid-tile>
+                    <a matTooltip="View {{image.title}} record in Journals by Title" href="/nde/jfulldisplay?context=L&vid={{viewCode}}&search_scope=jsearch_scope&tab=jsearch_slot&lang=en&docid=alma{{ image.id }}">
+                    <img [src]="image.src" [alt]="image.title" />
+                    </a>
+                </mat-grid-tile>
+            }
+        </mat-grid-list>
+        <p>Search Journals by Title to find records for individual publications. When you open the full record, you will see links to all the library databases that hold the full text of a particular publication, including the dates of coverage. Sometimes one database will have a different date range than another.
+</p>
+<p>Do <em>not</em> use Journals by Title to search for articles. To search for articles, visit the <a [href]="homepageUrl">OneSearch home page</a> and enter a search using the <i>Everything</i> option.</p>
+
+        <p>Sample searches:</p>
+        <ul>
+            @for (sample of selectedSamples; track sample) {
+                <li>
+                    <a [href]="urlRoot + sample">{{ sample }}<mat-icon>chevron_right</mat-icon></a>
+                </li>
+            }
+        </ul>
+        <p>You can browse journals using the <i>Browse by Topic</i> and <i>Browse A-Z</i> tools provided on this page.</p>
+        <p>For an alternative way to find journals, try <a [href]="browzineUrl" target="_blank">BrowZine.<mat-icon>open_in_new</mat-icon></a></p>
+    </mat-card-content>
+</mat-card>

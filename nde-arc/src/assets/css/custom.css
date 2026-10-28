@@ -75,6 +75,10 @@ nde-record-title .record-title .mat-body-large, .browse-search-item-text h3 {
 .view-it-text .package-name {
   font-size: 1.3rem;
 }
+
+ /* hide default journal homepage component */
+.journal-homepage-container {display:none;}
+
 /* increase collection title font size */
 #collectionTitle {
   font-size: 2rem;

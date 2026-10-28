@@ -71,6 +71,9 @@ nde-record-title .record-title .mat-body-large, .browse-search-item-text h3 {
   font-size: 1.3rem;
 }
 
+ /* hide default journal homepage component */
+.journal-homepage-container {display:none;}
+
 .view-it-text h3.package-name:focus, .view-it-text h3.package-name:hover {
   border-bottom:none;
 } 

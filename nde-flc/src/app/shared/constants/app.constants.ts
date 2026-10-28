@@ -36,5 +36,6 @@ export const VIEW_CONSTANTS = {
   feesFaqId: <string> '278414',
   returnsFaqId:<string> '327551',
   businessServices:<string> '/student-resources/support-services/business-services',
-  collectionRoot:<string> '8189463160005325'
+  collectionRoot:<string> '8189463160005325',
+  browzineID: <string> '3236'
 } as const;
