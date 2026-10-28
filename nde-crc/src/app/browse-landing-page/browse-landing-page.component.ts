@@ -46,10 +46,10 @@ export class BrowseLandingPageComponent implements OnInit {
     else if (rawData && /homosaurus/i.test(rawData)) {
       return {browse_type: 'Homosaurus subject heading', image: `${__webpack_public_path__}assets/images/homosaurus-24.png`};
     }
-    else if (rawData && /lc genre/i.test(rawData)) {
+    else if (rawData && /genre/i.test(rawData)) {
       return {browse_type: 'LC genre term', icon: 'category'};
     }
-    else if (rawData && /author/i.test(rawData)) {
+    else if (rawData && /name/i.test(rawData)) {
       return {browse_type: 'LC name heading', icon: 'person_search'};
     }
     else 
