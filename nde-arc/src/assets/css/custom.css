@@ -53,6 +53,9 @@ nde-logo img {
   display: none;
 }
 
+/* smaller text on showcase carousel,virtual browse, etc to show more words */
+.carousel-card h3.mat-title-medium {font: var(--sys-title-small) !important;}
+
 /* hide default label visually */
 .custom-search-bar-container h1, 
 .custom-search-bar-container h2 {
