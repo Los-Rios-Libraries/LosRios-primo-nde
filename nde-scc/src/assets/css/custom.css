@@ -141,7 +141,7 @@ nde-view-it-card .availability-text {
 }
 
 /* but show it in in title records */
-nde-search-result-item-container:has(a[id^="record_id_alma"]) + div nde-view-it-card .availability-text {display:flex !important;}
+nde-search-result-item-container:has(a[id^="record_id_alma"]) ~ div nde-view-it-card .availability-text {display:flex !important;}
 
 
 /* avoid duplicate local notes */
