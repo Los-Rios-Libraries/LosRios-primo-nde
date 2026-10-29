@@ -223,6 +223,13 @@ nde-atoz {order:2;}
 /* fix color on selected a-z button */
 .atoz-button.selected span, .atoz-button.selected span {color: #fff;}
 
+/* hide "link does not go to article" note in journal search */
+.journal-db-full-display .mat-icon:has(+ span > .lr-indirect-note),
+.journal-db-full-display .mat-icon + span:has(> .lr-indirect-note) {
+  display: none;
+}
+
+
 /* footer */
 footer {
   background-color: #014c8d; /* ARC royal blue */
