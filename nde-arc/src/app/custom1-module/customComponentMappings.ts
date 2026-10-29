@@ -14,11 +14,13 @@ import { ShowSubjectsInfoComponent } from '../show-subjects-info/show-subjects-i
 import { HeaderBannerComponent } from '../header-banner/header-banner.component';
 import { LocationNoteComponent } from '../location-note/location-note.component';
 import { JournalSearchLandingComponent } from '../journal-search-landing/journal-search-landing.component';
+import { LinkToLegacyVeComponent } from '../link-to-legacy-ve/link-to-legacy-ve.component';
 
 // Define the map
 export const selectorComponentMap = new Map<string, any>([
   ['nde-header', HeaderBannerComponent],
   ['nde-top-bar-before', HomepageLogoComponent],
+  ['nde-search-result-item-container-after', LinkToLegacyVeComponent],
   ['nde-landing-page', LandingPageComponent],
   ['nde-search-result-item-container-bottom', WrapperSearchResultItemContainerBottomComponent],  
   ['nde-full-display-service-container-before', LocalNotesComponent],

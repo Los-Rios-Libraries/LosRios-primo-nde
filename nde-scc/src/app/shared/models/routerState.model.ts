@@ -17,3 +17,10 @@ export interface PrimoRouterState {
     | string;
   isFirstNavigation: boolean;
 }
+
+// from router - current page path
+export interface RouterUrl {
+  state?: {
+    url?: string;
+  };
+}
