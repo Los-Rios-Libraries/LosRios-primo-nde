@@ -124,8 +124,10 @@ nde-request-card[data-qa*="interlibrary loan"] mat-card {display: none;}
 /* show heading on focus */
 #nde\.request\.title:has(.mat-expansion-panel-header:focus + .mat-expansion-panel-content-wrapper nde-request-card[data-qa*="interlibrary loan"])  {margin-top:unset;}  
 
-/* hide chapters from this book area */
+/* hide chapters-from-this-book area */
 #nde\.relatedItems\.chaptersOfThisBook {display:none;}
+/* also hide link to these chapter listings */
+nde-record-book-chapters-or-reviews:has([data-qa="book-chapters-indication"]) {display:none;}
 
 /* hide AI research assistant widget */
 nde-research-assistant-side-bar {
