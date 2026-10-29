@@ -37,6 +37,12 @@ export class ShowLockerInfoComponent implements DoCheck {
       id: '5020041320005325',
       path: '361527',
     },
+    {
+      key: 'crc',
+      name: 'Cosumnes River College Library',
+      id: '112023650005325',
+      path: '448395',
+    }
   ];
 
   ngDoCheck() {
