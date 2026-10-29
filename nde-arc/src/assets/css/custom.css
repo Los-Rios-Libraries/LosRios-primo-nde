@@ -108,6 +108,8 @@ nde-full-display-links .links-container span{
 #nde\.request\.title .mat-divider {display:none;}
 /* bring login prompt and locations list closer together */
 #nde\.request\.title {margin-top:-80px;}
+/* correct this for when local note shows */
+#nde\.getit\.locations:has(.lr-note) + #nde\.request\.title {margin-top:-30px;}
 /* remove negative margin when request form is collapsed */
 #nde\.getit\.locations:has(.mat-expansion-panel-header[aria-expanded="false"]:not(.brief-property-header-container)) + #nde\.request\.title {margin-top:0px;}
 /* adjust request prompt background and alignment */
