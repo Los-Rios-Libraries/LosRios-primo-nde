@@ -15,6 +15,7 @@ import { HeaderBannerComponent } from '../header-banner/header-banner.component'
 import { LocationNoteComponent } from '../location-note/location-note.component';
 import { JournalSearchLandingComponent } from '../journal-search-landing/journal-search-landing.component';
 import { LinkToLegacyVeComponent } from '../link-to-legacy-ve/link-to-legacy-ve.component';
+import { NorequestsMessageComponent } from '../norequests-message/norequests-message.component';
 
 // Define the map
 export const selectorComponentMap = new Map<string, any>([
@@ -38,5 +39,6 @@ export const selectorComponentMap = new Map<string, any>([
   ['nde-browse-home-page-bottom', BrowseLandingPageComponent],
   ['nde-view-it-card-bottom', DigitalBookLinkComponent],
   ['nde-location-bottom', LocationNoteComponent],
+  ['nde-requests-bottom', NorequestsMessageComponent],
   ['nde-journal-home-page', JournalSearchLandingComponent]
 ]);

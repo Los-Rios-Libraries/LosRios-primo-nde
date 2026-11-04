@@ -33,6 +33,7 @@ export const VIEW_CONSTANTS = {
   collectionsShowingAvailability:<string[]> [],
   limitedDeliveryFaq:<string> '407703',
   subjectInfoFaqId:<string> '414779',
+  noRequestsFaqId:<string> '448394',
   feesFaqId: <string> '407047',
   returnsFaqId:<string> '320267',
   businessServices:<string> '/student-resources/support-services/business-services',

@@ -13,6 +13,7 @@ import { WrapperSearchContainDropdownAfterComponent } from '../wrapper-search-co
 import { DigitalBookLinkComponent } from '../digital-book-link/digital-book-link.component';
 import { ShowSubjectsInfoComponent } from '../show-subjects-info/show-subjects-info.component';
 import { LocationNoteComponent } from '../location-note/location-note.component';
+import { NorequestsMessageComponent } from '../norequests-message/norequests-message.component';
 import { JournalSearchLandingComponent } from '../journal-search-landing/journal-search-landing.component';
 import { LinkToLegacyVeComponent } from '../link-to-legacy-ve/link-to-legacy-ve.component';
 
@@ -37,5 +38,6 @@ export const selectorComponentMap = new Map<string, any>([
   ['nde-search-contain-dropdown-after', WrapperSearchContainDropdownAfterComponent],
   ['nde-browse-home-page-bottom', BrowseLandingPageComponent],
   ['nde-location-bottom', LocationNoteComponent]
+  ['nde-requests-bottom', NorequestsMessageComponent],
   ['nde-journal-home-page', JournalSearchLandingComponent]
 ]);

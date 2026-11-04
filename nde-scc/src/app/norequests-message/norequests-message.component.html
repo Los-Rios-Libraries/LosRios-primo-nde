@@ -1,0 +1,17 @@
+@if (norequests()) {
+  <div class="flex-row">
+    <p>
+      @if (moreThanOneHolding()) {
+        <span>Click <i>View items</i> to see if request options are available.</span>
+      }
+      <span>
+        <mat-icon>info_outline</mat-icon>
+        <a 
+          [href]="faqUrl" target="_blank" matTooltip="Find out more about why some items cannot be requested">
+          About request limits 
+          <mat-icon aria-label="link opens in new browser tab">open_in_new</mat-icon>
+        </a>
+      </span>
+    </p>
+  </div>
+}

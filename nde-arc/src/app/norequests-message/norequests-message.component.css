@@ -1,0 +1,14 @@
+.mat-icon {font-size: 18px; vertical-align: middle;}
+div { background: var(--sys-error-container); font-weight: 300; padding-left:1.5rem;}
+p {width: 100%; }
+a {font-weight: 400;}
+span + span {display:block;}
+i {padding-left: 0.1rem; padding-right: 0.1rem;}
+
+
+@media (min-width: 768px) {
+    div {padding-left:0; }
+    p {display:flex; justify-content:center;}
+    span + span { padding-left:0.3rem;}
+    i {padding-left: 0.3rem; padding-right: 0.3rem;}
+}
