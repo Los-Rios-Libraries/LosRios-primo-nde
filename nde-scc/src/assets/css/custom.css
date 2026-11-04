@@ -97,7 +97,7 @@ nde-record-title .record-title .mat-body-large, .browse-search-item-text h3 {
 .grid-item .lr-availability-display {position:relative; bottom:40px;}
 
 /* hide extra links from MARC 856 and NZ GES */
-nde-full-display-links .links-container span{
+nde-full-display-links li:not(:has(a[href^="/nde/sourceRecord"])) {
   display: none;  
 }
 
