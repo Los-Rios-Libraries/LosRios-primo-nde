@@ -5,9 +5,9 @@
 @for (collection of collections(); track collection.col_id) { 
 
     <mat-card (click)="goToCollection(collection)" class="grid-item" matTooltip="{{collection.desc}}" matTooltipPosition ="above" appearance="outlined" tabindex="0" role="link">
-        <img mat-card-image [src]="thumbnailBaseURL + collection.col_id" alt="">
+        <img mat-card-image [src]="thumbnailBaseURL + collection.col_id" alt="" loading="lazy">
         <mat-card-footer>
-            <mat-card-title>{{collection.title}}<mat-icon iconPositionEnd>chevron_right</mat-icon></mat-card-title>
+            <mat-card-title><span>{{collection.title}}</span><mat-icon iconPositionEnd>chevron_right</mat-icon></mat-card-title>
         </mat-card-footer>
     </mat-card>
 }

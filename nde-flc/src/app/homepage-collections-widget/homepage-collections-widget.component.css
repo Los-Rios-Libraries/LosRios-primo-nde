@@ -14,10 +14,26 @@ img {height: 160px;object-fit:cover;}
 .mat-mdc-card {background:var(--second-col-color);color:var(--text-over-second); cursor:pointer;}
 .mat-mdc-card:hover {border: 1px solid var(--main-col-color); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);}
 
-.mat-mdc-card-title {font-size:1rem;padding: 8px 16px;}
-.mat-mdc-card-title .mat-icon {vertical-align:bottom;position:relative; top:2px;color:var(--text-over-second);}
+.mat-mdc-card-title {
+  font-size: 1rem;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+}
+
+.mat-mdc-card-title span {max-width: 86%;}
+
+.mat-mdc-card-title .mat-icon {
+  flex-shrink: 0; /* Ensures the icon never wraps independently */
+  position:relative;
+  top:4px;
+  color: var(--text-over-second);
+}
 
 .grid-item:hover .mat-mdc-card-footer .mat-icon, .mdc-button:hover .mat-icon, mdc-button:focus .mat-icon {margin-left: 12px !important; font-weight: 500 !important; font-size:18px;  }
+.grid-container div {padding-right: 8px;}
 
 
 @media (min-width: 768px) {
