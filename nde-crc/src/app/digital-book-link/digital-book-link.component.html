@@ -1,5 +1,18 @@
 @if (showLink()) {
-    <div class="flex-display">
-        <a [href]="linkTarget" target="_blank"><mat-icon>info_outline</mat-icon>Find out more about digital textbooks <mat-icon aria-label="Open in new window">open_in_new</mat-icon></a>
+<div class="lr-cdl">
+
+@if (notLoggedIn()) {
+    <div>
+        
+        <button type="button" (click)="openHostLogin()" mat-button class="lr-cdl-signin">Sign in to view
+            <mat-icon>login</mat-icon>
+        </button>
     </div>
+}
+
+    <div >
+        <a [href]="linkTarget" target="_blank" class="lr-cdl-info"><mat-icon>info_outline</mat-icon>Find out more about digital textbooks <mat-icon aria-label="Open in new window">open_in_new</mat-icon></a>
+    </div>
+
+</div>
 }

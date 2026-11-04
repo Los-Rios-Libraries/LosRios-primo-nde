@@ -1,5 +1,15 @@
-div { padding-left: 1rem;}
-.mat-icon {font-size:16px; vertical-align: text-top; color:var(--main-col-color);}
+.lr-cdl {padding-left: 1rem;}
+.mat-icon {font-size:16px; vertical-align: middle; color:var(--main-col-color);}
 .mat-icon:first-of-type {font-size:18px; margin-right: 0.20rem;}
+.lr-cdl-signin {font-size: 1.1rem;}
+.lr-cdl-signin .mat-icon {margin-right: 0.5rem;}
+div {display:block;}
 a {text-decoration: none; color:var(--main-col-color);}
 a:hover, a:focus {text-decoration: underline;}
+
+@media (min-width: 768px) { /* display as single row in desktop view */
+    .lr-cdl  {display:flex; flex-direction:row;}
+    .lr-cdl div {display:flex; flex-direction: column;}
+    .lr-cdl div + div:has(.lr-cdl-info) {padding-left:1rem; border-left: 1px solid var(--main-col-color); align-self: center;}
+
+}
