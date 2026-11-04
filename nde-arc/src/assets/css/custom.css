@@ -120,7 +120,7 @@ nde-full-display-links .links-container span{
 /* adjust request prompt background and alignment */
 #nde\.request\.title .notification-container {background:#F7EDA3; justify-content:center; border:0 !important;}
 /* adjust "no requests" alert */
-.no-requests {font-size:1.2rem !important; text-align:center;}
+.no-requests {font-size:1.2rem !important;}
 /* hide campus links in request form; look out for unintended consequences of this selector */
 .mat-mdc-optgroup-label {display: none !important;}
 
@@ -319,6 +319,6 @@ nde-home-page-showcase a:focus, nde-home-page-showcase a:hover { text-decoration
     cursor: default;
   }
   
-
+.no-requests {text-align:center;}
 
 }
