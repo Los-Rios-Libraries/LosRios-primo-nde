@@ -88,6 +88,9 @@ nde-record-title .record-title .mat-body-large, .browse-search-item-text h3 {
   font-size: 2rem;
 }
 
+/* digital resource tweaks */
+/* make button to access cdl title more noticeable */
+.cdl-button { font-size: 1.2rem; border: 2px solid; padding:1rem; margin-left: 1rem;}
 /* Apply background to collection discovery names for contrast */
 .collection-discovery-header .content {
   background-color: rgba(0, 0, 0, 0.6);
