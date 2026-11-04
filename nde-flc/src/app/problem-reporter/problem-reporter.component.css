@@ -1,4 +1,4 @@
 /* hover styles in brief results are in custom.css */
-div {text-align: right; text-transform: uppercase; margin-bottom:-2rem;}
-button {position:relative; z-index: 0;bottom:2rem; color:var(--sys-tertiary); font-size:.8rem;}
+div { text-transform: uppercase; margin-bottom:-2rem; justify-content:right;}
+button {position:relative; z-index: 0;bottom:2rem; color:var(--sys-tertiary) !important; border-color:var(--sys-tertiary) !important; font-size:.8rem;}
 .mat-icon {color:var(--sys-tertiary);}   
