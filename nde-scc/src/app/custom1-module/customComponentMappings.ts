@@ -37,7 +37,8 @@ export const selectorComponentMap = new Map<string, any>([
   ['nde-request-card-bottom', IllLinkComponent],
   ['nde-search-contain-dropdown-after', WrapperSearchContainDropdownAfterComponent],
   ['nde-browse-home-page-bottom', BrowseLandingPageComponent],
-  ['nde-location-bottom', LocationNoteComponent]
+  ['nde-view-it-card-bottom', DigitalBookLinkComponent],
+  ['nde-location-bottom', LocationNoteComponent],
   ['nde-requests-bottom', NorequestsMessageComponent],
   ['nde-journal-home-page', JournalSearchLandingComponent]
 ]);
