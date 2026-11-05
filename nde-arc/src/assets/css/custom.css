@@ -313,7 +313,6 @@ nde-search-results nde-search-result-item-container:hover .lr-problem-reporter, 
 /* show animated chevron on hover/focus of showcase header */
 a .mat-headline-medium::after {content: "chevron_right";  font-family: Material Icons;  vertical-align: middle; padding-left: 0.5rem;  transition: 0.15s padding ease-out;}
 a:focus .mat-headline-medium::after, a:hover .mat-headline-medium::after { padding-left: 1.5rem;}
-nde-home-page-showcase a:focus, nde-home-page-showcase a:hover { text-decoration: none !important;}
 
 @media (min-width: 768px) {
   
