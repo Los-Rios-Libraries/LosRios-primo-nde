@@ -86,9 +86,9 @@ nde-record-title .record-title .mat-body-large, .browse-search-item-text h3 {
 
 /* digital resource tweaks */
 /* make button to access cdl title more noticeable */
-.cdl-button { font-size: 1.2rem; border: 2px solid; padding:1rem; margin-left: 1rem;}
+.cdl-button { font-size: 1rem !important; border: 2px solid !important; padding:1rem !important; margin-left: 1rem;}
 /* hide Denied Note (override for unregistered users) from Access Rights rules. Not needed because sign-in prompt is supplied by custom component. Style rule is very general, so watch for it breaking */
-.flex-container-view-it-no-digital div.flex-row { display:none;}
+.flex-container-view-it-no-digital div.flex-row:not(:has(.cdl-button)) { display:none;}
 
 /* Apply background to collection discovery names for contrast */
 .collection-discovery-header .content {
