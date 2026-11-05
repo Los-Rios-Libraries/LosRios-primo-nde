@@ -135,6 +135,8 @@ nde-full-display-links li:not(:has(a[href^="/nde/sourceRecord"])) {
 .request-card path {
   stroke: var(--main-col-color) !important;
 } 
+/* adjust color of item-level requests */
+.location-buttons-wrapper button {color: var(--main-col-color) !important; border-color: var(--main-col-color) !important;} 
 /* hide sign-in prompt above ILL link  */
 nde-notification[message^="nui\.request\.signin"]:has(+ nde-request-card[data-qa*="interlibrary loan"]) {display: none;} 
 /* hide default ILL link */
