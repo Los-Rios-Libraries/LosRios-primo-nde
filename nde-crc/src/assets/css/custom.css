@@ -154,7 +154,8 @@ nde-request-card[data-qa*="interlibrary loan"] mat-card {display: none;}
 /* hide chapters-from-this-book area */
 #nde\.relatedItems\.chaptersOfThisBook {display:none;}
 /* also hide link to these chapter listings */
-nde-record-book-chapters-or-reviews:has([data-qa="book-chapters-indication"]) {display:none;}
+nde-record-book-chapters-or-reviews a[data-qa="book-chapters-indication"], .book-chapters-or-reviews-divider {display:none !important;}
+
 /* hide AI research assistant widget */
 nde-research-assistant-side-bar {
   display: none;
