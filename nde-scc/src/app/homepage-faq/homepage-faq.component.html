@@ -3,9 +3,10 @@
         <ul> 
         @for (faq of faqs(); track faq.question) { 
             <li>
-                <a [href]="faq.url" target="_blank">{{faq.question}} 
-                <mat-icon>open_in_new</mat-icon>
+                <a [href]="faq.url" target="_blank"><span>{{faq.question}}</span> 
+                    <mat-icon aria-label="Opens in new browser tab">open_in_new</mat-icon>
                 </a>
+                
             </li> 
         } 
         </ul>

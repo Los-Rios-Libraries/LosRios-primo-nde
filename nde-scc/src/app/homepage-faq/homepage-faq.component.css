@@ -1,7 +1,9 @@
-a, a:visited {text-decoration: none;color:var(--main-col-color);}
-a:hover, a:focus {text-decoration: underline;}
+a, a:visited a:hover, a:focus {text-decoration: none !important;color:var(--main-col-color);}
+li a {display: flex; align-items: baseline;}
+a:hover span, a:focus span {text-decoration: underline; display:flex; }
 .mdc-button:hover, .mdc-button-focus, .mdc-button-active {text-decoration: none;}
 .mdc-button, .mat-icon {color:  var(--main-col-color) !important; border-color:var(--main-col-color) !important;}
-mat-icon {vertical-align: middle; font-size:16px; vertical-align: middle;}
+mat-icon {font-size:16px;}
+li mat-icon {display:inline-flex; flex-shrink: 0; padding-left: 4px;}
 ul {padding-left: 1.5rem;}
 li {margin-bottom: 0.5rem;}
