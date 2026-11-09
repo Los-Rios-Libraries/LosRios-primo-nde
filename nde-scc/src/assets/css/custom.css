@@ -104,6 +104,11 @@ nde-record-title .record-title .mat-body-large, .browse-search-item-text h3 {
   padding: 8px;
   border-radius: 4px;
 }
+
+/* mat icons in collection descriptions */
+.collection-discovery-header .header-description a { color: var(--second-col-color) !important;}
+.collection-discovery-header .header-description .material-icons {font-size:14px;}
+
 /* get rid of last slash in breacrumbs */
 .collection-path:last-of-type + span {
   display: none;
