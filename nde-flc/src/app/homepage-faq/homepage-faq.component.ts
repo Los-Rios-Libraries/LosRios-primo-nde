@@ -20,7 +20,7 @@ import { VIEW_CONSTANTS } from '../shared/constants/app.constants';
   styleUrl: './homepage-faq.component.css',
 })
 export class HomepageFaqComponent {
-  faqSiteURL = `https://answers.library.losrios.edu/${VIEW_CONSTANTS.libraryAcronym}`;
+  faqSiteURL = `https://answers.library.losrios.edu/${VIEW_CONSTANTS.libraryAcronym}/search/?t=0&adv=1&topics=${VIEW_CONSTANTS.homeFaqWidgetTopic}`;
   private cachedHttp = inject(CachedHttpService);
 
   // If everything fails, this signal just becomes an empty array []

@@ -36,6 +36,7 @@ export const VIEW_CONSTANTS = {
   noRequestsFaqId:<string> '449525',
   feesFaqId: <string> '278654',
   returnsFaqId:<string> '396351',
+  homeFaqWidgetTopic:<string> 'OneSearch-Tips',
   businessServices:<string> '/student-resources/business-services',
   collectionRoot:<string> '8160469930005325',
   browzineID: <string> '3234'
