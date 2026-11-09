@@ -83,6 +83,11 @@ nde-record-title .record-title .mat-body-large, .browse-search-item-text h3 {
 #collectionTitle {
   font-size: 2rem;
 }
+/* fix appearance of SCC and ARC root collection tumbnails */
+.collection-discovery-thumbnail[src*='8160469930005325'], .collection-discovery-thumbnail[src*='8160329870005325'] {object-fit: contain !important;}
+/* collection discovery root */
+.collection-discovery-header {background: var(--main-col-color) !important;}
+.collection-discovery-header-title, .collection-discovery-header-title + span {color:#fff !important;}
 
 /* digital resource tweaks */
 /* make button to access cdl title more noticeable */
