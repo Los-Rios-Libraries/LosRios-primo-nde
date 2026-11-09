@@ -1,4 +1,6 @@
-import { Component, Input, DoCheck, signal } from '@angular/core';
+import { Component, Input, inject, DoCheck, signal } from '@angular/core';
+import { Store, createFeatureSelector } from '@ngrx/store';
+import { PrimoRouterState } from '../shared/models/routerState.model';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatIconModule } from '@angular/material/icon';
 import { VIEW_CONSTANTS } from '../shared/constants/app.constants';
@@ -10,6 +12,8 @@ interface Creator {
   college: string;
   url: string;
 }
+const selectRouterState = createFeatureSelector<PrimoRouterState>('routerState');
+
 
 @Component({
   selector: 'custom-local-creators',
@@ -21,6 +25,8 @@ interface Creator {
 export class LocalCreatorsComponent implements DoCheck {
   @Input() hostComponent!: any;
 
+  private store = inject(Store);
+
   // Variables to hold our data
   creatorsData: Creator[] = [];
   localCreatorExists = signal(false);
@@ -29,12 +35,12 @@ export class LocalCreatorsComponent implements DoCheck {
   private lastDataSignature: string = '';
 
   get isFullDisplay() {
-    return location.href.includes('nde/fulldisplay?');
+    return this.store.selectSignal(selectRouterState)()?.routerState === 'fulldisplay';
   }
 
  get isCollectionDiscovery() {
   // avoid showing main badge on collection results for collections featuring only local authors
-  return /collectionDiscovery?collectionId=(81105690080005325|81101867750005325)/.test(location.href);
+  return this.store.selectSignal(selectRouterState)()?.routerState === 'collectionDiscovery';
  }
 
   // ngDoCheck runs frequently, but we make it fast by only comparing strings
