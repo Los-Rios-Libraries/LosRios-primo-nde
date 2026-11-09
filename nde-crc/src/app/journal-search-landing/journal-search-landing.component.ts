@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { Store, createFeatureSelector } from '@ngrx/store';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
 import { MatIcon } from '@angular/material/icon';
@@ -7,6 +8,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { VIEW_CONSTANTS } from '../shared/constants/app.constants';
 import { ArrayUtilsService } from '../services/array-utils.service'; 
 import { samples, gridImages } from './search-samples';
+import { currentView } from '../shared/models/viewconfig.model';
+
+const selectViewConfig = createFeatureSelector<currentView>('viewConfig');
 
 @Component({
   selector: 'custom-journal-search-landing',
@@ -16,10 +20,12 @@ import { samples, gridImages } from './search-samples';
   styleUrl: './journal-search-landing.component.css'
 })
 export class JournalSearchLandingComponent {
+  private store = inject(Store);
+  viewConfig = this.store.selectSignal(selectViewConfig);
+  currentView = this.viewConfig()?.config?.vid;
   private arrayUtils = inject(ArrayUtilsService);
-  viewCode = `01CACCL_LRCCD:${VIEW_CONSTANTS.libraryAcronym.toUpperCase()}`;
-  urlRoot = `/nde/jsearch?&tab=jsearch_slot&search_scope=jsearch_scope&offset=0&lang=en&vid=${this.viewCode}&query=`;
-  homepageUrl = `/nde/home?vid=${this.viewCode}`;
+  urlRoot = `/nde/jsearch?&tab=jsearch_slot&search_scope=jsearch_scope&offset=0&lang=en&vid=${this.currentView}&query=`;
+  homepageUrl = `/nde/home?vid=${this.currentView}`;
   browzineUrl = `https://browzine.com/libraries/${VIEW_CONSTANTS.browzineID}/`;
 
   // Shuffles array via ArrayUtilsService and takes up to 4 items for links

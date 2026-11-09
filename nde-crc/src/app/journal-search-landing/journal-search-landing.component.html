@@ -8,7 +8,7 @@
 <mat-grid-list cols="5" rowHeight="1:1" gutterSize="8px">
             @for (image of periodicalImages; track image.src) {
                 <mat-grid-tile>
-                    <a matTooltip="View {{image.title}} record in Journals by Title" href="/nde/jfulldisplay?context=L&vid={{viewCode}}&search_scope=jsearch_scope&tab=jsearch_slot&lang=en&docid=alma{{ image.id }}">
+                    <a matTooltip="View {{image.title}} record in Journals by Title" href="/nde/jfulldisplay?context=L&vid={{currentView}}&search_scope=jsearch_scope&tab=jsearch_slot&lang=en&docid=alma{{ image.id }}">
                     <img [src]="image.src" [alt]="image.title" />
                     </a>
                 </mat-grid-tile>

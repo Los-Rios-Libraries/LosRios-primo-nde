@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { createFeatureSelector, Store } from '@ngrx/store';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs'; // 1. Imported map operator
 import { CollectionItem } from '../shared/models/collection.model';
@@ -9,6 +10,9 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { VIEW_CONSTANTS } from '../shared/constants/app.constants';
+import { currentView } from '../shared/models/viewconfig.model';
+
+const selectViewConfig = createFeatureSelector<currentView>('viewConfig');
 
 @Component({
   selector: 'custom-homepage-collections-widget',
@@ -19,12 +23,19 @@ import { VIEW_CONSTANTS } from '../shared/constants/app.constants';
   styleUrl: './homepage-collections-widget.component.css',
 })
 export class HomepageCollectionsWidgetComponent {
+  // get current view code
+  private store = inject(Store);
+  viewConfig = this.store.selectSignal(selectViewConfig);
+  currentView = this.viewConfig()?.config?.vid;
+
+
+  
   private cachedHttp = inject(CachedHttpService);
   private arrayUtils = inject(ArrayUtilsService); // 2. Switched to inject() to avoid initialization order bugs
 
   college = VIEW_CONSTANTS.libraryAcronym;
   thumbnailBaseURL = '/view/delivery/thumbnail/01CACCL_LRCCD/';
-  collectionPage = `/discovery/collectionDiscovery?vid=01CACCL_LRCCD:${this.college.toUpperCase()}&collectionId=`;
+  collectionPage = `/discovery/collectionDiscovery?vid=${this.currentView}&collectionId=`;
   collectionRoot = VIEW_CONSTANTS.collectionRoot;
  
 
