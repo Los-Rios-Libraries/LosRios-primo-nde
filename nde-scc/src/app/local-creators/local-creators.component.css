@@ -4,8 +4,8 @@
 .lr-logo-b{fill:#215dd6;}
 .lr-logo-c{fill:#9cceeb;}
 .badges .badge-item {align-items: baseline; font:var(--sys-body-small);}
-mat-icon {font-size:16px; vertical-align: baseline;}
-.lr-creator-blurb {vertical-align: middle;}
+mat-icon {font-size:14px; display:inline-flex;}
+.lr-creator-blurb {margin-bottom: 0.5rem;}
 a {color:var(--sys-primary); text-decoration: none;}
 a:hover, a:focus {text-decoration: underline;}
 .lrcreator-collection {padding-left:1rem; font-size:0.9rem;}
