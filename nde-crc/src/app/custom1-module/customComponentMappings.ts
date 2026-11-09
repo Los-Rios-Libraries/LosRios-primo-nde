@@ -11,6 +11,7 @@ import { WrapperBaseRequestFormBottomComponent } from '../wrapper-base-request-f
 import { LandingPageComponent } from '../landing-page/landing-page.component';
 import { DigitalBookLinkComponent } from '../digital-book-link/digital-book-link.component';
 import { ShowSubjectsInfoComponent } from '../show-subjects-info/show-subjects-info.component';
+import { CollectionBlurbsBottomComponent } from '../collection-blurbs-bottom/collection-blurbs-bottom.component';
 import { HeaderBannerComponent } from '../header-banner/header-banner.component';
 import { LocationNoteComponent } from '../location-note/location-note.component';
 import { JournalSearchLandingComponent } from '../journal-search-landing/journal-search-landing.component';
@@ -26,6 +27,7 @@ export const selectorComponentMap = new Map<string, any>([
   ['nde-search-result-item-container-bottom', WrapperSearchResultItemContainerBottomComponent],  
   ['nde-full-display-service-container-before', LocalNotesComponent],
   ['nde-collection-discovery-gallery-item-bottom', WrapperCollectionDiscoveryGalleryItemBottomComponent],
+  ['nde-collection-discovery-gallery-bottom', CollectionBlurbsBottomComponent],
   ['nde-record-availability-top', LocalCreatorsComponent],
   ['nde-fines-bottom', FeeInfoComponent],
   ['nde-locations-container-after', LocalNotesComponent],

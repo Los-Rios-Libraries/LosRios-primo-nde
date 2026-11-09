@@ -31,6 +31,7 @@ export const VIEW_CONSTANTS = {
   ],
   almaDFaq:<string> 'https://answers.library.losrios.edu/arc/faq/372430',
   collectionsShowingAvailability:<string[]> ['8191432850005325', '8188683380005325'],
+  collectionsWithBlurbs: <string[]> [],
   limitedDeliveryFaq:<string> '407682',
   subjectInfoFaqId:<string> '414780',
   noRequestsFaqId:<string> '449525',

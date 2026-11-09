@@ -31,6 +31,7 @@ export const VIEW_CONSTANTS = {
   ],
   almaDFaq:<string> 'https://answers.library.losrios.edu/flc/search/?t=0&adv=1&topics=Digital%20Books',
   collectionsShowingAvailability:<string[]> [],
+  collectionsWithBlurbs: <string[]> [],
   limitedDeliveryFaq:<string> '407119',
   subjectInfoFaqId:<string> '414406',
   noRequestsFaqId:<string> '448481',
