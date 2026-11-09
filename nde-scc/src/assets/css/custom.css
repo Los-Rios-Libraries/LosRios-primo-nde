@@ -62,7 +62,7 @@ nde-logo img {
 
 /* enlarge record titles */
 nde-record-title .record-title .mat-body-large, .browse-search-item-text h3 {
-  font-size: 1.3em !important;
+  font-size: 1.2em !important;
 }
 
 /* better render full-text buttons */
