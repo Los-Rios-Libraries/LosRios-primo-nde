@@ -4,7 +4,6 @@ import { FaqItem } from '../shared/models/faq.model';
 import { CachedHttpService } from '../services/cached-http.service';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
 import { MatAnchor } from '@angular/material/button';
 import { VIEW_CONSTANTS } from '../shared/constants/app.constants';
 
@@ -14,7 +13,6 @@ import { VIEW_CONSTANTS } from '../shared/constants/app.constants';
   imports: [
     MatCardModule,
     MatIconModule,
-    MatListModule,
     MatAnchor
   ],
   providers: [CachedHttpService],
