@@ -38,7 +38,7 @@ nde-logo img {
 
 /* let the custom search/header area size naturally */
 .custom-search-bar-container {
-  height: auto !important;
+  height: auto !important; align-items: start !important; 
 }
 
 /* ARC-colored top search/header background */
@@ -330,6 +330,7 @@ a .mat-headline-medium::after {content: "chevron_right";  font-family: Material 
 a:focus .mat-headline-medium::after, a:hover .mat-headline-medium::after { padding-left: 1.5rem;}
 
 @media (min-width: 768px) {
+  .custom-search-bar-container {align-items: center !important; }
   
   /* increase footer padding for desktop */
   #footer-container {padding-left: 3rem; padding-right: 3rem;
