@@ -55,6 +55,8 @@ nde-logo img {
 
 /* smaller text on showcase carousel,virtual browse, etc to show more words */
 .carousel-card h3.mat-title-medium {font: var(--sys-title-small) !important;}
+/* don't underline showcase header link */
+.showcase-container > a:hover, .showcase-container > a:focus {text-decoration:none;}
 
 /* hide default label visually */
 .custom-search-bar-container h1, 
