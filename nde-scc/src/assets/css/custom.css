@@ -136,6 +136,9 @@ nde-full-display-links li:not(:has(a[href^="/nde/sourceRecord"])) {
 #nde\.getit\.locations:has(.mat-expansion-panel-header[aria-expanded="false"]:not(.brief-property-header-container)) + #nde\.request\.title {margin-top:0px;}
 /* adjust request prompt background and alignment */
 #nde\.request\.title .notification-container {background:#F7EDA3; justify-content:center; border:0 !important;}
+/* hide request prompt when locations area is collapsed, but still show when request area is in focus */
+#nde\.getit\.locations:has(.locations.collapsed-panel) + #nde\.request\.title .notification-container {display:none;}
+#nde\.getit\.locations:has(.locations.collapsed-panel) + #nde\.request\.title .mat-expansion-panel .mat-expansion-panel-header:focus + .mat-expansion-panel-content-wrapper .notification-container {display: flex;}
 /* adjust "no requests" alert */
 .no-requests {font-size:1.2rem !important;}
 
