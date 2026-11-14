@@ -17,6 +17,7 @@ import { LocationNoteComponent } from '../location-note/location-note.component'
 import { NorequestsMessageComponent } from '../norequests-message/norequests-message.component';
 import { JournalSearchLandingComponent } from '../journal-search-landing/journal-search-landing.component';
 import { LinkToLegacyVeComponent } from '../link-to-legacy-ve/link-to-legacy-ve.component';
+import { BackToBrowseHomeButtonComponent } from '../back-to-browse-home-button/back-to-browse-home-button.component';
 
 // Define the map
 export const selectorComponentMap = new Map<string, any>([
@@ -39,6 +40,7 @@ export const selectorComponentMap = new Map<string, any>([
   ['nde-request-card-bottom', IllLinkComponent],
   ['nde-search-contain-dropdown-after', WrapperSearchContainDropdownAfterComponent],
   ['nde-browse-home-page-bottom', BrowseLandingPageComponent],
+  ['nde-browse-search-container-top', BackToBrowseHomeButtonComponent],
   ['nde-view-it-card-bottom', DigitalBookLinkComponent],
   ['nde-location-bottom', LocationNoteComponent],
   ['nde-requests-bottom', NorequestsMessageComponent],
