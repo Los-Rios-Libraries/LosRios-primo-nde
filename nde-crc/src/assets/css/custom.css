@@ -48,6 +48,8 @@ nde-logo img {
 .background-overlay {
   display: none;
 }
+/* more info label in natural language search */
+.natural-language-search-header-titles a, .natural-language-search-header-titles .material-icons {font-size:14px; margin-top:8px;}
 
 /* smaller text on showcase carousel,virtual browse, etc to show more words */
 .carousel-card h3.mat-title-medium {font: var(--sys-title-small) !important;}
