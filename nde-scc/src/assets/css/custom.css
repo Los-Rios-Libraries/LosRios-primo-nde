@@ -357,6 +357,10 @@ lr-note-sccRec:nth-child(1):is(span) {display:inline-block; }
 
 .no-requests {text-align:center;}
 
+nde-collection-discovery-list .lr-note-section {
+  left:80px !important;
+}
+
 
 
 }

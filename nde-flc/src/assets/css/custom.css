@@ -365,5 +365,9 @@ a:focus .mat-headline-medium::after, a:hover .mat-headline-medium::after { paddi
   }
 
   .no-requests {text-align:center;}
+  
+  nde-collection-discovery-list .lr-note-section {
+  left:80px !important;
+}
 
 }
