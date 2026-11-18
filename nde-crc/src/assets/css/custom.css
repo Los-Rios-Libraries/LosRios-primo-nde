@@ -97,8 +97,8 @@ nde-record-title .record-title .mat-body-large, .browse-search-item-text h3 {
 /* make button to access cdl title more noticeable */
 .cdl-button { font-size: 1rem !important; border: 2px solid !important; padding:1rem !important; margin-left: 1rem;}
 /* hide Denied Note (override for unregistered users) from Access Rights rules. Not needed because sign-in prompt is supplied by custom component. Style rule is very general, so watch for it breaking */
-.flex-container-view-it-no-digital div.flex-row:not(:has(.cdl-button)) { display:none;}
-.flex-container-view-it-no-digital div:has(a.package-name) + div.flex-row {display: flex;}
+.flex-container-view-it-digital div.flex-row:not(:has(.cdl-button)) { display:none;}
+
 /* when there are multiple representations, only show our digital books link component after the last one */
 .view-it-card-links-items:not(:last-child) .lr-cdl {display: none;}
 
