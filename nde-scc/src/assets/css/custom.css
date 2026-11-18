@@ -228,6 +228,8 @@ h5.package-name+mat-icon {
   height: 1.3rem !important;
   width: 1.3rem !important;
 }
+/* icons in our public notes */
+.flex-container-view-it-no-digital .material-icons { font-size:14px; margin-left:4px; vertical-align: center;}
 
 #notifText {font-size:1em; }
 nde-login .mat-icon, nde-login .availability-button {color:var(--main-col-color) !important; fill:var(--main-col-color); }
