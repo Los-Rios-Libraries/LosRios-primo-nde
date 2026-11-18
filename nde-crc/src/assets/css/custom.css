@@ -279,16 +279,23 @@ footer .main-landing-page {
 #footer-container .flex-column { flex-grow:1; flex-basis:0; }
 footer ul + h2 { margin-top: 10px !important;}
 .lr-social-icon {display: inline-block; margin-right: 10px; padding-top:10px;}
-/* footer .grid-item {margin-bottom:2rem;} */
+
 footer li a:link, footer li a:visited {
   color: var( --text-over-second);
   text-decoration: none;
+  display: flex;
+  align-items: baseline;
 }
 
 footer li a:hover, footer li a:focus {
   text-decoration: underline;
 }
+.lr-social-icon {display: inline-block !important; margin-right: 10px; padding-top:10px;}
+#footer-container span.lr-chevron {display: inline-flex;transition:all .3s linear; margin-right: 4px;}
+a:hover .lr-chevron, a:focus .lr-chevron {margin-left: 8px;}
+a:hover:has(.lr-chevron), a:focus:has(.lr-chevron) {text-decoration:none; }
 
+footer .material-icons { font-size:14px; display:inline-flex; flex-shrink: 0; position:relative; top:2px;}
 #subfooter {
   background-color: #00263D;
   /* padding-left:2rem; */

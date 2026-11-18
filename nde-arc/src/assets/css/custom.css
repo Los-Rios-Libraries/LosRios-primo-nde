@@ -123,7 +123,6 @@ nde-record-title .record-title .mat-body-large, .browse-search-item-text h3 {
   display: none;
 }
 
-
 .grid-item .lr-availability-display {position:relative; bottom:40px;}
 
 /* hide extra links from MARC 856 and NZ GES */
@@ -292,6 +291,8 @@ footer a:link,
 footer a:visited {
   color: #ffffff;
   text-decoration: none;
+  display: flex;
+  align-items: baseline;
 }
 
 footer li a:hover,
@@ -300,7 +301,12 @@ footer a:hover,
 footer a:focus {
   text-decoration: underline;
 }
-footer .material-icons { font-size:14px; vertical-align: center;}
+.lr-social-icon {display: inline-block !important; margin-right: 10px; padding-top:10px;}
+#footer-container span.lr-chevron {display: inline-flex;transition:all .3s linear; margin-right: 4px;}
+a:hover .lr-chevron, a:focus .lr-chevron {margin-left: 8px;}
+a:hover:has(.lr-chevron), a:focus:has(.lr-chevron) {text-decoration:none; }
+
+footer .material-icons { font-size:14px; display:inline-flex; flex-shrink: 0; position:relative; top:2px;}
 #subfooter {
   background-color: #003058; /* ARC primary blue */
 }
