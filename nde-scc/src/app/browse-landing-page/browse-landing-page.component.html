@@ -32,8 +32,8 @@
                     </li>
                 }
             </ul>
-            <p>The Library of Congress lists current subject headings in <a href="https://www.loc.gov/aba/publications/FreeLCSH/freelcsh.html" target="_blank">freely available PDF files.<mat-icon aria-label="Open in new window">open_in_new</mat-icon></a></p>
-            <p><a [href]="subjectFaqUrl" target="_blank">Read more about subject headings in OneSearch.<mat-icon aria-label="Open in new window">open_in_new</mat-icon></a></p>
+            <p>The Library of Congress lists current subject headings in <a href="https://www.loc.gov/aba/publications/FreeLCSH/freelcsh.html" target="_blank"><span>freely available PDF files.</span><mat-icon aria-label="Open in new window">open_in_new</mat-icon></a></p>
+            <p><a [href]="subjectFaqUrl" target="_blank"><span>Read more about subject headings in OneSearch.</span><mat-icon aria-label="Open in new window">open_in_new</mat-icon></a></p>
         }
         @case ('Homosaurus subject heading') {
             <p>Enter a Homosaurus subject heading to browse adjacent subject headings of titles held by any of the Los Rios Libraries. Then click a subject heading to view which titles have that Homosaurus subject.</p>
@@ -50,7 +50,7 @@
                     </li>
                 }
             </ul>
-            <p>The Homosaurus vocabulary can be viewed at <a href="https://homosaurus.org/" target="_blank">homosaurus.org.<mat-icon aria-label="Open in new window">open_in_new</mat-icon></a></p>
+            <p>The Homosaurus vocabulary can be viewed at <a href="https://homosaurus.org/" target="_blank"><span>homosaurus.org.</span><mat-icon aria-label="Open in new window">open_in_new</mat-icon></a></p>
            
         }
          @case ('LC genre term') {
@@ -68,7 +68,7 @@
                     </li>
                 }
             </ul>
-             <p>The Library of Congress lists current genre terms in <a href="https://www.loc.gov/aba/publications/FreeLCGFT/freelcgft.html" target="_blank">freely available PDF files.<mat-icon aria-label="Open in new window">open_in_new</mat-icon></a></p>
+             <p>The Library of Congress lists current genre terms in <a href="https://www.loc.gov/aba/publications/FreeLCGFT/freelcgft.html" target="_blank"><span>freely available PDF files.</span><mat-icon aria-label="Open in new window">open_in_new</mat-icon></a></p>
            
         }
         @case ('LC name heading') {
@@ -86,7 +86,7 @@
                     </li>
                 }
             </ul>
-             <p>The Library of Congress lists its name headings at the <a href="https://authorities.loc.gov/" target="_blank">Authorities site.<mat-icon aria-label="Open in new window">open_in_new</mat-icon></a></p>
+             <p>The Library of Congress lists its name headings at the <a href="https://authorities.loc.gov/" target="_blank"><span>Authorities site.</span><mat-icon aria-label="Open in new window">open_in_new</mat-icon></a></p>
            
         }
         @case ('Call number') {
@@ -104,13 +104,17 @@
                 }
             </ul>
             <p>Only physical resources, such as print books and DVDs, are shown as results in call number browse searches.</p>
-            <p>Find the letters and titles of the main LC classes in the <a href="https://www.loc.gov/catdir/cpso/lcco/" target="_blank">Library of Congress Classification Outline.<mat-icon aria-label="Open in new window">open_in_new</mat-icon></a></p>
+            <p>Find the letters and titles of the main LC classes in the <a href="https://www.loc.gov/catdir/cpso/lcco/" target="_blank"><span>Library of Congress Classification Outline. </span>   <mat-icon aria-label="Open in new window">open_in_new</mat-icon></a></p>
         }
         }
-        <p>The various indexes you browse here may contain errors caused by improper cataloging. The Libraries work to correct these errors when discovered, but given the large size of the catalog, they cannot commit to fixing every problem.</p>
-        <p>If you encounter a particularly problematic entry, please use the <i>Report a Problem</i> button or <a [href]="askUsUrl" target="_blank">send us a message<mat-icon>open_in_new</mat-icon></a> to report it to the Libraries for investigation.</p>
+        @if (browseScope().browse_type !== 'Call number') {
         <mat-divider class="nde-divider full-display-divider"></mat-divider>
         <h3 class="mat-headline-small">About cataloging errors and offensive language</h3>
+        <p>The various indexes you browse here may contain errors as a result of improper cataloging. </p>
+        <p>In some cases, language used in headings may stray from contemporary usage and even cause offence.</p>
+        <p>The Libraries work to correct these problems when discovered, but given the large size of the catalog, they cannot commit to fixing every problem.</p>
+        <p>If you encounter a particularly problematic entry, please report it to the Libraries for investigation via the <i>Report a Problem</i> button or <a [href]="askUsUrl" target="_blank"><span>Ask Us page.</span><mat-icon>open_in_new</mat-icon></a></p>        
+    }
     </mat-card-content>
 </mat-card>
 }
