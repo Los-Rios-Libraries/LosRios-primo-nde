@@ -5,6 +5,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
 import { MatIcon } from '@angular/material/icon';
 import { MatTooltip } from '@angular/material/tooltip';
+import { MatDivider } from '@angular/material/divider';
 import { VIEW_CONSTANTS } from '../shared/constants/app.constants';
 import { browseSelections } from './browse-landing-page-constants';
 
@@ -13,7 +14,7 @@ declare const __webpack_public_path__: string;
 @Component({
   selector: 'custom-browse-landing-page',
   standalone: true,
-  imports: [MatTabsModule, MatCardModule, MatIcon, MatTooltip],
+  imports: [MatTabsModule, MatCardModule, MatIcon, MatTooltip, MatDivider],
   templateUrl: './browse-landing-page.component.html',
   styleUrl: './browse-landing-page.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush
