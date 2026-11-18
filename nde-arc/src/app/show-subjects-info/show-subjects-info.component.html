@@ -1,4 +1,29 @@
-@if (hasSubjects()) {
-    <p><mat-icon>info_outline</mat-icon><a href="{{ faqUrl }}" target="_blank">Where do the subject headings in OneSearch come from?<mat-icon aria-label="Open in new window">open_in_new</mat-icon></a></p>
-}
+@if (showCard()) {
+  <div
+    class="flex-row flex-layout-end"
+    [class.has-subjects]="hasSubjects()"
+    [class.facet-active]="!hasSubjects() && facetActive()"
+    [class.subject-search]="!hasSubjects() && isSubjectSearch()">
+    <mat-card appearance="outlined">
+      <mat-card-content>
+        <mat-icon aria-label="Info">info_outline</mat-icon>
+        <a [href]="faqUrl" target="_blank" rel="noopener noreferrer">
+          Where do the subject headings in OneSearch come from?
+          <mat-icon aria-label="Open in new window">open_in_new</mat-icon>
+        </a>
 
+        @if (showDismissButton()) {
+          <button
+            mat-button
+            type="button"
+            matTooltip="Hide this message for 60 days"
+            class="dismiss-btn"
+            (click)="dismissCard()"
+            aria-label="Dismiss alert">
+            <mat-icon>close</mat-icon>
+          </button>
+        }
+      </mat-card-content>
+    </mat-card>
+  </div>
+}

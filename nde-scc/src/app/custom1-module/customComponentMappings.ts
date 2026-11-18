@@ -34,6 +34,7 @@ export const selectorComponentMap = new Map<string, any>([
   ['nde-locations-container-after', LocalNotesComponent],
   ['nde-full-display-details-after', LocalNotesComponent],
   ['nde-full-display-details-bottom', ShowSubjectsInfoComponent],
+  ['nde-search-results-top-bar-before', ShowSubjectsInfoComponent], 
   ['nde-get-it-before', LocalNotesComponent],
   ['nde-view-it-after', LocalNotesComponent] ,
   ['nde-base-request-form-bottom', WrapperBaseRequestFormBottomComponent],
