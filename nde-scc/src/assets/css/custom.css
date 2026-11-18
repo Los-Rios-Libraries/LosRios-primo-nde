@@ -208,7 +208,6 @@ nde-collection-discovery-gallery .lr-creator-block { position:relative; top:-3.5
 
 /* vary local notes look for list view in collection discovery */
 nde-collection-discovery-list .lr-note-section {
-  left:80px !important;
   top:-20px !important;
 }
 nde-full-display-details-after-from-remote-0 {display:flex; flex-direction:column;}
