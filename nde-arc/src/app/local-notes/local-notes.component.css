@@ -24,3 +24,7 @@ a:link, a:visited {
 .lr-note-area-viewitbottom, .lr-note-area-holdingstop {
   padding-left: 1rem;
 }
+
+.lr-note-sccRec {display:flex; flex-direction:row; align-items:baseline; }
+.lr-note-sccRec .mat-icon {display:flex; flex-direction:column; min-width: 20px !important; }
+.lr-note-sccRec + span {display:flex; flex-direction:column; }
