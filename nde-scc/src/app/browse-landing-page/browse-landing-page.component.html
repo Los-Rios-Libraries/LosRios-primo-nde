@@ -1,120 +1,115 @@
 @if (browseScope().browse_type) {
 <mat-card appearance="outlined" class="margin-top-huge">
     <mat-card-header>
-        <mat-card-title><h2 class="mat-headline-medium">Browse by {{browseScope().browse_type}} 
-            <!-- material design icons -->
-            @if (browseScope().icon) {
-                <mat-icon aria-hidden="true">{{browseScope().icon}}</mat-icon>
-            }
-            <!-- other images -->
-             @else if (browseScope().image) {
-                <img [src]="browseScope().image" alt="">
-
-            }
+        <mat-card-title>
+            <h2 class="mat-headline-medium">Browse by {{ browseScope().browse_type }}
+                @if (browseScope().icon) {
+                    <mat-icon aria-hidden="true">{{ browseScope().icon }}</mat-icon>
+                } @else if (browseScope().image) {
+                    <img [src]="browseScope().image" alt="">
+                }
             </h2>
         </mat-card-title>
-        <mat-card-subtitle>To switch between different browse options, select the desired category from the dropdown menu above.</mat-card-subtitle >
+        <mat-card-subtitle>To switch between different browse options, select the desired category from the dropdown menu above.</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
         @switch (browseScope().browse_type) {
-        @case ('LC subject heading') {
-            <p>Enter a Library of Congress (LC) subject heading to browse adjacent subject headings of titles held by any of the Los Rios Libraries. Then click a subject heading to view which titles have that LC subject.</p>
-            <p>Examples:</p>
-            
-            <ul>
-                @for (subject of this.lcSubjects; track subject.name) {
-                    <li>
-                        <a [href]="subject.url" 
-                           matTooltipPosition="right" 
-                           matTooltip="Open {{subject.name}} in Browse Search">
-                           {{subject.name}}<mat-icon>chevron_right</mat-icon>
-                        </a>
-                    </li>
-                }
-            </ul>
-            <p>The Library of Congress lists current subject headings in <a href="https://www.loc.gov/aba/publications/FreeLCSH/freelcsh.html" target="_blank"><span>freely available PDF files.</span><mat-icon aria-label="Open in new window">open_in_new</mat-icon></a></p>
-            <p><a [href]="subjectFaqUrl" target="_blank"><span>Read more about subject headings in OneSearch.</span><mat-icon aria-label="Open in new window">open_in_new</mat-icon></a></p>
-        }
-        @case ('Homosaurus subject heading') {
-            <p>Enter a Homosaurus subject heading to browse adjacent subject headings of titles held by any of the Los Rios Libraries. Then click a subject heading to view which titles have that Homosaurus subject.</p>
-            <p>Examples:</p>
-            
-            <ul>
-                @for (subject of this.homoitSubjects; track subject.name) {
-                    <li>
-                        <a [href]="subject.url" 
-                           matTooltipPosition="right" 
-                           matTooltip="Open {{subject.name}} in Browse Search">
-                           {{subject.name}}<mat-icon>chevron_right</mat-icon>
-                        </a>
-                    </li>
-                }
-            </ul>
-            <p>The Homosaurus vocabulary can be viewed at <a href="https://homosaurus.org/" target="_blank"><span>homosaurus.org.</span><mat-icon aria-label="Open in new window">open_in_new</mat-icon></a></p>
-           
-        }
-         @case ('LC genre term') {
-            <p>Enter a Library of Congress genre/format term to browse adjacent terms of titles held by any of the Los Rios Libraries. Then click a term to view which titles have that heading.</p>
-            <p>Examples:</p>
-            
-            <ul>
-                @for (subject of this.lcGenres; track subject.name) {
-                    <li>
-                        <a [href]="subject.url" 
-                           matTooltipPosition="right" 
-                           matTooltip="Open {{subject.name}} in Browse Search">
-                           {{subject.name}}<mat-icon>chevron_right</mat-icon>
-                        </a>
-                    </li>
-                }
-            </ul>
-             <p>The Library of Congress lists current genre terms in <a href="https://www.loc.gov/aba/publications/FreeLCGFT/freelcgft.html" target="_blank"><span>freely available PDF files.</span><mat-icon aria-label="Open in new window">open_in_new</mat-icon></a></p>
-           
-        }
-        @case ('LC name heading') {
-            <p>Enter a Library of Congress-formatted name of a person or organization to browse adjacent headings of titles held by any of the Los Rios Libraries. Then click a heading to view which titles have that LC name in their record.</p>
-            <p>Examples:</p>
-            
-            <ul>
-                @for (subject of this.lcNames; track subject.name) {
-                    <li>
-                        <a [href]="subject.url" 
-                           matTooltipPosition="right" 
-                           matTooltip="Open {{subject.name}} in Browse Search">
-                           {{subject.name}}<mat-icon>chevron_right</mat-icon>
-                        </a>
-                    </li>
-                }
-            </ul>
-             <p>The Library of Congress lists its name headings at the <a href="https://authorities.loc.gov/" target="_blank"><span>Authorities site.</span><mat-icon aria-label="Open in new window">open_in_new</mat-icon></a></p>
-           
-        }
-        @case ('Call number') {
-            <p>Enter part or all of a Library of Congress (LC) call number to find items across the Los Rios libraries in call-number order.</p>
-            <p>Examples:</p>
-            <ul>
-                @for (callNo of this.callNos; track callNo.class) {
-                    <li>
-                        <a [href]="callNo.url" 
-                           matTooltipPosition="right" 
-                           matTooltip="Open {{callNo.class}} in Browse Search">
-                           {{callNo.class}} <span >({{callNo.desc}})</span><mat-icon>chevron_right</mat-icon>
-                        </a>
-                    </li>
-                }
-            </ul>
-            <p>Only physical resources, such as print books and DVDs, are shown as results in call number browse searches.</p>
-            <p>Find the letters and titles of the main LC classes in the <a href="https://www.loc.gov/catdir/cpso/lcco/" target="_blank"><span>Library of Congress Classification Outline. </span>   <mat-icon aria-label="Open in new window">open_in_new</mat-icon></a></p>
-        }
+            @case ('LC subject heading') {
+                <p>Enter a Library of Congress (LC) subject heading to browse adjacent subject headings of titles held by any of the Los Rios Libraries. Then click a subject heading to view which titles have that LC subject.</p>
+                <p>Examples:</p>
+                <ul>
+                    @for (subject of lcSubjects; track subject.name) {
+                        <li>
+                            <a [href]="subject.url"
+                               (click)="navigateToBrowse($event, subject.scope, subject.query)"
+                               matTooltipPosition="right"
+                               matTooltip="Open {{ subject.name }} in Browse Search">
+                               {{ subject.name }}<mat-icon>chevron_right</mat-icon>
+                            </a>
+                        </li>
+                    }
+                </ul>
+                <p>The Library of Congress lists current subject headings in <a href="https://www.loc.gov/aba/publications/FreeLCSH/freelcsh.html" target="_blank" rel="noopener noreferrer"><span>freely available PDF files.</span><mat-icon aria-label="Open in new window">open_in_new</mat-icon></a></p>
+                <p><a [href]="subjectFaqUrl" target="_blank" rel="noopener noreferrer"><span>Read more about subject headings in OneSearch.</span><mat-icon aria-label="Open in new window">open_in_new</mat-icon></a></p>
+            }
+            @case ('Homosaurus subject heading') {
+                <p>Enter a Homosaurus subject heading to browse adjacent subject headings of titles held by any of the Los Rios Libraries. Then click a subject heading to view which titles have that Homosaurus subject.</p>
+                <p>Examples:</p>
+                <ul>
+                    @for (subject of homoitSubjects; track subject.name) {
+                        <li>
+                            <a [href]="subject.url"
+                               (click)="navigateToBrowse($event, subject.scope, subject.query)"
+                               matTooltipPosition="right"
+                               matTooltip="Open {{ subject.name }} in Browse Search">
+                               {{ subject.name }}<mat-icon>chevron_right</mat-icon>
+                            </a>
+                        </li>
+                    }
+                </ul>
+                <p>The Homosaurus vocabulary can be viewed at <a href="https://homosaurus.org/" target="_blank" rel="noopener noreferrer"><span>homosaurus.org.</span><mat-icon aria-label="Open in new window">open_in_new</mat-icon></a></p>
+            }
+            @case ('LC genre term') {
+                <p>Enter a Library of Congress genre/format term to browse adjacent terms of titles held by any of the Los Rios Libraries. Then click a term to view which titles have that heading.</p>
+                <p>Examples:</p>
+                <ul>
+                    @for (subject of lcGenres; track subject.name) {
+                        <li>
+                            <a [href]="subject.url"
+                               (click)="navigateToBrowse($event, subject.scope, subject.query)"
+                               matTooltipPosition="right"
+                               matTooltip="Open {{ subject.name }} in Browse Search">
+                               {{ subject.name }}<mat-icon>chevron_right</mat-icon>
+                            </a>
+                        </li>
+                    }
+                </ul>
+                <p>The Library of Congress lists current genre terms in <a href="https://www.loc.gov/aba/publications/FreeLCGFT/freelcgft.html" target="_blank" rel="noopener noreferrer"><span>freely available PDF files.</span><mat-icon aria-label="Open in new window">open_in_new</mat-icon></a></p>
+            }
+            @case ('LC name heading') {
+                <p>Enter a Library of Congress-formatted name of a person or organization to browse adjacent headings of titles held by any of the Los Rios Libraries. Then click a heading to view which titles have that LC name in their record.</p>
+                <p>Examples:</p>
+                <ul>
+                    @for (subject of lcNames; track subject.name) {
+                        <li>
+                            <a [href]="subject.url"
+                               (click)="navigateToBrowse($event, subject.scope, subject.query)"
+                               matTooltipPosition="right"
+                               matTooltip="Open {{ subject.name }} in Browse Search">
+                               {{ subject.name }}<mat-icon>chevron_right</mat-icon>
+                            </a>
+                        </li>
+                    }
+                </ul>
+                <p>The Library of Congress lists its name headings at the <a href="https://authorities.loc.gov/" target="_blank" rel="noopener noreferrer"><span>Authorities site.</span><mat-icon aria-label="Open in new window">open_in_new</mat-icon></a></p>
+            }
+            @case ('Call number') {
+                <p>Enter part or all of a Library of Congress (LC) call number to find items across the Los Rios libraries in call-number order.</p>
+                <p>Examples:</p>
+                <ul>
+                    @for (callNo of callNos; track callNo.class) {
+                        <li>
+                            <a [href]="callNo.url"
+                               (click)="navigateToBrowse($event, callNo.scope, callNo.query)"
+                               matTooltipPosition="right"
+                               matTooltip="Open {{ callNo.class }} in Browse Search">
+                               {{ callNo.class }} <span>({{ callNo.desc }})</span><mat-icon>chevron_right</mat-icon>
+                            </a>
+                        </li>
+                    }
+                </ul>
+                <p>Only physical resources, such as print books and DVDs, are shown as results in call number browse searches.</p>
+                <p>Find the letters and titles of the main LC classes in the <a href="https://www.loc.gov/catdir/cpso/lcco/" target="_blank" rel="noopener noreferrer"><span>Library of Congress Classification Outline.</span> <mat-icon aria-label="Open in new window">open_in_new</mat-icon></a></p>
+            }
         }
         @if (browseScope().browse_type !== 'Call number') {
-        <mat-divider class="nde-divider full-display-divider"></mat-divider>
-        <h3 class="mat-headline-small">About cataloging errors and offensive language</h3>
-        <p>The various indexes you browse here may contain errors as a result of improper cataloging. </p>
-        <p>In some cases, language used in headings may stray from contemporary usage and even cause offence.</p>
-        <p>The Libraries work to correct these problems when discovered, but given the large size of the catalog, they cannot commit to fixing every problem.</p>
-        <p>If you encounter a particularly problematic entry, please report it to the Libraries for investigation via the <i>Report a Problem</i> button or <a [href]="askUsUrl" target="_blank"><span>Ask Us page.</span><mat-icon>open_in_new</mat-icon></a></p>        
-    }
+            <mat-divider class="nde-divider full-display-divider"></mat-divider>
+            <h3 class="mat-headline-small">About cataloging errors and offensive language</h3>
+            <p>The various indexes you browse here may contain errors as a result of improper cataloging.</p>
+            <p>In some cases, language used in headings may stray from contemporary usage and even cause offence.</p>
+            <p>The Libraries work to correct these problems when discovered, but given the large size of the catalog, they cannot commit to fixing every problem.</p>
+            <p>If you encounter a particularly problematic entry, please report it to the Libraries for investigation via the <i>Report a Problem</i> button or <a [href]="askUsUrl" target="_blank" rel="noopener noreferrer"><span>Ask Us page.</span><mat-icon>open_in_new</mat-icon></a></p>
+        }
     </mat-card-content>
 </mat-card>
 }
