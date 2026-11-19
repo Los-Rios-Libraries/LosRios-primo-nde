@@ -14,8 +14,8 @@ const selectViewConfig = createFeatureSelector<currentView>('viewConfig');
   standalone: true,
   imports: [MatCardModule, MatButtonModule, MatIconModule],
   templateUrl: './back-to-browse-home-button.component.html',
-  styleUrl: './back-to-browse-home-button.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrl: './back-to-browse-home-button.component.css'
 })
 export class BackToBrowseHomeButtonComponent {
   private store = inject(Store);
