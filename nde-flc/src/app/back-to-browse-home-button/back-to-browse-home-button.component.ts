@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { Store, createFeatureSelector } from '@ngrx/store';
-import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowseState } from '../shared/models/browse-search.model';
@@ -12,7 +11,7 @@ const selectViewConfig = createFeatureSelector<currentView>('viewConfig');
 @Component({
   selector: 'custom-back-to-browse-home-button',
   standalone: true,
-  imports: [MatCardModule, MatButtonModule, MatIconModule],
+  imports: [MatButtonModule, MatIconModule],
   templateUrl: './back-to-browse-home-button.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
   styleUrl: './back-to-browse-home-button.component.css'
