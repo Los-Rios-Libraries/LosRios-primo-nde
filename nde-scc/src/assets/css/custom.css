@@ -36,6 +36,8 @@ nde-logo img {
   height: 50px;
   padding-right: 1rem;
 }
+/* hide "browse" in top menu */
+.main-menu-list li:has(a[href^="/nde/browse?"]) {display: none;}
 
 .custom-search-bar-container {
   height: auto !important; align-items: start !important; 
