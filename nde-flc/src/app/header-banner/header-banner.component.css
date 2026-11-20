@@ -1,13 +1,15 @@
 .lr-header-banner { 
-    background-color: var(--second-col-color); 
-    justify-content: center;
-    color: var(--mat-app-text-color); 
+    justify-content: center; 
     font-size: 1.3rem; 
-    border-bottom: 2px solid var(--main-col-color); 
+    border-bottom: 2px solid; 
     padding: 1rem; 
     
     /* Ensure content doesn't spill out while shrinking */
     overflow: hidden; 
+}
+a {
+    text-decoration: underline;
+    text-underline-offset: 6px;
 }
 
 /* Force the browser to animate from full size to 0 */
