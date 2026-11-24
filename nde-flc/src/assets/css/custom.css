@@ -36,6 +36,25 @@ nde-logo img {
   padding-right: 1rem;
 }
 
+/* banner colors. Limit styles here to colors. Other styles set in component */
+.lr-header-banner {
+background-color: #7CB82F;
+color: #121212;
+border-bottom-color: #0084AC !important;
+}
+
+/* link and open-in-new icon color */
+.lr-header-banner a:link, .lr-header-banner a:visited, .lr-header-banner .mat-icon {
+color: #121212;
+}
+/* dismiss icon color */
+.lr-header-banner .mdc-button .mat-icon { 
+color: #121212;
+}
+
+/* hide "browse" in top menu */
+.main-menu-list li:has(a[href^="/nde/browse?"]) {display: none;}
+
 .custom-search-bar-container {
   height: auto !important; align-items: start !important; 
 }
