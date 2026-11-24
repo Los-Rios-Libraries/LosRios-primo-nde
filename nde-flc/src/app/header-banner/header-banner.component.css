@@ -1,7 +1,8 @@
 .lr-header-banner { 
     justify-content: center; 
     font-size: 1.3rem; 
-    border-bottom: 2px solid; 
+    border-bottom-width: 2px;
+    border-bottom-style: solid; 
     padding: 1rem; 
     
     /* Ensure content doesn't spill out while shrinking */
