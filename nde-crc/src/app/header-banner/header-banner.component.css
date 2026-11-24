@@ -36,6 +36,7 @@ a {
     animation: crushBanner 300ms cubic-bezier(0.4, 0.0, 0.2, 1) forwards !important;
 }
 
-.mat-icon { font-size: 16px; font-weight:bold; vertical-align: middle; margin-left: 4px; }
+.mat-icon { font-size: 16px; vertical-align: middle; margin-left: 4px; }
 
-.dismiss-btn { justify-content: right;height: auto; }
+.mat-mdc-button { justify-content: right;height: auto; }
+.mat-mdc-button .mat-icon {font-weight: bold;}
