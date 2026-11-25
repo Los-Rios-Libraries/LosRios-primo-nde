@@ -14,6 +14,7 @@ import {MatCardModule} from '@angular/material/card';
 import { MatCardModule } from '@angular/material/card';
 import { VIEW_CONSTANTS } from '../shared/constants/app.constants';
 import { currentView } from '../shared/models/viewconfig.model';
+import { SHELL_ROUTER } from '../injection-tokens';
 
 const selectViewConfig = createFeatureSelector<currentView>('viewConfig');
 
@@ -35,7 +36,7 @@ export class HomepageCollectionsWidgetComponent {
 
   
   private cachedHttp = inject(CachedHttpService);
-  private arrayUtils = inject(ArrayUtilsService); // 2. Switched to inject() to avoid initialization order bugs
+  private arrayUtils = inject(ArrayUtilsService);
 
   college = VIEW_CONSTANTS.libraryAcronym;
   thumbnailBaseURL = '/view/delivery/thumbnail/01CACCL_LRCCD/';

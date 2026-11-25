@@ -27,6 +27,7 @@ const selectViewConfig = createFeatureSelector<currentView>('viewConfig');
 export class HomepageCollectionsWidgetComponent {
   // get current view code
   private store = inject(Store);
+  private router = inject<Router>(SHELL_ROUTER);
   viewConfig = this.store.selectSignal(selectViewConfig);
   currentView = this.viewConfig()?.config?.vid;
 
