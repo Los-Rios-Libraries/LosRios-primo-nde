@@ -1,35 +1,29 @@
 @if (collectionHasBlurb()) {
+    <aside>
 
     <mat-card appearance="outlined" class="margin-top-huge">
         
    
-
 @switch (collectionDiscovery()?.currentCollectionId) {
     
     @case ('81101867750005325') { 
         <mat-card-content>
-            <p >For articles, book chapters, and resources not held at our library, see our <a href="https://researchguides.scc.losrios.edu/scc-authors" target="_blank">SCC Authors guide. <mat-icon aria-label="Open in new tab">open_in_new</mat-icon></a></p>
+            <p >For articles, book chapters, and resources not held at our library, see our <a href="https://researchguides.scc.losrios.edu/scc-authors" target="_blank"><span>SCC Authors guide</span> <mat-icon aria-label="Open in new tab">open_in_new</mat-icon></a></p>
         </mat-card-content>
     }
      @case ('8196633390005325') {
-      
-               
             <mat-card-title>
-                Discover more resources by and about Joan Didion in the databases
+                <h2 class="mat-headline-small">Discover more resources by and about Joan Didion</h2>
             </mat-card-title>
-             <mat-card-content>
-           <ul>
-				<li><a href="https://scclosrios.idm.oclc.org/login?url=https://search.ebscohost.com/login.aspx?direct=true&amp;AuthType=ip,uid&amp;db=a9h&amp;bquery=(ZA+%26quot%3bdidion%2c+joan%26quot%3b)+OR+(ZP+%26quot%3bdidion%2c+joan%2c+1934-2021%26quot%3b)&amp;cli0=FT&amp;clv0=Y&amp;type=1&amp;searchMode=And&amp;site=ehost-live&amp;scope=site" target="_blank">Academic Search Complete <mat-icon aria-label="Open in new tab">open_in_new</mat-icon></a></li>
-				<li><a href="https://scclosrios.idm.oclc.org/login?url=https://go.gale.com/ps/i.do?st=T001&amp;qt=ACID~13026267+OR+13026265&amp;sw=w&amp;ty=ps&amp;it=search&amp;sid=bookmark-LitRC&amp;p=LitRC&amp;s=Relevance&amp;u=cclc_sac&amp;v=2.1&amp;asid=457998b6" target="_blank">Literature Resource Center <mat-icon aria-label="Open in new tab">open_in_new</mat-icon></a></li>
-			</ul>
-            <p>
-                Also find 
-                <a href="https://libbyapp.com/search/losriosccd/search/query-joan%20didion/page-1" target="_blank">
-                    Joan Didion audiobooks via Libby 
-                    <mat-icon aria-label="Open in new tab">open_in_new</mat-icon>
-                </a>
-            </p>
-       </mat-card-content>
+            <mat-card-content>
+                <ul>
+                    <li><a href="/nde/search?query=creator,exact,didion%E2%94%80%20joan,OR;sub,exact,didion%E2%94%80%20joan,OR;title,exact,joan%20didion*&amp;tab=everything&search_scope=scc_everything&amp;mode=advanced&amp;lang=en&amp;vid=01CACCL_LRCCD:SCC"><span>Joan Didion in OneSearch</span><mat-icon>chevron_right</mat-icon></a></li>
+				    <li><a href="https://scclosrios.idm.oclc.org/login?url=https://search.ebscohost.com/login.aspx?direct=true&amp;AuthType=ip,uid&amp;db=a9h&amp;bquery=(ZA+%26quot%3bdidion%2c+joan%26quot%3b)+OR+(ZP+%26quot%3bdidion%2c+joan%2c+1934-2021%26quot%3b)&amp;cli0=FT&amp;clv0=Y&amp;type=1&amp;searchMode=And&amp;site=ehost-live&amp;scope=site" target="_blank"><span>Joan Didion in Academic Search Complete</span><mat-icon aria-label="Open in new tab">open_in_new</mat-icon></a></li>
+				    <li><a href="https://scclosrios.idm.oclc.org/login?url=https://go.gale.com/ps/i.do?st=T001&amp;qt=ACID~13026267+OR+13026265&amp;sw=w&amp;ty=ps&amp;it=search&amp;sid=bookmark-LitRC&amp;p=LitRC&amp;s=Relevance&amp;u=cclc_sac&amp;v=2.1&amp;asid=457998b6" target="_blank"><span>Joan Didion in Literature Resource Center</span><mat-icon aria-label="Open in new tab">open_in_new</mat-icon></a></li>
+                    <li><a href="https://libbyapp.com/search/losriosccd/search/query-joan%20didion/page-1" target="_blank"><span>
+                    Joan Didion audiobooks via Libby</span><mat-icon aria-label="Open in new tab">open_in_new</mat-icon></a></li>
+                </ul>
+            </mat-card-content>
     }
 
    
@@ -37,4 +31,5 @@
 
 
 </mat-card>
+</aside>
 }
