@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { createFeatureSelector, Store } from '@ngrx/store';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs'; // 1. Imported map operator
@@ -6,11 +7,12 @@ import { CollectionItem } from '../shared/models/collection.model';
 import { CachedHttpService } from '../services/cached-http.service';
 import { ArrayUtilsService } from '../services/array-utils.service';
 import { MatIconModule } from '@angular/material/icon';
-import {MatTooltipModule} from '@angular/material/tooltip';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 import { VIEW_CONSTANTS } from '../shared/constants/app.constants';
 import { currentView } from '../shared/models/viewconfig.model';
+import { SHELL_ROUTER } from '../injection-tokens';
 
 const selectViewConfig = createFeatureSelector<currentView>('viewConfig');
 
@@ -25,17 +27,18 @@ const selectViewConfig = createFeatureSelector<currentView>('viewConfig');
 export class HomepageCollectionsWidgetComponent {
   // get current view code
   private store = inject(Store);
+  private router = inject<Router>(SHELL_ROUTER);
   viewConfig = this.store.selectSignal(selectViewConfig);
   currentView = this.viewConfig()?.config?.vid;
 
 
   
   private cachedHttp = inject(CachedHttpService);
-  private arrayUtils = inject(ArrayUtilsService); // 2. Switched to inject() to avoid initialization order bugs
+  private arrayUtils = inject(ArrayUtilsService);
 
   college = VIEW_CONSTANTS.libraryAcronym;
   thumbnailBaseURL = '/view/delivery/thumbnail/01CACCL_LRCCD/';
-  collectionPage = `/discovery/collectionDiscovery?vid=${this.currentView}&collectionId=`;
+  collectionPage = `/collectionDiscovery?vid=${this.currentView}&collectionId=`;
   collectionRoot = VIEW_CONSTANTS.collectionRoot;
  
 
@@ -55,9 +58,18 @@ export class HomepageCollectionsWidgetComponent {
 
   constructor() {  }
 
-goToCollection(collection: CollectionItem) {
+  goToAllCollections(event: Event): void {
+    this.navigateToCollection(this.collectionRoot, event);
+  }
 
- location.href = this.collectionPage + collection.col_id;
-}
-  
+  private navigateToCollection(collectionId: string, event?: Event): void {
+    event?.preventDefault();
+    const vid = this.viewConfig()?.config?.vid;
+    this.router.navigate(['/collectionDiscovery'], {
+      queryParams: {
+        vid,
+        collectionId,
+      },
+    });
+  }
 }

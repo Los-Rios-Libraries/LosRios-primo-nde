@@ -1,10 +1,10 @@
 @if (collections().length > 0) {
 <h2 class="mat-headline-medium">Explore Collections</h2>
 <div class="grid-container">
-        
-@for (collection of collections(); track collection.col_id) { 
 
-    <mat-card (click)="goToCollection(collection)" class="grid-item" matTooltip="{{collection.desc}}" matTooltipPosition ="above" appearance="outlined" tabindex="0" role="link">
+@for (collection of collections(); track collection.col_id) {
+
+    <mat-card (click)="goToCollection(collection)" (keydown.enter)="goToCollection(collection)" class="grid-item" matTooltip="{{collection.desc}}" matTooltipPosition="above" appearance="outlined" tabindex="0" role="link">
         <img mat-card-image [src]="thumbnailBaseURL + collection.col_id" alt="" loading="lazy">
         <mat-card-footer>
             <mat-card-title><span>{{collection.title}}</span><mat-icon iconPositionEnd>chevron_right</mat-icon></mat-card-title>
@@ -13,8 +13,9 @@
 }
 </div>
 <div class="display-flex flex-layout-end margin-top-medium">
-        <a mat-stroked-button [href]="collectionPage + collectionRoot">View all collections 
-            <mat-icon iconPositionEnd>chevron_right</mat-icon> 
-        </a>
+    <a mat-stroked-button [href]="collectionPage + collectionRoot" (click)="goToAllCollections($event)">
+        View all collections
+        <mat-icon iconPositionEnd>chevron_right</mat-icon>
+    </a>
 </div>
 }
